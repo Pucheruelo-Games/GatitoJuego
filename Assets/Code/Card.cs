@@ -6,5 +6,7 @@ namespace Code
     {
         [SerializeField] private Sprite icon;
         public Sprite Icon => icon;
+        [SerializeField] private int cost;
+        public int Cost => cost;
     }
 }
