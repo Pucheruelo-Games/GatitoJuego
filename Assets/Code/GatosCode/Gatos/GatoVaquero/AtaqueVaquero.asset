@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b90d74a18efc404c813d0ca1b2dfc1a, type: 3}
   m_Name: AtaqueVaquero
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueDisparo
-  _prefabDisp: {fileID: 3783132196845721684, guid: 65496836bb52ee9439e173985c7492ec, type: 3}
+  _prefabDisp: {fileID: 2415932382332830713, guid: 65496836bb52ee9439e173985c7492ec, type: 3}

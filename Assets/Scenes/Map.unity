@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &21172746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 21172747}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &21172747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21172746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &24383433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -579,10 +610,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1395413121}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -139.16998, y: -768}
-  m_SizeDelta: {x: 163.61, y: 149.96}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 400.83002, y: 192}
+  m_SizeDelta: {x: 163.60999, y: 149.96002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146406356
 MonoBehaviour:
@@ -1884,10 +1915,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1395413121}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 155.85999, y: -768}
-  m_SizeDelta: {x: 152.05, y: 149.96}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -384.14, y: 192}
+  m_SizeDelta: {x: 152.04999, y: 149.96002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571743600
 MonoBehaviour:
@@ -3126,7 +3157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UiManager
   _mesa: {fileID: 2003549599}
+  _monedas: {fileID: 2003549601}
   _vidaUI: {fileID: 146406356}
+  _monedasUI: {fileID: 571743600}
 --- !u!1 &1423838967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,7 +3475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474289883}
   m_Layer: 0
-  m_Name: TileSet
+  m_Name: TileSet------------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3661,6 +3694,7 @@ MonoBehaviour:
   - {fileID: 1445424970}
   - {fileID: 1990188883}
   - {fileID: 1210299512}
+  _monedas: {fileID: 2003549601}
   _intervalo: 5
 --- !u!1001 &1563426558
 PrefabInstance:
@@ -4255,6 +4289,7 @@ GameObject:
   - component: {fileID: 1933037443}
   - component: {fileID: 1933037442}
   - component: {fileID: 1933037444}
+  - component: {fileID: 1933037445}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4349,9 +4384,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _vel: 5
+  _velDisp: 3
   _mover: {fileID: -1680190386980627800, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _maxI: -2.75
   _maxD: 2.75
+  _prefabDisp: {fileID: 3783132196845721684, guid: 65496836bb52ee9439e173985c7492ec, type: 3}
+--- !u!50 &1933037445
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933037441}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1945986826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4651,6 +4715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2003549596}
   - component: {fileID: 2003549597}
+  - component: {fileID: 2003549601}
   - component: {fileID: 2003549599}
   - component: {fileID: 2003549598}
   - component: {fileID: 2003549600}
@@ -4669,12 +4734,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003549595}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5162, y: -5.718, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.037779987, y: -5.5815897, z: 0}
   m_LocalScale: {x: 7.4129214, y: 3.704942, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2075116056}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2003549597
 SpriteRenderer:
@@ -4723,7 +4788,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.6886792, g: 0.5287826, b: 0.32809716, a: 1}
@@ -4821,6 +4886,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2003549601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003549595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70c696484eef244ea70677d5d445404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Monedas
+  _monedasAct: 0
 --- !u!1001 &2064009607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4984,7 +5062,6 @@ Transform:
   m_Children:
   - {fileID: 665771255}
   - {fileID: 227923379}
-  - {fileID: 2003549596}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2079383987
@@ -5288,4 +5365,6 @@ SceneRoots:
   - {fileID: 1994446812}
   - {fileID: 1474289883}
   - {fileID: 1559563159}
+  - {fileID: 2003549596}
   - {fileID: 2075116056}
+  - {fileID: 21172747}

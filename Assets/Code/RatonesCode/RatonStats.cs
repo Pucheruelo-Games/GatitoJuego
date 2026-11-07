@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(menuName ="Ratones/RatonStats")]
 public class RatonStats : ScriptableObject
@@ -11,6 +12,8 @@ public class RatonStats : ScriptableObject
     public float dmg => _dmg;
     [SerializeField] float _atkSpeed;
     public float atkSpeed => _atkSpeed;
+    [SerializeField] int _recompensa;
+    public int recompensa => _recompensa;
     [SerializeField] Sprite _skin;
     public Sprite sprite => _skin;
     

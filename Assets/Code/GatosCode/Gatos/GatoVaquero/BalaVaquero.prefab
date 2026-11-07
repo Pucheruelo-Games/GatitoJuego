@@ -184,11 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa1dc789f609f948879e99f6e6c61d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Disparo
-  _dmg: 1
-  _speed: 5
-  _tiempo: 10
-  _sprite: {fileID: 0}
-  _spriteRenderer: {fileID: 7913647177626473907}
+  _dmg: 2
+  _vel: 5
+  _alcance: 10
 --- !u!50 &1653487694094783842
 Rigidbody2D:
   serializedVersion: 5

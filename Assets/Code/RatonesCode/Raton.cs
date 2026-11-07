@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Raton : MonoBehaviour, IDañable
@@ -7,6 +8,7 @@ public class Raton : MonoBehaviour, IDañable
     private float _hp;
     private float _timer;
     private IDañable _objetivo;
+    public event Action<int> Muelto;
     public void Init(RatonStats stats)
     {
         _stats = stats;
@@ -20,12 +22,14 @@ public class Raton : MonoBehaviour, IDañable
             transform.Translate(Vector2.down * _stats.vel * Time.deltaTime);
             return;
         }
+        
         _timer += Time.deltaTime;
         if(_timer >= _stats.atkSpeed)
         {
             _objetivo.RecibirDmg(_stats.dmg);
             _timer= 0;
         }
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -44,6 +48,8 @@ public class Raton : MonoBehaviour, IDañable
     }
     private void Morir()
     {
+        Debug.Log("Me he muelto");
+        Muelto?.Invoke(_stats.recompensa);
         Destroy(gameObject);
     }
 }
