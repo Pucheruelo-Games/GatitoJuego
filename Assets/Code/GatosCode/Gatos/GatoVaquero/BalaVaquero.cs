@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class Disparo : MonoBehaviour
+public class BalaVaquero : MonoBehaviour
 {
     [SerializeField] float _dmg;
     [SerializeField] float _speed;
     [SerializeField] float _tiempo;
     [SerializeField] Sprite _sprite;
     [SerializeField] SpriteRenderer _spriteRenderer;
-
+    public float GetTiempo()
+    {
+        return _tiempo;
+    }
     private void Start()
     {
         Destroy(gameObject, _tiempo);
