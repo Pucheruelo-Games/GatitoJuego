@@ -25,9 +25,9 @@ public abstract class ProyectilBase : MonoBehaviour
         if (collider.gameObject.layer != LayerMask.NameToLayer("Raton")) return;
         if (!collider.TryGetComponent(out IDañable obj)) return;
 
-        AlAtacar(obj);
+        AlAtacar(collider);
         Destroy(gameObject);
     }
 
-    protected abstract void AlAtacar(IDañable obj);
+    protected abstract void AlAtacar(Collider2D obj);
 }
