@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BalaVaquero : ProyectilBase
 {
-    protected override void AlAtacar(IDañable obj)
+    protected override void AlAtacar(Collider2D obj)
     {
-        obj.RecibirDmg(_dmg);
+        obj.GetComponent<IDañable>().RecibirDmg(_dmg);
     }
 }

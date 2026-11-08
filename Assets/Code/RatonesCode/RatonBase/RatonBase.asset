@@ -15,6 +15,6 @@ MonoBehaviour:
   _hp: 6
   _vel: 0.2
   _dmg: 1
-  _atkSpeed: 0.5
+  _atkSpeed: 1.5
   _recompensa: 1
-  _skin: {fileID: -602172651, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  _skin: {fileID: -7154950045172618049, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}

@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 2198068573293541188, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2275087386434197862}
   - component: {fileID: 4692912786222150708}
-  - component: {fileID: 2415932382332830713}
+  - component: {fileID: -3700237443027560319}
   - component: {fileID: 1653487694094783842}
   m_Layer: 0
   m_Name: Tostada
@@ -160,7 +160,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0035735965, y: -0.008933812}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -170,9 +170,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.70696974, y: 0.6033372}
   m_EdgeRadius: 0
---- !u!114 &2415932382332830713
+--- !u!114 &-3700237443027560319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,11 +181,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3783132196845721684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fa1dc789f609f948879e99f6e6c61d1, type: 3}
+  m_Script: {fileID: 11500000, guid: fa3f46e89bd03f44eaf8b77c759634c1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Disparo
+  m_EditorClassIdentifier: Assembly-CSharp::BalaTostada
   _dmg: 2
-  _vel: 3
+  _vel: 5
   _alcance: 10
 --- !u!50 &1653487694094783842
 Rigidbody2D:

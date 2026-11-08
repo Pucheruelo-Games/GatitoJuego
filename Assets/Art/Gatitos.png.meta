@@ -75,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,10 +127,10 @@ TextureImporter:
       name: Gatitos_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 80
-        width: 24
-        height: 24
+        x: 30
+        y: 3
+        width: 26
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,8 +193,8 @@ TextureImporter:
       name: Gatitos_9
       rect:
         serializedVersion: 2
-        x: 27
-        y: 1
+        x: 1
+        y: 79
         width: 50
         height: 50
       alignment: 0
@@ -295,6 +295,72 @@ TextureImporter:
       bones: []
       spriteID: e4b2354278b166644931023200d11cac
       internalID: -602172651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 15
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abb68c050df4d944a73c9a3110dd589
+      internalID: 2198068573293541188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 7
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38d8268cb6b9a647a34495bdb7d304b
+      internalID: -4149455633675506791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_3
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 136
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c722d4da0d84b4daf8cba9d03bac59
+      internalID: -7154950045172618049
       vertices: []
       indices: 
       edges: []
