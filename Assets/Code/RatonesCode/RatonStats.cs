@@ -14,7 +14,10 @@ public class RatonStats : ScriptableObject
     public float atkSpeed => _atkSpeed;
     [SerializeField] int _recompensa;
     public int recompensa => _recompensa;
+    [SerializeField] int _dificultad;
+    public int dificultad => _dificultad;
     [SerializeField] Sprite _skin;
     public Sprite sprite => _skin;
+    
     
 }
