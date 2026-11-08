@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6fe27c9ce64727af7c85250afd374b, type: 3}
+  m_Name: CowBoyCat
+  m_EditorClassIdentifier: Assembly-CSharp::Code.CatEntity
+  health: 10
+  attackSpeed: 2
+  sprite: {fileID: -8031270095727454048, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  attack: {fileID: 11400000, guid: c165e6eb438acab4baaaaf81a6baa878, type: 2}
+  width: 1
+  height: 1

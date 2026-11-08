@@ -8,5 +8,7 @@ namespace Code
         public Sprite Icon => icon;
         [SerializeField] private int cost;
         public int Cost => cost;
+        [SerializeField] private float cooldown;
+        public float Cooldown => cooldown;
     }
 }

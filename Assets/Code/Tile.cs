@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class Tile : MonoBehaviour
+namespace Code
 {
-    public bool _conGato = false;
-    public Gato _elGato;
-
-    public void Colocar(Gato gato)
+    public class Tile : MonoBehaviour
     {
-        _elGato = gato;
-    }
-    public void Quitar()
-    {
-        _elGato = null;
+        public CatBehaviour Cat;
     }
 }

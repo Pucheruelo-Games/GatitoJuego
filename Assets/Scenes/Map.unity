@@ -4672,10 +4672,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc2661226bf91b468c95001ea1edf8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UiManager
-  _mesa: {fileID: 2003549599}
-  _monedas: {fileID: 2003549601}
-  _vidaUI: {fileID: 925457367}
-  _monedasUI: {fileID: 571743600}
+  table: {fileID: 0}
+  healthUI: {fileID: 0}
+  coinsUI: {fileID: 0}
 --- !u!1 &1423542675
 GameObject:
   m_ObjectHideFlags: 0
@@ -5480,18 +5479,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a347b51773b3d3543b7dfb430776b314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerEnemigos
-  _prefab: {fileID: 6636535001878114660, guid: 24e5fc6a064006d428bdaa3ff22e6e56, type: 3}
-  _tipos:
-  - {fileID: 11400000, guid: f4b1435e4a8160f47864a6450d49709c, type: 2}
-  _spawners:
-  - {fileID: 2135075601}
-  - {fileID: 1999607776}
-  - {fileID: 578447267}
-  - {fileID: 1445424970}
-  - {fileID: 1990188883}
-  - {fileID: 1210299512}
-  _monedas: {fileID: 2003549601}
-  _intervalo: 5
+  mousePrefab: {fileID: 6636535001878114660, guid: 24e5fc6a064006d428bdaa3ff22e6e56, type: 3}
+  mice: []
+  spawnPoints: []
+  interval: 5
 --- !u!1001 &1563426558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6687,7 +6678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6629257ac63ea46a5d1d86e4ccfe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mesa
-  _hpMax: 10
+  health: 10
 --- !u!50 &2003549600
 Rigidbody2D:
   serializedVersion: 5
@@ -6727,7 +6718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70c696484eef244ea70677d5d445404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Monedas
-  _monedasAct: 0
 --- !u!1001 &2064009607
 PrefabInstance:
   m_ObjectHideFlags: 0
