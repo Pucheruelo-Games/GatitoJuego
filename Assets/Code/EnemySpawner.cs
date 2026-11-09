@@ -1,27 +1,109 @@
+using System;
+using System.Collections;
 using Code;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private MouseBehaviour mousePrefab;
-    [SerializeField] private MouseEntity[] mice;
-    [SerializeField] private Transform[] spawnPoints;
-    [SerializeField] private float interval = 5f;
-    private float _timer;
-    private void Update()
+    [SerializeField] MouseBehaviour _prefab;
+    [SerializeField] MouseData[] _tipos;
+    [SerializeField] GameObject[] _spawners;
+    private int _spawneados;
+    [SerializeField] float _intervalo = 4;
+    [SerializeField] EnemySpawner _spawner;
+    [SerializeField] int _tiempoPausa;
+    private int _ronda;
+    public Action CambioRonda;
+    public Action<string> CuentaCambio;
+    int _enemRonda = 8;
+    private int _tiempo;
+    private void Awake()
     {
-        _timer += Time.deltaTime;
-        if (_timer < interval) return;
-        Spawn();
+        _tiempo = _tiempoPausa;
+        _ronda = GameManager.Instance.Round;
+    }
+    private void Start()
+    {
+        CambioRonda?.Invoke();
+        StartCoroutine(CuentaAtras());
+    }
+    private IEnumerator CuentaAtras()
+    {
+        if (_ronda > 1)
+        {
+            yield return new WaitForSeconds(1f);
+            TransicionTienda();
+        }
+        while (_tiempo > 0)
+        {
+            Debug.Log(_tiempo+"!");
+            CuentaCambio?.Invoke(_tiempo.ToString());
+            yield return new WaitForSeconds(1f);
+            _tiempo--;
+            
+        }
+        CuentaCambio?.Invoke("YA!");
+        yield return new WaitForSeconds(1f);
+        CuentaCambio?.Invoke(_tiempo.ToString());
+
+        _tiempo = _tiempoPausa;
+        EmpezarRonda();
     }
 
-    private void Spawn()
+    private void TransicionTienda()
     {
-        _timer = 0;
-        var path = Random.Range(0, 6);
-        Vector2 spawnPoint = spawnPoints[path].transform.position;
-        var mouse = Instantiate(mousePrefab, spawnPoint, Quaternion.identity);
-        mouse.Init(mice[Random.Range(0, mice.Length)]);
+        //XD
+    }
+
+    private void EmpezarRonda()
+    {
+        float intervalo = Mathf.Max(0.15f, _intervalo / _ronda);
+        int enemVar = UnityEngine.Random.Range(_enemRonda-_ronda, _enemRonda+_ronda);
+        int cantidad = enemVar * _ronda;
+
+        Debug.Log("Ronda: " + _ronda + "CantidadEnemigos: " + cantidad);
+        StartCoroutine(_spawner.SpawnearEnemigosDeRonda(cantidad,intervalo,_ronda));
+    }
+    public void CambiarRonda()
+    {
+        _ronda++;
+        CambioRonda?.Invoke();
+        StartCoroutine(CuentaAtras());
+    }
+
+    public IEnumerator SpawnearEnemigosDeRonda(int cantidad, float intervalo, int ronda)
+    {
+        while (cantidad > 0)
+        {
+            float var = Random.Range(-0.5f, 0.5f);
+            float espera = Mathf.Max(0.1f, intervalo + var);
+            yield return new WaitForSeconds(espera);
+
+            int carril = Random.Range(0, 6);
+            Vector2 spawner = _spawners[carril].transform.position;
+            MouseBehaviour r = Instantiate(_prefab, spawner, Quaternion.identity);
+
+            r.Init(_tipos[Random.Range(0, _tipos.Length)]);
+            _spawneados++;
+            GameManager.Instance.Coins += r.MouseData.Reward;
+            r.OnEntityDeath += RatonMuelto;
+            Debug.Log("Ha spawneado una rata");
+            cantidad--;
+        }
+
+        yield return new WaitUntil(TodosMuertos);
+        CambioRonda?.Invoke();
+    }
+
+    private bool TodosMuertos()
+    {
+        return _spawneados <= 0;
+    }
+
+    private void RatonMuelto()
+    {
+        _spawneados--;
     }
 }

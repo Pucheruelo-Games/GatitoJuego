@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Code
@@ -7,6 +8,7 @@ namespace Code
         [SerializeField] protected SpriteRenderer spriteRenderer;
         protected Entity Entity;
         protected int CurrentHealth;
+        public event Action OnEntityDeath;
         
         public void Init(Entity entity)
         {
@@ -24,6 +26,7 @@ namespace Code
             if( CurrentHealth <= 0)
             {
                 OnDeath();
+                OnEntityDeath?.Invoke();
             }
         }
 

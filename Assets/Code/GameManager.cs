@@ -3,13 +3,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _singleton;
-    public static GameManager Singleton => _singleton;
+    private static GameManager _instance;
+    public static GameManager Instance => _instance;
+
+    private int _round = 1;
+    public int Round => _round;
 
     private void Awake()
     {
-        if (Singleton) Destroy(gameObject);
-        else _singleton = this;
+        if (Instance) Destroy(gameObject);
+        else _instance = this;
     }
 
     private int _coins;

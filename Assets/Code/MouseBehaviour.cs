@@ -6,7 +6,8 @@ namespace Code
     [RequireComponent(typeof(Rigidbody2D))]
     public class MouseBehaviour : EntityBehaviour
     {
-        private MouseEntity _mouseEntity;
+        private MouseData _mouseData;
+        public MouseData MouseData => _mouseData;
         private float _timer;
         private Rigidbody2D _rigidbody2D;
         private LayerMask _targetLayerMask;
@@ -19,8 +20,8 @@ namespace Code
 
         protected override void OnInit()
         {
-            if (Entity is not MouseEntity mouse) throw new Exception("Entity is not MouseEntity");
-            _mouseEntity = mouse;
+            if (Entity is not MouseData mouse) throw new Exception("Entity is not MouseEntity");
+            _mouseData = mouse;
             _targetLayerMask = LayerMask.GetMask("Cat");
         }
         
@@ -30,7 +31,7 @@ namespace Code
             
             if (!Entity.Attack.IsEnemyInRange(context))
             {
-                _rigidbody2D.linearVelocity = _mouseEntity.Speed * Vector2.down;
+                _rigidbody2D.linearVelocity = _mouseData.Speed * Vector2.down;
             }
             else
             {
@@ -45,7 +46,7 @@ namespace Code
 
         protected override void OnDeath()
         {
-            GameManager.Singleton.Coins += _mouseEntity.Reward;
+            GameManager.Instance.Coins += _mouseData.Reward;
             Destroy(gameObject);
         }
     }
