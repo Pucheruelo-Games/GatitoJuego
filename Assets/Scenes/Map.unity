@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 21172747}
   - component: {fileID: 21172748}
   m_Layer: 0
-  m_Name: LevelManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,13 +160,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 21172746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07af2d8e789651f43a46fb63a12ec943, type: 3}
+  m_Script: {fileID: 11500000, guid: e70c696484eef244ea70677d5d445404, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RoundManager
-  _ronda: 1
-  _intervalo: 4
-  _spawner: {fileID: 1559563160}
-  _tiempoPausa: 3
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1001 &24383433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5036,9 +5032,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1395413121}
   - component: {fileID: 1395413120}
-  - component: {fileID: 1395413122}
   - component: {fileID: 1395413119}
   - component: {fileID: 1395413118}
+  - component: {fileID: 1395413122}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5146,10 +5142,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cc2661226bf91b468c95001ea1edf8e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UiManager
+  m_EditorClassIdentifier: Assembly-CSharp::Code.UIManager
   _mesa: {fileID: 2003549599}
-  _monedas: {fileID: 2003549601}
-  _roundManager: {fileID: 21172748}
+  _roundManager: {fileID: 1559563160}
   _vidaUI: {fileID: 925457367}
   _monedasUI: {fileID: 571743600}
   _cuentaAtrasTxt: {fileID: 182889922}
@@ -5960,7 +5955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerEnemigos
   _prefab: {fileID: 6636535001878114660, guid: 24e5fc6a064006d428bdaa3ff22e6e56, type: 3}
   _tipos:
-  - {fileID: 11400000, guid: f4b1435e4a8160f47864a6450d49709c, type: 2}
+  - {fileID: 11400000, guid: 83ca08dd67b3d574fa919a8a10eb3923, type: 2}
   _spawners:
   - {fileID: 2135075601}
   - {fileID: 1999607776}
@@ -5968,8 +5963,8 @@ MonoBehaviour:
   - {fileID: 1445424970}
   - {fileID: 1990188883}
   - {fileID: 1210299512}
-  _roundManager: {fileID: 21172748}
-  _monedas: {fileID: 2003549601}
+  _intervalo: 4
+  _tiempoPausa: 3
 --- !u!1001 &1563426558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6690,12 +6685,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785d21ef4b6dca74aa24c6c512739fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  _vel: 5
-  _velDisp: 3
-  _mover: {fileID: -1680190386980627800, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  _maxI: -2.75
-  _maxD: 2.75
-  _prefabDisp: {fileID: 3783132196845721684, guid: 9ac20cfbfb3dd8a4b844c74878145c8a, type: 3}
+  speed: 5
+  attackSpeed: 5
+  move: {fileID: -1680190386980627800, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  maxDistanceLeft: -2.75
+  maxDistanceRight: 2.75
+  attack: {fileID: 11400000, guid: 22fa8e2321f6e4443aaf6dd05462c073, type: 2}
 --- !u!50 &1933037445
 Rigidbody2D:
   serializedVersion: 5
@@ -7022,11 +7017,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2003549596}
   - component: {fileID: 2003549597}
-  - component: {fileID: 2003549601}
   - component: {fileID: 2003549599}
   - component: {fileID: 2003549598}
   - component: {fileID: 2003549600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mesa
   m_TagString: Mesa
   m_Icon: {fileID: 0}
@@ -7165,7 +7159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6629257ac63ea46a5d1d86e4ccfe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mesa
-  _hpMax: 10
+  health: 10
 --- !u!50 &2003549600
 Rigidbody2D:
   serializedVersion: 5
@@ -7193,19 +7187,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2003549601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003549595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70c696484eef244ea70677d5d445404, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Monedas
-  _monedasAct: 0
 --- !u!1001 &2064009607
 PrefabInstance:
   m_ObjectHideFlags: 0

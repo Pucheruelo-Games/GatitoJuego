@@ -12,7 +12,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject[] _spawners;
     private int _spawneados;
     [SerializeField] float _intervalo = 4;
-    [SerializeField] EnemySpawner _spawner;
     [SerializeField] int _tiempoPausa;
     private int _ronda;
     public Action CambioRonda;
@@ -64,7 +63,7 @@ public class EnemySpawner : MonoBehaviour
         int cantidad = enemVar * _ronda;
 
         Debug.Log("Ronda: " + _ronda + "CantidadEnemigos: " + cantidad);
-        StartCoroutine(_spawner.SpawnearEnemigosDeRonda(cantidad,intervalo,_ronda));
+        StartCoroutine(SpawnearEnemigosDeRonda(cantidad,intervalo,_ronda));
     }
     public void CambiarRonda()
     {
@@ -87,7 +86,6 @@ public class EnemySpawner : MonoBehaviour
 
             r.Init(_tipos[Random.Range(0, _tipos.Length)]);
             _spawneados++;
-            GameManager.Instance.Coins += r.MouseData.Reward;
             r.OnEntityDeath += RatonMuelto;
             Debug.Log("Ha spawneado una rata");
             cantidad--;
