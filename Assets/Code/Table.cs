@@ -10,7 +10,6 @@ namespace Code
         public event Action<int> OnHealthChange;
         private void Start()
         {
-            health = health;
             OnHealthChange?.Invoke(health);
         }
         public void TakeDamage(int damage)
