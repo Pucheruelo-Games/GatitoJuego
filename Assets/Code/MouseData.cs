@@ -9,5 +9,7 @@ namespace Code
         public float Speed => speed;
         [SerializeField] private int reward;
         public int Reward => reward;
+        [SerializeField] private int difficulty;
+        public int Difficulty => difficulty;
     }
 }

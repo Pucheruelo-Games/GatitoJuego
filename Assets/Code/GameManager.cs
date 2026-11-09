@@ -6,9 +6,13 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance => _instance;
 
-    private int _round = 1;
+    private int _round = 0;
     public int Round => _round;
-
+    public void NextRound()
+    {
+        _round++;
+        OnRoundChange.Invoke();
+    }
     private void Awake()
     {
         if (Instance) Destroy(gameObject);
@@ -27,4 +31,5 @@ public class GameManager : MonoBehaviour
         }
     }
     public event Action<int> OnCoinsChange = delegate { };
+    public event Action OnRoundChange = delegate { };
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ToastAttack
   m_EditorClassIdentifier: Assembly-CSharp::Code.ShootAttack
   projectile: {fileID: 2121697921538561138, guid: 65496836bb52ee9439e173985c7492ec, type: 3}
-  damage: 20
+  damage: 2
   velocity: 5
-  range: 20
+  range: 15
   sprite: {fileID: 2198068573293541188, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}

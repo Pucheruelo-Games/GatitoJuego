@@ -14,26 +14,24 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float _intervalo = 4;
     [SerializeField] int _tiempoPausa;
     private int _ronda;
-    public Action CambioRonda;
     public Action<string> CuentaCambio;
     int _enemRonda = 8;
     private int _tiempo;
     private void Awake()
     {
         _tiempo = _tiempoPausa;
-        _ronda = GameManager.Instance.Round;
     }
     private void Start()
     {
-        CambioRonda?.Invoke();
+        GameManager.Instance.NextRound();
         StartCoroutine(CuentaAtras());
     }
     private IEnumerator CuentaAtras()
     {
+        _ronda = GameManager.Instance.Round;
         if (_ronda > 1)
         {
             yield return new WaitForSeconds(1f);
-            TransicionTienda();
         }
         while (_tiempo > 0)
         {
@@ -65,10 +63,10 @@ public class EnemySpawner : MonoBehaviour
         Debug.Log("Ronda: " + _ronda + "CantidadEnemigos: " + cantidad);
         StartCoroutine(SpawnearEnemigosDeRonda(cantidad,intervalo,_ronda));
     }
-    public void CambiarRonda()
+    private void CambiarRonda()
     {
-        _ronda++;
-        CambioRonda?.Invoke();
+        GameManager.Instance.NextRound();
+        TransicionTienda();
         StartCoroutine(CuentaAtras());
     }
 
@@ -92,7 +90,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         yield return new WaitUntil(TodosMuertos);
-        CambioRonda?.Invoke();
+        CambiarRonda();
     }
 
     private bool TodosMuertos()
