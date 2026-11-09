@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67097a21b9c4c05b250cbcbca9cf196, type: 3}
   m_Name: BaseMouse
   m_EditorClassIdentifier: Assembly-CSharp::Code.MouseEntity
-  health: 10
-  attackSpeed: 3
-  sprite: {fileID: -7154950045172618049, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  health: 4
+  attackSpeed: 1.5
+  sprite: {fileID: -5149744388904727079, guid: 4393c2f7bfa6b514b8b2ada5a56c816b, type: 3}
   attack: {fileID: 11400000, guid: 13653cb031bde784ebb3364d78d8b11a, type: 2}
   width: 1
   height: 1
-  speed: 1
+  speed: 0.5
   reward: 1
+  difficulty: 1

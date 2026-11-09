@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58efbd65f11f43e0ac302edc090ef548, type: 3}
   m_Name: BaseMouseAttack
   m_EditorClassIdentifier: Assembly-CSharp::Code.MeleeAttack
-  damage: 2
+  damage: 1
