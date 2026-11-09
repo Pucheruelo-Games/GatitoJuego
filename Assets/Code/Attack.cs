@@ -6,8 +6,7 @@ namespace Code
     {
         public abstract void Hit(AttackContext attackContext);
 
-        public bool IsEnemyInRange(AttackContext attackContext) =>
-            IsEnemyInRange(attackContext, out var target);
+        public bool IsEnemyInRange(AttackContext attackContext) => IsEnemyInRange(attackContext, out var target);
         public abstract bool IsEnemyInRange(AttackContext attackContext, out IDamageable target);
     }
 }

@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace Code
 {
-    [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
+    [RequireComponent(typeof(Rigidbody2D))]
     public class BaseProjectile : MonoBehaviour
     {
-        private uint _damage;
+        private int _damage;
         private float _velocity;
         private Vector2 _direction;
         private float _range;
@@ -23,7 +23,7 @@ namespace Code
             Debug.Assert(_spriteRenderer,"SpriteRenderer not found");
         }
 
-        public void Init(Vector2 direction, uint damage, float velocity, float range, LayerMask targetLayerMask)
+        public void Init(Vector2 direction, int damage, float velocity, float range, LayerMask targetLayerMask, Sprite sprite)
         {
             _direction = direction;
             _damage = damage;
@@ -31,6 +31,7 @@ namespace Code
             _range = range;
             _targetLayerMask = targetLayerMask;
             _initialPosition = _rigidbody2D.position;
+            _spriteRenderer.sprite = sprite;
         }
         
         private void FixedUpdate()
@@ -40,8 +41,8 @@ namespace Code
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.layer != _targetLayerMask) return;
             if (!other.TryGetComponent(out IDamageable damageable)) return;
+            if ((_targetLayerMask.value & (1 << other.gameObject.layer)) == 0) return;
 
             damageable.TakeDamage(_damage);
             Despawn();

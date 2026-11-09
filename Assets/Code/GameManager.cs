@@ -12,9 +12,9 @@ public class GameManager : MonoBehaviour
         else _singleton = this;
     }
 
-    private uint _coins;
+    private int _coins;
 
-    public uint Coins
+    public int Coins
     {
         get => _coins;
         set
@@ -23,5 +23,5 @@ public class GameManager : MonoBehaviour
             OnCoinsChange.Invoke(_coins);
         }
     }
-    public event Action<uint> OnCoinsChange = delegate { };
+    public event Action<int> OnCoinsChange = delegate { };
 }

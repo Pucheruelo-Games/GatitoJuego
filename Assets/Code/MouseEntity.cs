@@ -7,7 +7,7 @@ namespace Code
     {
         [SerializeField] private float speed;
         public float Speed => speed;
-        [SerializeField] private uint reward;
-        public uint Reward => reward;
+        [SerializeField] private int reward;
+        public int Reward => reward;
     }
 }

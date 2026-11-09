@@ -7,7 +7,7 @@ namespace Code
     public class ShootAttack : Attack
     {
         [SerializeField] BaseProjectile projectile;
-        [SerializeField] private uint damage;
+        [SerializeField] private int damage;
         [SerializeField] private float velocity;
         [SerializeField] private float range;
         [SerializeField] private Sprite sprite;
@@ -15,6 +15,11 @@ namespace Code
         public override bool IsEnemyInRange(AttackContext context, out IDamageable target)
         {
             var hit = Physics2D.Raycast(context.SourcePosition, context.Direction, range, context.TargetLayerMask);
+            if (!hit)
+            {
+                target = null;
+                return false;
+            }
             if (hit.collider.TryGetComponent(out IDamageable damageable))
             {
                 target = damageable;
@@ -27,7 +32,7 @@ namespace Code
         public override void Hit(AttackContext context)
         {
             var newProjectile = Instantiate(projectile, context.SourcePosition, Quaternion.identity);
-            newProjectile.Init(context.Direction, damage, velocity, range, context.TargetLayerMask);
+            newProjectile.Init(context.Direction, damage, velocity, range, context.TargetLayerMask, sprite);
         }   
     }
 }

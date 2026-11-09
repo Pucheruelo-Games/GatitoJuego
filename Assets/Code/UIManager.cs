@@ -21,7 +21,7 @@ namespace Code
             GameManager.Singleton.OnCoinsChange -= UpdateCoins;
 
         }
-        private void UpdateCoins(uint coins) => coinsUI.text = coins.ToString();
-        private void UpdateHealth(uint health) => healthUI.text = health.ToString();
+        private void UpdateCoins(int coins) => coinsUI.text = coins.ToString();
+        private void UpdateHealth(int health) => healthUI.text = health.ToString();
     }
 }

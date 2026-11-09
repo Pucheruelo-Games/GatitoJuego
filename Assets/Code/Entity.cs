@@ -5,8 +5,8 @@ namespace Code
 {
     public abstract class Entity : ScriptableObject
     {
-        [SerializeField] private uint health;
-        public uint Health => health;
+        [SerializeField] private int health;
+        public int Health => health;
         [SerializeField] private float attackSpeed;
         public float AttackSpeed => attackSpeed;
         [SerializeField] private Sprite sprite;

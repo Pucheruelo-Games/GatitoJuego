@@ -9,7 +9,7 @@ namespace Code
         private MouseEntity _mouseEntity;
         private float _timer;
         private Rigidbody2D _rigidbody2D;
-        private AttackContext _context;
+        private LayerMask _targetLayerMask;
 
         private void Awake()
         {
@@ -21,12 +21,14 @@ namespace Code
         {
             if (Entity is not MouseEntity mouse) throw new Exception("Entity is not MouseEntity");
             _mouseEntity = mouse;
-            _context = new AttackContext(transform.position, Vector2.down, LayerMask.NameToLayer("Cat"));
+            _targetLayerMask = LayerMask.GetMask("Cat");
         }
         
         private void FixedUpdate()
         {
-            if (!Entity.Attack.IsEnemyInRange(_context))
+            var context = new AttackContext(transform.position, Vector2.down, _targetLayerMask);
+            
+            if (!Entity.Attack.IsEnemyInRange(context))
             {
                 _rigidbody2D.linearVelocity = _mouseEntity.Speed * Vector2.down;
             }
@@ -36,7 +38,7 @@ namespace Code
                 _timer += Time.fixedDeltaTime;
                 if (_timer < Entity.AttackSpeed) return;
                 
-                Entity.Attack.Hit(_context);
+                Entity.Attack.Hit(context);
                 _timer= 0;
             }
         }

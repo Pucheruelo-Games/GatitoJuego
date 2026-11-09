@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651336c189a164418224bbb828b0d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Raton
-  _skin: {fileID: 6877857591525584898}
+  spriteRenderer: {fileID: 6877857591525584898}
 --- !u!61 &347784072850423495
 BoxCollider2D:
   m_ObjectHideFlags: 0

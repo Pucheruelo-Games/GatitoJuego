@@ -6,7 +6,7 @@ namespace Code
     {
         [SerializeField] protected SpriteRenderer spriteRenderer;
         protected Entity Entity;
-        protected uint CurrentHealth;
+        protected int CurrentHealth;
         
         public void Init(Entity entity)
         {
@@ -18,7 +18,7 @@ namespace Code
         
         protected abstract void OnInit();
         
-        public void TakeDamage(uint damage)
+        public void TakeDamage(int damage)
         {
             CurrentHealth -= damage;
             if( CurrentHealth <= 0)

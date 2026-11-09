@@ -1,62 +1,61 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+namespace Code
 {
-    [SerializeField] private float _vel = 5f;
-    [SerializeField] private float _velDisp = 5f;
-    [SerializeField] InputActionReference _mover;
-    [SerializeField] float _maxI = -2.75f;
-    [SerializeField] float _maxD = 2.75f;
-    [SerializeField] GameObject _prefabDisp;
-    private Rigidbody2D _rb;
-    private Coroutine _disparar;
+    public class PlayerMovement : MonoBehaviour
+    {
+        [SerializeField] private float speed = 5f;
+        [SerializeField] private float attackSpeed = 5f;
+        [SerializeField] InputActionReference move;
+        [SerializeField] float maxDistanceLeft = -2.75f;
+        [SerializeField] float maxDistanceRight = 2.75f;
+        [SerializeField] Attack attack;
+        private Rigidbody2D _rigidbody2D;
+        private LayerMask _targetLayerMask;
+        private float _attackCooldown;
 
-    private void Awake()
-    {
-        _rb = GetComponent<Rigidbody2D>();
-    }
-    private void OnEnable()
-    {
-        _mover.action.Enable();
-        if (_disparar != null)
+        private void Awake()
         {
-            StopCoroutine(_disparar);
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+            Debug.Assert(_rigidbody2D,$"{this} Rigidbody2D object not found");
+            _targetLayerMask =  LayerMask.GetMask("Mouse");
         }
-        _disparar = StartCoroutine(Atacar());   
-    }
-    private void OnDisable()
-    {
-        _mover.action.Disable();
-        if (_disparar != null)
+        private void OnEnable()
         {
-            StopCoroutine(_disparar);
-            _disparar = null;
+            move.action.Enable();
         }
-    }
-    private void Update()
-    {
-        float timer = Time.deltaTime;
-        float dir = _mover.action.ReadValue<Vector2>().x;
-        float pos = transform.position.x;
+        private void OnDisable()
+        {
+            move.action.Disable();
+        }
+        private void Update()
+        {
+            float timer = Time.deltaTime;
+            float dir = move.action.ReadValue<Vector2>().x;
+            float pos = transform.position.x;
 
-        if ((pos <= _maxI &&dir<0)||(  pos >= _maxD&&dir>0))
-        {
-            dir = 0;
-        }
-        _rb.linearVelocityX = dir * _vel;
+            if ((pos <= maxDistanceLeft &&dir<0)||(  pos >= maxDistanceRight&&dir>0))
+            {
+                dir = 0;
+            }
+            _rigidbody2D.linearVelocityX = dir * speed;
         
-    }
-    private IEnumerator Atacar()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(_velDisp);
-            Instantiate(_prefabDisp, transform.position, Quaternion.identity);
         }
-        
+
+        private void FixedUpdate()
+        {
+            var context = new AttackContext(transform.position, Vector2.up, _targetLayerMask);
+            _attackCooldown += Time.fixedDeltaTime;
+            if (_attackCooldown > attackSpeed)
+            {
+                attack.Hit(context);
+                _attackCooldown = 0;
+            }
+        }
     }
 }
