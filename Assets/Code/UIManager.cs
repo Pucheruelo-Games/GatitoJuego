@@ -20,14 +20,14 @@ namespace Code
             _mesa.OnHealthChange += ActualizarVida;
             GameManager.Instance.OnCoinsChange += ActualizarMonedas;
             GameManager.Instance.OnRoundChange += ActualizarRonda;
-            _roundManager.CuentaCambio += CuentaAtras;
+            _roundManager.PauseTimerChanged += CuentaAtras;
         }
         private void OnDisable()
         {
             _mesa.OnHealthChange -= ActualizarVida;
             GameManager.Instance.OnCoinsChange -= ActualizarMonedas;
             GameManager.Instance.OnRoundChange -= ActualizarRonda;
-            _roundManager.CuentaCambio -= CuentaAtras;
+            _roundManager.PauseTimerChanged -= CuentaAtras;
 
         }
         private void CuentaAtras(String num)
