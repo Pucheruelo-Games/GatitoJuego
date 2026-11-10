@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4393c2f7bfa6b514b8b2ada5a56c816b
+guid: d3c44cab942a69547aab00538ad113c2
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -8,15 +8,6 @@ TextureImporter:
   - first:
       213: -3274167162619842268
     second: Ratones_1
-  - first:
-      213: 5484801481006534047
-    second: Ratones_2
-  - first:
-      213: -5284597068077120306
-    second: Ratones_3
-  - first:
-      213: -4855444434869341007
-    second: Ratones_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 18
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,12 +106,12 @@ TextureImporter:
       name: Ratones_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 131
-        width: 24
-        height: 24
+        x: 0
+        y: 129
+        width: 156
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,10 +128,10 @@ TextureImporter:
       name: Ratones_1
       rect:
         serializedVersion: 2
-        x: 53
-        y: 131
-        width: 24
-        height: 24
+        x: 0
+        y: 0
+        width: 27
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,55 +146,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Ratones_2
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 131
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1d84cac361fad04ab33d2ef859886ab
-      internalID: 5484801481006534047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ratones_3
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 131
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7b266553d99a7244bcdc585709e5912
-      internalID: -5284597068077120306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e6da8911725115243b6ba1534205e02a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -215,9 +162,6 @@ TextureImporter:
     nameFileIdTable:
       Ratones_0: -5149744388904727079
       Ratones_1: -3274167162619842268
-      Ratones_2: 5484801481006534047
-      Ratones_3: -5284597068077120306
-      Ratones_4: -4855444434869341007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
