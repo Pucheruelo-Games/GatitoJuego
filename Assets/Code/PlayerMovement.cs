@@ -49,7 +49,7 @@ namespace Code
 
         private void FixedUpdate()
         {
-            var context = new AttackContext(transform.position, Vector2.up, _targetLayerMask);
+            var context = new AttackContext(transform.position, Vector2.up, _targetLayerMask, null);
             _attackCooldown += Time.fixedDeltaTime;
             if (_attackCooldown > attackSpeed)
             {

@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70c696484eef244ea70677d5d445404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  _health: 10
 --- !u!1001 &24383433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6059,6 +6060,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 83ca08dd67b3d574fa919a8a10eb3923, type: 2}
   - {fileID: 11400000, guid: 79deade7a1642114d87da623ebc0198b, type: 2}
   - {fileID: 11400000, guid: 76848836328b70641aba29d618441781, type: 2}
+  - {fileID: 11400000, guid: 0ebdf61bcb713b74f87b0cfac258bd9d, type: 2}
+  - {fileID: 11400000, guid: e56c4dfb44289cd4bb79d4d9a25dff8d, type: 2}
   _spawners:
   - {fileID: 2135075601}
   - {fileID: 1999607776}
@@ -7333,7 +7336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6629257ac63ea46a5d1d86e4ccfe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mesa
-  health: 10
 --- !u!50 &2003549600
 Rigidbody2D:
   serializedVersion: 5

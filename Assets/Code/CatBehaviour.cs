@@ -11,7 +11,7 @@ namespace Code
 
         protected override void OnInit()
         {
-            _context = new AttackContext(transform.position, Vector3.up, LayerMask.NameToLayer("Mouse"));
+            _context = new AttackContext(transform.position, Vector3.up, LayerMask.NameToLayer("Mouse"), this);
         }
 
         protected override void OnDeath()
