@@ -20,4 +20,4 @@ MonoBehaviour:
   height: 1
   speed: 0.2
   reward: 4
-  difficulty: 1
+  difficulty: 2

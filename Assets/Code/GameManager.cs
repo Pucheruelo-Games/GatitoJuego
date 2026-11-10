@@ -1,3 +1,4 @@
+using Code;
 using System;
 using UnityEngine;
 
@@ -8,11 +9,14 @@ public class GameManager : MonoBehaviour
 
     private int _round = 0;
     public int Round => _round;
+    [SerializeField] private int _health = 10;
+    public int Health { get => _health; set { _health = value; }}
     public void NextRound()
     {
         _round++;
         OnRoundChange.Invoke();
     }
+    
     private void Awake()
     {
         if (Instance) Destroy(gameObject);
@@ -32,4 +36,5 @@ public class GameManager : MonoBehaviour
     }
     public event Action<int> OnCoinsChange = delegate { };
     public event Action OnRoundChange = delegate { };
+
 }

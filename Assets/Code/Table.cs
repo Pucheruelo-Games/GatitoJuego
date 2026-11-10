@@ -5,17 +5,15 @@ namespace Code
 {
     public class Table : MonoBehaviour, IDamageable
     {
-        [SerializeField] private int health = 10;
-
         public event Action<int> OnHealthChange;
         private void Start()
         {
-            OnHealthChange?.Invoke(health);
+            OnHealthChange?.Invoke(GameManager.Instance.Health);
         }
         public void TakeDamage(int damage)
         {
-            health -= damage;
-            OnHealthChange?.Invoke(health);
+            GameManager.Instance.Health -= damage;
+            OnHealthChange?.Invoke(GameManager.Instance.Health);
         }
     }
 

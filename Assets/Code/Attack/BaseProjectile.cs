@@ -44,6 +44,7 @@ namespace Code
             if (!other.TryGetComponent(out IDamageable damageable)) return;
             if ((_targetLayerMask.value & (1 << other.gameObject.layer)) == 0) return;
 
+            
             damageable.TakeDamage(_damage);
             Despawn();
         }
