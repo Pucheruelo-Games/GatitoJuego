@@ -10,5 +10,7 @@ namespace Code
         public int Cost => cost;
         [SerializeField] private float cooldown;
         public float Cooldown => cooldown;
+        [SerializeField] private string displayname;
+        public string DisplayName => displayname;
     }
 }

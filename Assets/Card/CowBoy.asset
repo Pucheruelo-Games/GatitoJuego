@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b60c45c8bd4b33bb5f912126ab3495, type: 3}
   m_Name: CowBoy
   m_EditorClassIdentifier: Assembly-CSharp::Code.CatCard
-  icon: {fileID: 0}
-  cost: 0
-  cooldown: 0
-  cat: {fileID: 0}
+  icon: {fileID: 21300000, guid: 2d3371aa1a6b47944800f752601d5622, type: 3}
+  cost: 2
+  cooldown: 10
+  displayname: CowBoy
+  cat: {fileID: 11400000, guid: 0b7e8a71246d0ee4b9299bd7b9effc57, type: 2}
