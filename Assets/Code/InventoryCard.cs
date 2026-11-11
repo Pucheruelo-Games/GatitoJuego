@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Code
@@ -25,7 +26,6 @@ namespace Code
         {
             if (InputManager.Instance.Actions.Player.Click.WasPerformedThisFrame())
             {
-                
             }
         }
     }
