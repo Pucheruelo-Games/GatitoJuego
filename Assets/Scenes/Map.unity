@@ -6103,11 +6103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a347b51773b3d3543b7dfb430776b314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerEnemigos
-  _prefab: {fileID: 6636535001878114660, guid: 24e5fc6a064006d428bdaa3ff22e6e56, type: 3}
+  _prefab: {fileID: 0}
   _tipos:
   - {fileID: 11400000, guid: 83ca08dd67b3d574fa919a8a10eb3923, type: 2}
-  - {fileID: 11400000, guid: 79deade7a1642114d87da623ebc0198b, type: 2}
   - {fileID: 11400000, guid: 76848836328b70641aba29d618441781, type: 2}
+  - {fileID: 11400000, guid: 79deade7a1642114d87da623ebc0198b, type: 2}
   _spawners:
   - {fileID: 2135075601}
   - {fileID: 1999607776}
