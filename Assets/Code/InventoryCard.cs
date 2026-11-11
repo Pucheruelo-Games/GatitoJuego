@@ -24,8 +24,9 @@ namespace Code
 
         private void Update()
         {
-            if (InputManager.Instance.Actions.Player.Click.WasPerformedThisFrame())
+            if (InputManager.Instance.Actions.Player.Click.WasReleasedThisFrame())
             {
+                
             }
         }
     }
