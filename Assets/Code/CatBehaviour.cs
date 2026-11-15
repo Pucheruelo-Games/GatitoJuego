@@ -1,33 +1,58 @@
+using System;
 using System.Threading;
 using Code;
 using UnityEngine;
 
 namespace Code
 {
-    public class CatBehaviour : EntityBehaviour
+    [RequireComponent(typeof(Attack))]
+    public class CatBehaviour : MonoBehaviour, IDamageable
     {
+        public AttackTag AttackTag => AttackTag.Cat;
+        [SerializeField] private float health;
+        [SerializeField] private float attackSpeed;
+        [SerializeField] private Attack attack;
+        [SerializeField] private Animator animator;
         private float _timer;
-        private AttackContext _context;
+        private Tile[] _tiles;
 
-        protected override void OnInit()
+        public void Init(params Tile[] tiles)
         {
-            _context = new AttackContext(transform.position, Vector3.up, LayerMask.NameToLayer("Mouse"));
+            var position = Vector3.zero;
+            _tiles = tiles;
+            foreach (var tile in _tiles)
+            {
+                tile.Cat = this;
+                position += tile.transform.position;
+            }
+            position /= _tiles.Length;
+            position.y += 0.2f;
+            transform.position = position;
         }
 
-        protected override void OnDeath()
+        private void FixedUpdate()
         {
-            Destroy(gameObject);
+            if (attack.IsEnemyInRange())
+            {
+                _timer += Time.fixedDeltaTime;
+                if (_timer >= attackSpeed)
+                {
+                    _timer -= attackSpeed;
+                    attack.Perform();
+                }
+            }
+        }
+
+        public void TakeDamage(int damage)
+        {
+            health -= damage;
+            if (health <= 0) Die();
         }
         
-        private void Update()
+        private void Die()
         {
-            _timer += Time.deltaTime;
-
-            if (_timer < Entity.AttackSpeed) return;
-            if (!Entity.Attack.IsEnemyInRange(_context, out IDamageable a)) return;
-        
-            Entity.Attack.Hit(_context);
-            _timer = 0;
+            foreach (var tile in _tiles) tile.Cat = null;
+            Destroy(this.gameObject);
         }
     }
 }

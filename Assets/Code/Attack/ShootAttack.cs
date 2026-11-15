@@ -1,38 +1,38 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Code
 {
-    [CreateAssetMenu(fileName = "ShootAttack", menuName = "Attack/ShootAttack", order = 0)]
     public class ShootAttack : Attack
     {
-        [SerializeField] BaseProjectile projectile;
-        [SerializeField] private int damage;
-        [SerializeField] private float velocity;
-        [SerializeField] private float range;
-        [SerializeField] private Sprite sprite;
+        [SerializeField] private BaseProjectile projectile;
+        [SerializeField] private Vector2 direction;
+        [SerializeField] private Transform origin;
         
-        public override bool IsEnemyInRange(AttackContext context, out IDamageable target)
+        public override bool IsEnemyInRange(out IDamageable target)
         {
-            var hit = Physics2D.Raycast(context.SourcePosition, context.Direction, range, context.TargetLayerMask);
-            if (!hit)
+            foreach (var hit in Physics2D.RaycastAll(origin.position, direction, projectile.Range))
             {
-                target = null;
-                return false;
+                if (hit.collider.TryGetComponent(out IDamageable damageable) && damageable.AttackTag == TargetTag)
+                {
+                    target = damageable;
+                    return true;
+                }
             }
-            if (hit.collider.TryGetComponent(out IDamageable damageable))
-            {
-                target = damageable;
-                return true;
-            }
-
             target = null;
             return false;
         }
-        public override void Hit(AttackContext context)
+
+        public override void Perform()
         {
-            var newProjectile = Instantiate(projectile, context.SourcePosition, Quaternion.identity);
-            newProjectile.Init(context.Direction, damage, velocity, range, context.TargetLayerMask, sprite);
-        }   
+            var newProjectile = Instantiate(projectile);
+            newProjectile.transform.position = origin.position;
+            newProjectile.Init(direction, TargetTag);
+        }
+        
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(origin.position, direction * projectile.Range);
+        }
     }
 }

@@ -1,16 +1,13 @@
 using System;
 using System.Collections;
 using Code;
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Serialization;
-using System.Collections.Generic;
 using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] MouseBehaviour _prefab;
-    [SerializeField] MouseData[] _tipos;
+    [SerializeField] MouseBehaviour[] prefabs;
     [SerializeField] GameObject[] _spawners;
     private int _spawneados;
     [SerializeField] float _intervalo = 4;
@@ -19,7 +16,6 @@ public class EnemySpawner : MonoBehaviour
     public Action<string> CuentaCambio;
     int _enemRonda = 8;
     private int _tiempo;
-    List<MouseData> PosiblesSpawned = new();
     private void Awake()
     {
         _tiempo = _tiempoPausa;
@@ -45,23 +41,11 @@ public class EnemySpawner : MonoBehaviour
             
         }
         CuentaCambio?.Invoke("YA!");
-        GenerarPosiblesEnemigos();
         yield return new WaitForSeconds(1f);
         CuentaCambio?.Invoke(_tiempo.ToString());
 
         _tiempo = _tiempoPausa;
         EmpezarRonda();
-    }
-    private void GenerarPosiblesEnemigos()
-    {
-        PosiblesSpawned.Clear();
-        for (int i = 0; i < _tipos.Length; i++)
-        {
-            if (_tipos[i].Difficulty <= _ronda)
-            {
-                PosiblesSpawned.Add(_tipos[i]);
-            }
-        }
     }
 
     private void TransicionTienda()
@@ -80,7 +64,6 @@ public class EnemySpawner : MonoBehaviour
     }
     private void CambiarRonda()
     {
-        
         GameManager.Instance.NextRound();
         TransicionTienda();
         StartCoroutine(CuentaAtras());
@@ -96,12 +79,10 @@ public class EnemySpawner : MonoBehaviour
 
             int carril = Random.Range(0, 6);
             Vector2 spawner = _spawners[carril].transform.position;
-           
-            MouseBehaviour r = Instantiate(_prefab, spawner, Quaternion.identity);
-
-            r.Init(PosiblesSpawned[Random.Range(0, PosiblesSpawned.Count)]);
+            MouseBehaviour r = Instantiate(prefabs[Random.Range(0,prefabs.Length)], spawner, Quaternion.identity);
+            
             _spawneados++;
-            r.OnEntityDeath += RatonMuelto;
+            r.OnDeath += OnMouseDeath;
             Debug.Log("Ha spawneado una rata");
             cantidad--;
         }
@@ -110,12 +91,9 @@ public class EnemySpawner : MonoBehaviour
         CambiarRonda();
     }
 
-    private bool TodosMuertos()
-    {
-        return _spawneados <= 0;
-    }
+    private bool TodosMuertos() => _spawneados <= 0;
 
-    private void RatonMuelto()
+    private void OnMouseDeath()
     {
         _spawneados--;
     }

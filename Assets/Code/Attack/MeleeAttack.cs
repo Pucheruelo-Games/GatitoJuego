@@ -1,33 +1,39 @@
+using System;
 using UnityEngine;
 
 namespace Code
 {
-    [CreateAssetMenu(fileName = "MeleeAttack", menuName = "Attack/MeleeAttack", order = 0)]
     public class MeleeAttack : Attack
     {
+        [SerializeField] private Vector2 direction;
         [SerializeField] private int damage;
+        [SerializeField] private Transform origin;
+        [SerializeField] private float range;
         
-        public override bool IsEnemyInRange(AttackContext context, out IDamageable target)
+        public override bool IsEnemyInRange(out IDamageable target)
         {
-            var hit = Physics2D.Raycast(context.SourcePosition, context.Direction, 1, context.TargetLayerMask);
-            if (!hit)
+            foreach (var hit in Physics2D.RaycastAll(origin.position, direction, range))
             {
-                target = null;
-                return false;
+                if (hit.collider.TryGetComponent(out IDamageable damageable) && damageable.AttackTag == TargetTag)
+                {
+                    target = damageable;
+                    return true;
+                }
             }
-            if (hit.collider.TryGetComponent(out IDamageable damageable))
-            {
-                target = damageable;
-                return true;
-            }
-
             target = null;
             return false;
         }
-        public override void Hit(AttackContext context)
+
+        public override void Perform()
         {
-            if (IsEnemyInRange(context, out var target))
+            if (IsEnemyInRange(out IDamageable target))
                 target.TakeDamage(damage);
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(origin.position, direction * range);
         }
     }
 }

@@ -111,6 +111,15 @@ namespace Code
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Position"",
+                    ""type"": ""Value"",
+                    ""id"": ""fd5791f2-9f73-4b72-b1cd-5051fe4d8ff5"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -267,6 +276,28 @@ namespace Code
                     ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3e98d680-9d3f-4d62-a030-84bf8dfd2e05"",
+                    ""path"": ""<Touchscreen>/primaryTouch/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Position"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5bc600b5-abcd-44cc-9b04-99e9d5007a9c"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Position"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -338,6 +369,7 @@ namespace Code
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
             m_Player_Click = m_Player.FindAction("Click", throwIfNotFound: true);
+            m_Player_Position = m_Player.FindAction("Position", throwIfNotFound: true);
         }
 
         ~@InputActions()
@@ -420,6 +452,7 @@ namespace Code
         private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
         private readonly InputAction m_Player_Move;
         private readonly InputAction m_Player_Click;
+        private readonly InputAction m_Player_Position;
         /// <summary>
         /// Provides access to input actions defined in input action map "Player".
         /// </summary>
@@ -439,6 +472,10 @@ namespace Code
             /// Provides access to the underlying input action "Player/Click".
             /// </summary>
             public InputAction @Click => m_Wrapper.m_Player_Click;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/Position".
+            /// </summary>
+            public InputAction @Position => m_Wrapper.m_Player_Position;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -471,6 +508,9 @@ namespace Code
                 @Click.started += instance.OnClick;
                 @Click.performed += instance.OnClick;
                 @Click.canceled += instance.OnClick;
+                @Position.started += instance.OnPosition;
+                @Position.performed += instance.OnPosition;
+                @Position.canceled += instance.OnPosition;
             }
 
             /// <summary>
@@ -488,6 +528,9 @@ namespace Code
                 @Click.started -= instance.OnClick;
                 @Click.performed -= instance.OnClick;
                 @Click.canceled -= instance.OnClick;
+                @Position.started -= instance.OnPosition;
+                @Position.performed -= instance.OnPosition;
+                @Position.canceled -= instance.OnPosition;
             }
 
             /// <summary>
@@ -607,6 +650,13 @@ namespace Code
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnClick(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Position" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnPosition(InputAction.CallbackContext context);
         }
     }
 }

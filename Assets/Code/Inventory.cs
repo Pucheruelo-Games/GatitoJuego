@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 namespace Code
 {
     public class Inventory : MonoBehaviour
     {
+        [SerializeField] private SpriteRenderer cardPreview;
         [SerializeField] private InventoryCard cardPrefab;
         [SerializeField] private RectTransform cardContainer;
         [SerializeField] private int cardSlots;
@@ -42,10 +44,47 @@ namespace Code
 
         private void Update()
         {
+            if (InputManager.Instance.Player.Click.WasPressedThisFrame() && GetPointedCard(out var card))
+            {
+                _carriedCard = card;
+            }
+            
             if (_carriedCard)
             {
-                _carriedCard.transform.position = Mouse.current.position.ReadValue();
+                var position = InputManager.Instance.Player.Position.ReadValue<Vector2>();
+                var worldPos = Camera.main.ScreenToWorldPoint(position) * Vector2.one;
+                _carriedCard.VisualRect.position = position;
+                _carriedCard.OnCarriedUpdate(worldPos, cardPreview);
+                
+                if (InputManager.Instance.Player.Click.WasReleasedThisFrame() && _carriedCard)
+                {
+                    _carriedCard.OnCardDrop(worldPos);
+                    cardPreview.gameObject.SetActive(false);
+                    _carriedCard.VisualRect.gameObject.SetActive(true);
+                    _carriedCard.VisualRect.localPosition = Vector3.zero;
+                    _carriedCard = null;
+                }
             }
+        }
+        
+        private static bool GetPointedCard(out InventoryCard card)
+        {
+            var eventData = new PointerEventData(EventSystem.current);
+            eventData.position = InputManager.Instance.Player.Position.ReadValue<Vector2>();
+            List<RaycastResult> result = new();
+            EventSystem.current.RaycastAll(eventData, result);
+            foreach (var hit in result)
+            {
+                print(hit.gameObject.name);
+                if (!hit.gameObject.TryGetComponent(out InventoryCard c))
+                    continue;
+                
+                card = c;
+                return true;
+            }
+
+            card = null;
+            return false;
         }
 
         private void Start()

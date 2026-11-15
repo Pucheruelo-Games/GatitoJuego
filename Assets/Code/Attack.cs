@@ -2,11 +2,11 @@ using UnityEngine;
 
 namespace Code
 {
-    public abstract class Attack : ScriptableObject
+    public abstract class Attack : MonoBehaviour
     {
-        public abstract void Hit(AttackContext attackContext);
-
-        public bool IsEnemyInRange(AttackContext attackContext) => IsEnemyInRange(attackContext, out var target);
-        public abstract bool IsEnemyInRange(AttackContext attackContext, out IDamageable target);
+        [field:SerializeField] protected AttackTag TargetTag { get; private set; }
+        public abstract bool IsEnemyInRange(out IDamageable target);
+        public bool IsEnemyInRange() => IsEnemyInRange(out IDamageable target);
+        public abstract void Perform();
     }
 }
