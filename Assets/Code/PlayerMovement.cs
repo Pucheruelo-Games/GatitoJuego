@@ -24,6 +24,7 @@ namespace Code
         }
         private void Update()
         {
+            if (Inventory.Instance.CarriedCard) return;
             var dir = InputManager.Instance.Player.Move.ReadValue<Vector2>().x;
             var pos = transform.position.x;
 
@@ -37,10 +38,10 @@ namespace Code
         private void FixedUpdate()
         {
             _attackCooldown += Time.fixedDeltaTime;
-            if (_attackCooldown > attackSpeed)
+            if (_attackCooldown > attackSpeed && attack.IsEnemyInRange())
             {
                 attack.Perform();
-                _attackCooldown -= attackSpeed;
+                _attackCooldown = 0f;
             }
         }
     }

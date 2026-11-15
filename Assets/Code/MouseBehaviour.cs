@@ -55,8 +55,15 @@ namespace Code
             _dead = true;
             OnDeath?.Invoke();
             GameManager.Instance.Coins += reward;
-            Destroy(GetComponent<Collider2D>());
-            Destroy(this.gameObject,2);
+            if (animator)
+            {
+                Destroy(GetComponent<Collider2D>()); 
+                Destroy(this.gameObject, 2);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
