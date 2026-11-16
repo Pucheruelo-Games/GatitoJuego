@@ -2051,6 +2051,7 @@ MonoBehaviour:
   cardSlots: 6
   startCards:
   - {fileID: 11400000, guid: 55e50379549f4ce4789c79450e9b9db2, type: 2}
+  - {fileID: 11400000, guid: 230218d32585e6e4aa6d8d63a203abd7, type: 2}
 --- !u!4 &644300617
 Transform:
   m_ObjectHideFlags: 0

@@ -28,11 +28,19 @@ namespace Code
             var dir = InputManager.Instance.Player.Move.ReadValue<Vector2>().x;
             var pos = transform.position.x;
 
-            if ((pos <= maxDistanceLeft && dir < 0) || ( pos >= maxDistanceRight && dir > 0))
+            if (pos <= maxDistanceLeft && dir < 0)
             {
-                dir = 0;
+                transform.position = new Vector3(maxDistanceLeft, transform.position.y, transform.position.z);
             }
-            _rigidbody2D.linearVelocityX = dir * speed;
+            else if (pos >= maxDistanceRight && dir > 0)
+            {
+                transform.position = new Vector3(maxDistanceRight, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                _rigidbody2D.linearVelocityX = dir * speed;
+            }
+            
         }
 
         private void FixedUpdate()
