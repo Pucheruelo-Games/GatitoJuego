@@ -56,6 +56,7 @@ MonoBehaviour:
   attack: {fileID: 4331545656230452655}
   animator: {fileID: 1817989913249787967}
   rigidbody2D: {fileID: 1153347623361214546}
+  difficulty: 1
 --- !u!114 &4331545656230452655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +250,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5149744388904727079, guid: 4393c2f7bfa6b514b8b2ada5a56c816b, type: 3}
+  m_Sprite: {fileID: -3274167162619842268, guid: 4393c2f7bfa6b514b8b2ada5a56c816b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

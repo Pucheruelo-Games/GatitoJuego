@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Code
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class MouseBehaviour : MonoBehaviour, IDamageable
+    public class MouseBehaviour : MonoBehaviour, IDamageable, IComparable<MouseBehaviour>
     {
         public AttackTag AttackTag => AttackTag.Mouse;
         [SerializeField] private float health;
@@ -14,6 +14,8 @@ namespace Code
         [SerializeField] private Attack attack;
         [SerializeField] private Animator animator;
         [SerializeField] private Rigidbody2D rigidbody2D;
+        [SerializeField] private int difficulty;
+        public int Difficulty => difficulty;
         private bool _dead;
         private float _timer;
         private LayerMask _targetLayerMask;
@@ -64,6 +66,11 @@ namespace Code
             {
                 Destroy(gameObject);
             }
+        }
+
+        public int CompareTo(MouseBehaviour other)
+        {
+            return other.difficulty.CompareTo(difficulty);
         }
     }
 }

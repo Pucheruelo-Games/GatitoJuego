@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4149455633675506791, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  m_Sprite: {fileID: -7154950045172618049, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,6 +138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b246ad41be194fc40ac2fea6442baa05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.BaseProjectile
+  damage: 0
+  velocity: 0
+  range: 0
+  rigidbody2D: {fileID: 0}
 --- !u!61 &4692912786222150708
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4331545656230452655}
   - component: {fileID: 347784072850423495}
   - component: {fileID: 1153347623361214546}
+  - component: {fileID: 8335132272627175215}
   m_Layer: 7
   m_Name: SkateBoardMouse
   m_TagString: Untagged
@@ -53,8 +54,9 @@ MonoBehaviour:
   moveSpeed: 1.3
   reward: 2
   attack: {fileID: 4331545656230452655}
-  animator: {fileID: 0}
+  animator: {fileID: 8335132272627175215}
   rigidbody2D: {fileID: 1153347623361214546}
+  difficulty: 3
 --- !u!114 &4331545656230452655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +147,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &8335132272627175215
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15638756225623962}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81734c85aff51df44bb0971b14f74ca1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6812786580221443480
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +250,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5284597068077120306, guid: 4393c2f7bfa6b514b8b2ada5a56c816b, type: 3}
+  m_Sprite: {fileID: 1190826923, guid: 4393c2f7bfa6b514b8b2ada5a56c816b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

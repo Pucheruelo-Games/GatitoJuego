@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 30
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2198068573293541188, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  m_Sprite: {fileID: -7154950045172618049, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,8 +142,6 @@ MonoBehaviour:
   velocity: 5
   range: 10
   rigidbody2D: {fileID: 1653487694094783842}
-  spriteRenderer: {fileID: 7913647177626473907}
-  boxCollider2D: {fileID: 4692912786222150708}
 --- !u!61 &4692912786222150708
 BoxCollider2D:
   m_ObjectHideFlags: 0
