@@ -8,6 +8,7 @@ namespace Code
         [SerializeField] private int damage;
         [SerializeField] private float velocity;
         [SerializeField] private float range;
+        public int Damage => damage;
         public float Range => range;
         [SerializeField] private Rigidbody2D rigidbody2D;
         private Vector2 _initialPosition;

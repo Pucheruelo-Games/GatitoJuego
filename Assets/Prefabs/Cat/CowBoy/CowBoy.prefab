@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9228a0c3bae3954f935cad5152d130f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gato
-  health: 12
-  attackSpeed: 4
+  health: 5
+  attackSpeed: 3.5
   attack: {fileID: 2645387813991624404}
   animator: {fileID: 0}
 --- !u!61 &7898750176576649046

@@ -10,6 +10,7 @@ namespace Code
         [SerializeField] private Transform origin;
         [SerializeField] private float range;
         [SerializeField] private float ExplosionRadius;
+
         
         public override bool IsEnemyInRange(out IDamageable target)
         {
@@ -37,7 +38,10 @@ namespace Code
                     }
                 }
             }
-            Destroy(this.gameObject);
+            if(this.TryGetComponent(out MouseBehaviour mouseBehaviour))
+            {
+                mouseBehaviour.TakeDamage(999999);
+            }
                 
         }
     }

@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Raton
   health: 10
-  attackSpeed: 1
+  attackSpeed: 1.2
   moveSpeed: 0.2
   reward: 3
   attack: {fileID: 4331545656230452655}
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.MeleeAttack
   <TargetTag>k__BackingField: 0
   direction: {x: 0, y: -1}
-  damage: 2
+  damage: 3
   origin: {fileID: 4322703690070839394}
   range: 0.5
 --- !u!61 &347784072850423495

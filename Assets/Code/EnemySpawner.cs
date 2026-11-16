@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int _tiempoPausa;
     private int _ronda;
     public Action<string> CuentaCambio;
-    int _enemRonda = 8;
+    int _enemRonda = 6;
     private int _tiempo;
     private System.Collections.Generic.List<MouseBehaviour> _ratonesSpawneables = new System.Collections.Generic.List<MouseBehaviour>();
     private void Awake()
