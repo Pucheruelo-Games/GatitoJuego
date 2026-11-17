@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bomb
   m_EditorClassIdentifier: Assembly-CSharp::Code.SpellCard
   icon: {fileID: 21300000, guid: 7968a3f0ee594c14a8ddb01df0bd0fe4, type: 3}
-  cost: 4
-  cooldown: 20
+  cost: 0
+  cooldown: 3
   displayname: Bomb
-  action: {fileID: 0}
+  spell: {fileID: 3195143326174965144, guid: be5904afefd2c9845bf34529b1d0e828, type: 3}

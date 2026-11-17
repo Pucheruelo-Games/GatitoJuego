@@ -59,6 +59,10 @@ namespace Code
                         
                         preview.color = newColor;
                     }
+                    else
+                    {
+                        _card.Preview.GeneratePreview(preview, tile);
+                    }
 
                     if (tile.Cat == null) ;
 
@@ -84,7 +88,11 @@ namespace Code
                         if (tile.Cat) return;
                         var cat = Instantiate(catCard.Cat);
                         cat.Init(tile);
-                        
+                    }
+                    else if (_card is SpellCard spellCard)
+                    {
+                        var spell = Instantiate(spellCard.Spell);
+                        spell.Cast(tile);
                     }
                     
                     GameManager.Instance.Coins -= _card.Cost;

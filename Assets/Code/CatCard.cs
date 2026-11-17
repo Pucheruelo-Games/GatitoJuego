@@ -13,5 +13,6 @@ namespace Code
         public CatBehaviour Cat => cat;
         [SerializeField] private Sprite preview;
         public Sprite Preview => preview;
+        protected override IPreviewable _preview => null;
     }
 }
