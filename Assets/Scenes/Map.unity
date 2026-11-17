@@ -2053,6 +2053,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 55e50379549f4ce4789c79450e9b9db2, type: 2}
   - {fileID: 11400000, guid: 0f1477231cd5e134e9573972e517e4e9, type: 2}
   - {fileID: 11400000, guid: 1103d6cacf44cc74489ca01a62f89032, type: 2}
+  - {fileID: 11400000, guid: 12be596081a39844ba1725c3ecf0fba0, type: 2}
+  - {fileID: 11400000, guid: e832b9291d1101c4a90d31e45d0460d0, type: 2}
 --- !u!4 &644300617
 Transform:
   m_ObjectHideFlags: 0
@@ -5753,6 +5755,7 @@ MonoBehaviour:
   - {fileID: 6636535001878114660, guid: 66eb0f6e56d3c344bbf8fbcc2fa4ecae, type: 3}
   - {fileID: 6636535001878114660, guid: 3f9247ec71080dd4f8e2dda023a855df, type: 3}
   - {fileID: 6636535001878114660, guid: 00e29da439cc04c40abd8249619e76ea, type: 3}
+  - {fileID: 6636535001878114660, guid: b9d73ca9cf570bb4d9eb6d3398c92abf, type: 3}
   _spawners:
   - {fileID: 2135075601}
   - {fileID: 1999607776}

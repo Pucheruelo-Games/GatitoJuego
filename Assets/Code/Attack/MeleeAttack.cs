@@ -9,7 +9,8 @@ namespace Code
         [SerializeField] private int damage;
         [SerializeField] private Transform origin;
         [SerializeField] private float range;
-        
+        [SerializeField] private Effect[] effects;
+
         public override bool IsEnemyInRange(out IDamageable target)
         {
             foreach (var hit in Physics2D.RaycastAll(origin.position, direction, range))
@@ -27,7 +28,7 @@ namespace Code
         public override void Perform()
         {
             if (IsEnemyInRange(out IDamageable target))
-                target.TakeDamage(damage);
+                target.TakeDamage(damage, effects);
         }
 
         private void OnDrawGizmos()

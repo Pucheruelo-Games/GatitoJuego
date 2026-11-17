@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Raton
   health: 6
   attackSpeed: 3
-  moveSpeed: 0.25
+  moveSpeed: 0.8
   reward: 4
   attack: {fileID: -3390734876699524419}
   animator: {fileID: 1817989913249787967}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.ShootAttack
   <TargetTag>k__BackingField: 0
-  projectile: {fileID: 2121697921538561138, guid: 2dbf12b6f7d013b4887ff5843152122a, type: 3}
+  projectile: {fileID: 2121697921538561138, guid: 1ac569fd10408934aa299f9fa633a3dd, type: 3}
   direction: {x: 0, y: -1}
   origin: {fileID: 4322703690070839394}
 --- !u!1 &6812786580221443480

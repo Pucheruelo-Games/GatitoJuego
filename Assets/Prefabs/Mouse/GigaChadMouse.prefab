@@ -49,14 +49,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651336c189a164418224bbb828b0d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Raton
-  health: 25
+  health: 20
   attackSpeed: 0.6
-  moveSpeed: 0.4
-  reward: 6
+  moveSpeed: 1.5
+  reward: 10
   attack: {fileID: 4331545656230452655}
   animator: {fileID: 7004805430496815070}
   rigidbody2D: {fileID: 1153347623361214546}
-  difficulty: 5
+  difficulty: 6
 --- !u!114 &4331545656230452655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +74,7 @@ MonoBehaviour:
   damage: 10
   origin: {fileID: 4322703690070839394}
   range: 0.5
+  effects: []
 --- !u!61 &347784072850423495
 BoxCollider2D:
   m_ObjectHideFlags: 0

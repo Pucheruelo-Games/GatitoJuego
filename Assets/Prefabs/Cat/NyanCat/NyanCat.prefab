@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247471166799921765}
   - component: {fileID: 8686921566209477612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 8655387335933335661}
   - component: {fileID: 7898750176576649046}
   - component: {fileID: 2447016817747894938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NyanCat
   m_TagString: Gato
   m_Icon: {fileID: 0}

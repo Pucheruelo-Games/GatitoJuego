@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Raton
   health: 10
   attackSpeed: 1.2
-  moveSpeed: 0.2
+  moveSpeed: 0.75
   reward: 3
   attack: {fileID: 4331545656230452655}
   animator: {fileID: 7004805430496815070}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2578394304275363255}
   - component: {fileID: 7913647177626473907}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 9183445921403438452}
   - component: {fileID: 4692912786222150708}
   - component: {fileID: 1653487694094783842}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Rainbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

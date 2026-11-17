@@ -30,9 +30,9 @@ namespace Code
         {
             if (IsEnemyInRange(out IDamageable target))
             {
-                foreach (var hit in Physics2D.CircleCastAll(origin.position, ExplosionRadius, direction))
+                foreach (var hit in Physics2D.OverlapCircleAll(origin.position, ExplosionRadius))
                 {
-                    if (hit.collider.TryGetComponent(out IDamageable damageable) && damageable.AttackTag == TargetTag)
+                    if (hit.TryGetComponent(out IDamageable damageable) && damageable.AttackTag == TargetTag)
                     {
                         damageable.TakeDamage(damage);
                     }
@@ -43,6 +43,11 @@ namespace Code
                 mouseBehaviour.TakeDamage(999999);
             }
                 
+        }
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(origin.position, ExplosionRadius);
         }
     }
 }

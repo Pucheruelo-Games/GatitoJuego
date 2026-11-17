@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: -2115447062, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
   cost: 4
   cooldown: 4
-  displayname: CapitalistCat
+  displayname: Catitalist
   width: 1
   height: 1
   cat: {fileID: 8655387335933335661, guid: 8c2ccf9970ef7c2428051d3e92a421d2, type: 3}

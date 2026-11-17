@@ -51,12 +51,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Raton
   health: 1
   attackSpeed: 0.1
-  moveSpeed: 3.5
+  moveSpeed: 15
   reward: 3
   attack: {fileID: 5381383452775463275}
   animator: {fileID: 7004805430496815070}
   rigidbody2D: {fileID: 1153347623361214546}
-  difficulty: 3
+  difficulty: 4
 --- !u!114 &5381383452775463275
 MonoBehaviour:
   m_ObjectHideFlags: 0
