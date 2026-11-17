@@ -1,6 +1,7 @@
-using System;
-using System.Threading;
 using Code;
+using System;
+using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 namespace Code
@@ -15,6 +16,8 @@ namespace Code
         [SerializeField] private Animator animator;
         private float _timer;
         private Tile[] _tiles;
+        private List<Effect> activeEffects = new List<Effect>();
+        private float _poisonTick;
 
         public void Init(params Tile[] tiles)
         {
@@ -41,14 +44,62 @@ namespace Code
                     attack.Perform();
                 }
             }
+            List<Effect> newListEff = new List<Effect>(activeEffects);
+            foreach (Effect ef in newListEff)
+            {
+                ef.duration -= Time.fixedDeltaTime;
+                if (ef.duration <= 0)
+                {
+                    activeEffects.Remove(ef);
+                }
+            }
+
+            if (HasActiveEffects(EffectType.Poison, out int lvl) && _poisonTick <= 0)
+            {
+                TakeDamage(lvl);
+                _poisonTick = 1;
+            }
+            else
+            {
+                _poisonTick -= Time.fixedDeltaTime;
+            }
         }
 
-        public void TakeDamage(int damage)
+        public void TakeDamage(int damage, Effect[] effects = null)
         {
             health -= damage;
             if (health <= 0) Die();
+            if (effects == null) return;
+            foreach (Effect ef in effects)
+            {
+                switch (ef.effectType)
+                {
+                    case (EffectType.KnockBack):
+                        Debug.Log("Un gato no puede ser knockbacked");
+                        break;
+                    case (EffectType.Poison):
+                        activeEffects.Add(new Effect(ef.effectType, ef.duration, ef.level));
+                        break;
+                    case (EffectType.Slowness):
+                        break;
+                }
+            }
+            activeEffects.Sort();
         }
-        
+        private bool HasActiveEffects(EffectType ef, out int lvl)
+        {
+            foreach (Effect efec in activeEffects)
+            {
+                if (efec.effectType == ef)
+                {
+                    lvl = efec.level;
+                    return true;
+                }
+            }
+            lvl = 0;
+            return false;
+        }
+
         private void Die()
         {
             foreach (var tile in _tiles) tile.Cat = null;

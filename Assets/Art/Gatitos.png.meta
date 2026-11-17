@@ -17,18 +17,6 @@ TextureImporter:
   - first:
       213: 402124302352054351
     second: Gatitos_4
-  - first:
-      213: 4147676707466408907
-    second: Gatitos_5
-  - first:
-      213: -4887072930176335743
-    second: Gatitos_6
-  - first:
-      213: -8031270095727454048
-    second: Gatitos_7
-  - first:
-      213: 1893899457427344705
-    second: Gatitos_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -127,10 +115,10 @@ TextureImporter:
       name: Gatitos_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 3
-        width: 26
-        height: 20
+        x: 1
+        y: 131
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,73 +134,95 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gatitos_7
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 131
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a892f046623b8090800000000000000
-      internalID: -8031270095727454048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gatitos_8
+      name: Gatitos_1
       rect:
         serializedVersion: 2
         x: 1
         y: 1
         width: 24
         height: 24
-      alignment: 9
-      pivot: {x: 0.5, y: 0.125}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14d0340b58b784a10800000000000000
-      internalID: 1893899457427344705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gatitos_9
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 79
-        width: 50
-        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f09c3ab9ba32d174f9ff66af0b68fa06
-      internalID: -1059393189
+      spriteID: 4477c17b8bb118e10800000000000000
+      internalID: 2198068573293541188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gatitos_10
+      name: Gatitos_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 2
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b278ff51c2a66c0800000000000000
+      internalID: -4149455633675506791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 14
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc22dba7d284bc90800000000000000
+      internalID: -7154950045172618049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_4
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 6
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48fe352ce1a49500800000000000000
+      internalID: 402124302352054351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_5
       rect:
         serializedVersion: 2
         x: 27
@@ -227,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3872c3f640b40748b470750101f2ca3
-      internalID: -696831763
+      spriteID: a083e942b2f0d034c83b326a44e95a7c
+      internalID: 1897224193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gatitos_11
+      name: Gatitos_6
       rect:
         serializedVersion: 2
         x: 53
@@ -249,14 +259,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a625293860404b41830f3707305922b
-      internalID: -1632076642
+      spriteID: 1db7f9d95e520ae4f9a60f8425352b7a
+      internalID: 1824484745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gatitos_12
+      name: Gatitos_7
       rect:
         serializedVersion: 2
         x: 79
@@ -271,14 +281,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91afc4b641675c54d98792e97af86ff1
-      internalID: -1590276313
+      spriteID: 65050f764cbb37d4ea9a52c328d6bd22
+      internalID: -1957878578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gatitos_13
+      name: Gatitos_8
       rect:
         serializedVersion: 2
         x: 105
@@ -293,20 +303,152 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4b2354278b166644931023200d11cac
-      internalID: -602172651
+      spriteID: 9d268b41b33754b4aafcb058babfef4c
+      internalID: 1201241399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gatitos_1
+      name: Gatitos_9
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 131
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43fbb6f7cd4bd34fb3d22ec10b88b35
+      internalID: -2115447062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 79
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abfbd21422b11143a3be5c621f91e56
+      internalID: -1211398744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_11
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 105
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f072a901facde44db60446d375034ca
+      internalID: 464161347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_12
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 105
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12ce2214198ad741a4d404486a7c0a0
+      internalID: 1629340583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_13
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 105
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ae448582cf87f41a9dbe14561e2143
+      internalID: -874086438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_14
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 105
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c814cd864a9a9f84aaf9e8948605a0a4
+      internalID: 1000913442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_15
       rect:
         serializedVersion: 2
         x: 142
-        y: 15
-        width: 10
-        height: 9
+        y: 27
+        width: 9
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +457,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3abb68c050df4d944a73c9a3110dd589
-      internalID: 2198068573293541188
+      spriteID: 18f1d28c425cf2d4c9514f48ae91810d
+      internalID: 432178207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gatitos_2
+      name: Gatitos_16
       rect:
         serializedVersion: 2
-        x: 146
-        y: 7
-        width: 4
-        height: 5
+        x: 130
+        y: 5
+        width: 11
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,8 +479,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c38d8268cb6b9a647a34495bdb7d304b
-      internalID: -4149455633675506791
+      spriteID: 57b8565f778129646b64a0806ef10e53
+      internalID: 1499809918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gatitos_17
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 7
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d754293f9972349468d3c5891dc1e1b4
+      internalID: 1615267039
       vertices: []
       indices: 
       edges: []
@@ -347,7 +511,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 028535f23c8d52d4094b2ecdda837a07
+    spriteID: 6aad4b112e303994e925729ddc3367ac
     internalID: 0
     vertices: []
     indices: 
@@ -359,19 +523,22 @@ TextureImporter:
     nameFileIdTable:
       Gatitos_0: 8012055214899776398
       Gatitos_1: 2198068573293541188
-      Gatitos_10: -696831763
-      Gatitos_11: -1632076642
-      Gatitos_12: -1590276313
-      Gatitos_13: -602172651
-      Gatitos_14: 592004645
+      Gatitos_10: -1211398744
+      Gatitos_11: 464161347
+      Gatitos_12: 1629340583
+      Gatitos_13: -874086438
+      Gatitos_14: 1000913442
+      Gatitos_15: 432178207
+      Gatitos_16: 1499809918
+      Gatitos_17: 1615267039
       Gatitos_2: -4149455633675506791
       Gatitos_3: -7154950045172618049
       Gatitos_4: 402124302352054351
-      Gatitos_5: 4147676707466408907
-      Gatitos_6: -4887072930176335743
-      Gatitos_7: -8031270095727454048
-      Gatitos_8: 1893899457427344705
-      Gatitos_9: -1059393189
+      Gatitos_5: 1897224193
+      Gatitos_6: 1824484745
+      Gatitos_7: -1957878578
+      Gatitos_8: 1201241399
+      Gatitos_9: -2115447062
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

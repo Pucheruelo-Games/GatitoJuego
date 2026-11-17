@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using System.Linq;
 using Code;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -14,8 +16,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int _tiempoPausa;
     private int _ronda;
     public Action<string> CuentaCambio;
-    int _enemRonda = 8;
+    int _enemRonda = 6;
     private int _tiempo;
+    private System.Collections.Generic.List<MouseBehaviour> _ratonesSpawneables = new System.Collections.Generic.List<MouseBehaviour>();
     private void Awake()
     {
         _tiempo = _tiempoPausa;
@@ -32,6 +35,7 @@ public class EnemySpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
         }
+        CrearListaEnemigosRonda();
         while (_tiempo > 0)
         {
             Debug.Log(_tiempo+"!");
@@ -43,9 +47,21 @@ public class EnemySpawner : MonoBehaviour
         CuentaCambio?.Invoke("YA!");
         yield return new WaitForSeconds(1f);
         CuentaCambio?.Invoke(_tiempo.ToString());
-
+        
         _tiempo = _tiempoPausa;
         EmpezarRonda();
+    }
+    private void CrearListaEnemigosRonda()
+    {
+        _ratonesSpawneables.Clear();
+        for (int i = 0; i < prefabs.Length; i++)
+        {
+            if (prefabs[i].Difficulty<=_ronda)
+            {
+                _ratonesSpawneables.Add(prefabs[i]);
+            }
+        }
+        _ratonesSpawneables.Sort();
     }
 
     private void TransicionTienda()
@@ -79,7 +95,8 @@ public class EnemySpawner : MonoBehaviour
 
             int carril = Random.Range(0, 6);
             Vector2 spawner = _spawners[carril].transform.position;
-            MouseBehaviour r = Instantiate(prefabs[Random.Range(0,prefabs.Length)], spawner, Quaternion.identity);
+            
+            MouseBehaviour r= (Instantiate(RatonesCampanaDeGauss(), spawner, Quaternion.identity));
             
             _spawneados++;
             r.OnDeath += OnMouseDeath;
@@ -90,7 +107,20 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitUntil(TodosMuertos);
         CambiarRonda();
     }
+    private MouseBehaviour RatonesCampanaDeGauss()
+    {
+        float r1 = Random.Range(0, _ronda+1);
+        float r2 = Random.Range(0, _ronda+1);
+        int dificultad = Mathf.FloorToInt((r1 + r2) / 2);
 
+        var candidatos = _ratonesSpawneables.Where(r => r.Difficulty == dificultad).ToList();
+        if(candidatos.Count<=0)
+        {
+            return _ratonesSpawneables.OrderBy(r => Mathf.Abs(r.Difficulty - dificultad)).First();
+        }
+        int r3 = Random.Range(0, candidatos.Count);
+        return candidatos[r3];
+    }
     private bool TodosMuertos() => _spawneados <= 0;
 
     private void OnMouseDeath()
