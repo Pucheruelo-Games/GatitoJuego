@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EyeCatCard
   m_EditorClassIdentifier: Assembly-CSharp::Code.CatCard
   icon: {fileID: -1957878578, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
-  cost: 0
+  cost: 5
   cooldown: 2
   displayname: EyeCat
   width: 1
