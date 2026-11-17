@@ -31,6 +31,7 @@ namespace Code
             position /= _tiles.Length;
             position.y += 0.2f;
             transform.position = position;
+            if (animator) animator.SetTrigger("Attack");
         }
 
         private void FixedUpdate()
@@ -42,6 +43,7 @@ namespace Code
                 {
                     _timer -= attackSpeed;
                     attack.Perform();
+                    if (animator) animator.SetTrigger("Attack");
                 }
             }
             List<Effect> newListEff = new List<Effect>(activeEffects);
@@ -69,6 +71,7 @@ namespace Code
         {
             health -= damage;
             if (health <= 0) Die();
+            else if (animator) animator.SetTrigger("Hurt");
             if (effects == null) return;
             foreach (Effect ef in effects)
             {
@@ -103,7 +106,16 @@ namespace Code
         private void Die()
         {
             foreach (var tile in _tiles) tile.Cat = null;
-            Destroy(this.gameObject);
+            if (animator) animator.SetTrigger("Dead");
+            if (animator)
+            {
+                Destroy(GetComponent<Collider2D>());
+                Destroy(this.gameObject, 2);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
