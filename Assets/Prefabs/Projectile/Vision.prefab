@@ -144,7 +144,7 @@ MonoBehaviour:
   effects:
   - effectType: 1
     duration: 5
-    level: 1
+    level: 2
   rigidbody2D: {fileID: 1653487694094783842}
 --- !u!61 &4692912786222150708
 BoxCollider2D:

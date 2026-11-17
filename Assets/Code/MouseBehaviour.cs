@@ -86,14 +86,14 @@ namespace Code
             }
             else
             {
-                if (HasActiveEffects(EffectType.Slowness, out int real))
+                if (HasActiveEffects(EffectType.Slowness, out int slow))
                 {
-                    float caluclo = (-moveSpeed) + (real / 1.75f);
+                    float caluclo = moveSpeed / slow;
                     if (caluclo <= 0)
                     {
                         caluclo = 0;
                     }
-                    rigidbody2D.AddForceY(caluclo, ForceMode2D.Force);
+                    rigidbody2D.AddForceY(-caluclo, ForceMode2D.Force);
                 }
                 else
                 {
