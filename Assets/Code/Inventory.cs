@@ -9,7 +9,7 @@ namespace Code
 {
     public class Inventory : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer cardPreview;
+        [SerializeField] private PreviewHandler cardPreview;
         [SerializeField] private InventoryCard cardPrefab;
         [SerializeField] private RectTransform cardContainer;
         [SerializeField] private int cardSlots;
@@ -51,17 +51,13 @@ namespace Code
             
             if (_carriedCard)
             {
-                var position = InputManager.Instance.Player.Position.ReadValue<Vector2>();
-                var worldPos = Camera.main.ScreenToWorldPoint(position) * Vector2.one;
-                _carriedCard.VisualRect.position = position;
-                _carriedCard.OnCarriedUpdate(worldPos, cardPreview);
+                var canvasPos = InputManager.Instance.Player.Position.ReadValue<Vector2>();
+                var worldPos = Camera.main.ScreenToWorldPoint(canvasPos) * Vector2.one;
+                _carriedCard.OnCarriedUpdate(worldPos, canvasPos, cardPreview);
                 
                 if (InputManager.Instance.Player.Click.WasReleasedThisFrame() && _carriedCard)
                 {
-                    _carriedCard.OnCardDrop(worldPos);
-                    cardPreview.gameObject.SetActive(false);
-                    _carriedCard.VisualRect.gameObject.SetActive(true);
-                    _carriedCard.VisualRect.localPosition = Vector3.zero;
+                    _carriedCard.OnCardDrop(worldPos, canvasPos, cardPreview);
                     _carriedCard = null;
                 }
             }

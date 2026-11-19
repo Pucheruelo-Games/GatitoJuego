@@ -11,7 +11,7 @@ namespace Code
         [SerializeField] private TMP_Text nameText;
         [SerializeField] private TMP_Text costText;
         [SerializeField] private Image cooldownMask;
-        [field:SerializeField] public RectTransform VisualRect { get; private set; }
+        [SerializeField] private RectTransform visualRect;
         private Card _card;
         private float _cooldown = 0f;
 
@@ -34,52 +34,28 @@ namespace Code
             }
         }
 
-        public void OnCarriedUpdate(Vector2 position, SpriteRenderer preview)
+        public void OnCarriedUpdate(Vector2 worldPos, Vector2 canvasPos, PreviewHandler handler)
         {
-            foreach (var hit in Physics2D.OverlapBoxAll(position,Vector2.one*0.1f,0))
+            visualRect.transform.position = canvasPos;
+            foreach (var hit in Physics2D.OverlapBoxAll(worldPos,Vector2.one*0.1f,0))
             {
                 if (hit.TryGetComponent(out Tile tile))
                 {
-                    preview.gameObject.SetActive(true);
-                    VisualRect.gameObject.SetActive(false);
-                    preview.transform.position = tile.transform.position + Vector3.up * 0.2f;
-                    if (_card is CatCard catCard)
-                    {
-                        preview.sprite = catCard.Preview;
-
-                        var newColor = new Color();
-                        
-                        if (tile.Cat || 
-                            GameManager.Instance.Coins < catCard.Cost ||
-                            _cooldown > 0f) 
-                            newColor = Color.red;
-                        else newColor = Color.white;
-
-                        newColor.a = 0.5f;
-                        
-                        preview.color = newColor;
-                    }
-                    else
-                    {
-                        _card.Preview.GeneratePreview(preview, tile);
-                    }
-
-                    if (tile.Cat == null) ;
-
+                    visualRect.gameObject.SetActive(false);
+                    handler.Init(tile, _cooldown <= 0f && GameManager.Instance.Coins >= _card.Cost);
+                    _card.GeneratePreview(handler);
                     return;
                 }
             }
-            preview.gameObject.SetActive(false);
-            VisualRect.gameObject.SetActive(true);
+            visualRect.gameObject.SetActive(true);
         }
 
-        public void OnCardDrop(Vector2 position)
+        public void OnCardDrop(Vector2 worldPos, Vector2 canvasPos, PreviewHandler handler)
         {
-            foreach (var hit in Physics2D.OverlapBoxAll(position,Vector2.one*0.1f,0))
+            foreach (var hit in Physics2D.OverlapBoxAll(worldPos,Vector2.one * 0.1f,0))
             {
                 if (hit.TryGetComponent(out Tile tile))
                 {
-                    
                     if (GameManager.Instance.Coins < _card.Cost) return;
                     if (_cooldown > 0f) return;
                     
@@ -100,6 +76,9 @@ namespace Code
                     return;
                 }
             }
+            visualRect.gameObject.SetActive(true);
+            visualRect.localPosition = Vector3.zero;
+            handler.ReleasePreview();
         }
     }
 }

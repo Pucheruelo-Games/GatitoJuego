@@ -12,7 +12,6 @@ namespace Code
         public float Cooldown => cooldown;
         [SerializeField] private string displayname;
         public string DisplayName => displayname;
-        protected abstract IPreviewable _preview { get; }
-        public IPreviewable Preview => _preview;
+        public abstract void GeneratePreview(PreviewHandler handler);
     }
 }

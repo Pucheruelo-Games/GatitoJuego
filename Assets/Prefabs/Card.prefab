@@ -678,7 +678,7 @@ MonoBehaviour:
   nameText: {fileID: 2813650424912569784}
   costText: {fileID: 4461221771026232897}
   cooldownMask: {fileID: 973200894412724412}
-  <VisualRect>k__BackingField: {fileID: 2598071801828884314}
+  visualRect: {fileID: 2598071801828884314}
 --- !u!114 &8781416311149269554
 MonoBehaviour:
   m_ObjectHideFlags: 0
