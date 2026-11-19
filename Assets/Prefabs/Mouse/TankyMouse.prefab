@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651336c189a164418224bbb828b0d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Raton
-  health: 150
+  health: 100
   attackSpeed: 1.2
   moveSpeed: 0.75
   reward: 3
