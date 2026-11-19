@@ -138,9 +138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b246ad41be194fc40ac2fea6442baa05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.BaseProjectile
-  damage: 2
+  damage: 40
   velocity: 6
   range: 10
+  effects: []
   rigidbody2D: {fileID: 1653487694094783842}
 --- !u!61 &4692912786222150708
 BoxCollider2D:

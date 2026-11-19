@@ -1,4 +1,7 @@
+using NUnit.Framework;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.VFX;
 
 namespace Code
 {
@@ -10,8 +13,8 @@ namespace Code
         [SerializeField] private Transform origin;
         [SerializeField] private float range;
         [SerializeField] private float ExplosionRadius;
+        [SerializeField] protected VisualEffect[] Particles;
 
-        
         public override bool IsEnemyInRange(out IDamageable target)
         {
             foreach (var hit in Physics2D.RaycastAll(origin.position, direction, range))
@@ -35,6 +38,8 @@ namespace Code
                     if (hit.TryGetComponent(out IDamageable damageable) && damageable.AttackTag == TargetTag)
                     {
                         damageable.TakeDamage(damage);
+                        if(Particles.Length>0) Particles[0].Play();
+
                     }
                 }
             }

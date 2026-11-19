@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b60c45c8bd4b33bb5f912126ab3495, type: 3}
   m_Name: PigCatCard
   m_EditorClassIdentifier: Assembly-CSharp::Code.CatCard
-  icon: {fileID: 1201241399, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
-  cost: 0
-  cooldown: 2
+  icon: {fileID: -6104482763094284809, guid: ed6e9a4e41b9c7b418702297a4550dae, type: 3}
+  cost: 8
+  cooldown: 8
   displayname: Pig
   width: 1
   height: 1

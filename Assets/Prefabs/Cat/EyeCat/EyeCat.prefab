@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9228a0c3bae3954f935cad5152d130f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gato
-  health: 5
+  health: 50
   attackSpeed: 5
   attack: {fileID: 2645387813991624404}
   animator: {fileID: -4233338027454204378}
@@ -290,6 +290,7 @@ MonoBehaviour:
   projectile: {fileID: 2121697921538561138, guid: 76ffcd7011e05e744873c14f4c66bac5, type: 3}
   direction: {x: 0, y: 1}
   origin: {fileID: 874792310514442902}
+  Particles: []
 --- !u!95 &-4233338027454204378
 Animator:
   serializedVersion: 7

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 namespace Code
 {
@@ -7,7 +8,8 @@ namespace Code
         [SerializeField] private BaseProjectile projectile;
         [SerializeField] private Vector2 direction;
         [SerializeField] private Transform origin;
-        
+        [SerializeField] protected VisualEffect[] Particles;
+
         public override bool IsEnemyInRange(out IDamageable target)
         {
             foreach (var hit in Physics2D.RaycastAll(origin.position, direction, projectile.Range))
@@ -27,6 +29,7 @@ namespace Code
             var newProjectile = Instantiate(projectile);
             newProjectile.transform.position = origin.position;
             newProjectile.Init(direction, TargetTag);
+            if (Particles.Length > 0) Particles[0].Play();
         }
         
         private void OnDrawGizmos()

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b60c45c8bd4b33bb5f912126ab3495, type: 3}
   m_Name: EyeCatCard
   m_EditorClassIdentifier: Assembly-CSharp::Code.CatCard
-  icon: {fileID: -1957878578, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
-  cost: 5
-  cooldown: 2
+  icon: {fileID: 21300000, guid: 3f6c5c6013122c944a0c1bfaa9e57744, type: 3}
+  cost: 4
+  cooldown: 5
   displayname: EyeCat
   width: 1
   height: 1
