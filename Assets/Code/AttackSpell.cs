@@ -8,6 +8,7 @@ namespace Code
         [SerializeField] private Animator animator;
         [SerializeField] private float delay;
         [SerializeField] private Attack attack;
+        [SerializeField] private bool animatorCastSpell = false;
 
         protected override void OnCast(params Tile[] tiles)
         {
@@ -39,7 +40,7 @@ namespace Code
         private void DoCast()
         {
             if (animator) animator.SetTrigger("Attack");
-            attack.Perform();
+            if (!animatorCastSpell) attack.Perform();
         }
     }
 }

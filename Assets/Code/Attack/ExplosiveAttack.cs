@@ -28,17 +28,15 @@ namespace Code
 
         public override void Perform()
         {
-            if (IsEnemyInRange(out IDamageable target))
+            foreach (var hit in Physics2D.OverlapCircleAll(origin.position, ExplosionRadius))
             {
-                foreach (var hit in Physics2D.OverlapCircleAll(origin.position, ExplosionRadius))
+                if (hit.TryGetComponent(out IDamageable damageable) && damageable.AttackTag == TargetTag)
                 {
-                    if (hit.TryGetComponent(out IDamageable damageable) && damageable.AttackTag == TargetTag)
-                    {
-                        damageable.TakeDamage(damage);
-                    }
+                    damageable.TakeDamage(damage);
                 }
             }
-            if(this.TryGetComponent(out MouseBehaviour mouseBehaviour))
+            
+            if (this.TryGetComponent(out MouseBehaviour mouseBehaviour))
             {
                 mouseBehaviour.TakeDamage(999999);
             }

@@ -49,7 +49,7 @@ namespace Code
         {
             transform.position = _center;
 
-            foreground.color = Color.white;
+            foreground.color = new Color(1f, 1f, 1f, 0.5f);
             background.color = areaPreviewColor;
             
             if (_generated) return;
@@ -63,7 +63,7 @@ namespace Code
         {
             transform.position = _center;
 
-            foreground.color = Color.white;
+            foreground.color = new Color(1f, 1f, 1f, 0.5f);
             background.color = areaPreviewColor;
             
             if (_generated) return;
