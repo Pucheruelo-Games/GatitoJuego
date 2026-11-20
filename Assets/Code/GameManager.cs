@@ -1,6 +1,5 @@
 using Code;
 using System;
-using Code;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour

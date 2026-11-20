@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2578394304275363255}
   - component: {fileID: 7913647177626473907}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,9 +79,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 30
+  m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2198068573293541188, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  m_Sprite: {fileID: -7154950045172618049, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 2121697921538561138}
   - component: {fileID: 4692912786222150708}
   - component: {fileID: 1653487694094783842}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Toast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,8 +142,6 @@ MonoBehaviour:
   velocity: 5
   range: 10
   rigidbody2D: {fileID: 1653487694094783842}
-  spriteRenderer: {fileID: 7913647177626473907}
-  boxCollider2D: {fileID: 4692912786222150708}
 --- !u!61 &4692912786222150708
 BoxCollider2D:
   m_ObjectHideFlags: 0

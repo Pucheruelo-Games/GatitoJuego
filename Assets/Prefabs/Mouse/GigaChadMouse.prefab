@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4331545656230452655}
   - component: {fileID: 347784072850423495}
   - component: {fileID: 1153347623361214546}
-  - component: {fileID: 1817989913249787967}
+  - component: {fileID: 7004805430496815070}
   m_Layer: 7
-  m_Name: BasicMouse
+  m_Name: GigaChadMouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,13 +49,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651336c189a164418224bbb828b0d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Raton
-  health: 3
-  attackSpeed: 1
-  moveSpeed: 0.4
-  reward: 1
+  health: 20
+  attackSpeed: 0.6
+  moveSpeed: 1.5
+  reward: 10
   attack: {fileID: 4331545656230452655}
-  animator: {fileID: 1817989913249787967}
+  animator: {fileID: 7004805430496815070}
   rigidbody2D: {fileID: 1153347623361214546}
+  difficulty: 6
 --- !u!114 &4331545656230452655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,9 +71,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.MeleeAttack
   <TargetTag>k__BackingField: 0
   direction: {x: 0, y: -1}
-  damage: 1
+  damage: 10
   origin: {fileID: 4322703690070839394}
   range: 0.5
+  effects: []
 --- !u!61 &347784072850423495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,7 +148,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &1817989913249787967
+--- !u!95 &7004805430496815070
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -249,7 +251,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5149744388904727079, guid: 4393c2f7bfa6b514b8b2ada5a56c816b, type: 3}
+  m_Sprite: {fileID: -124514480, guid: 4393c2f7bfa6b514b8b2ada5a56c816b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

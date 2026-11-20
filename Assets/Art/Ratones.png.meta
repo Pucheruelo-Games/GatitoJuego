@@ -8,15 +8,6 @@ TextureImporter:
   - first:
       213: -3274167162619842268
     second: Ratones_1
-  - first:
-      213: 5484801481006534047
-    second: Ratones_2
-  - first:
-      213: -5284597068077120306
-    second: Ratones_3
-  - first:
-      213: -4855444434869341007
-    second: Ratones_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ratones_0
+      name: Ratones_1
       rect:
         serializedVersion: 2
         x: 1
@@ -121,28 +112,6 @@ TextureImporter:
         height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ddc54743ce6888b0800000000000000
-      internalID: -5149744388904727079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ratones_1
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 131
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -164,15 +133,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1d84cac361fad04ab33d2ef859886ab
-      internalID: 5484801481006534047
+      spriteID: 3f4513a03d12ed643b14fbb8aae04d50
+      internalID: -1015350799
       vertices: []
       indices: 
       edges: []
@@ -181,20 +150,152 @@ TextureImporter:
       name: Ratones_3
       rect:
         serializedVersion: 2
-        x: 79
+        x: 53
         y: 131
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7b266553d99a7244bcdc585709e5912
-      internalID: -5284597068077120306
+      spriteID: feb9482152381fe4e814bc8edb6b03c9
+      internalID: 213192189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratones_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 131
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93c8dfc3e157f344a24d56955a7e0d7
+      internalID: 1190826923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratones_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 131
+        width: 50
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdc535396061854da37f0dda7edb7fb
+      internalID: -1084907979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratones_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 105
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f639d01d8582d45bf6db81171fb802
+      internalID: 1667164959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratones_7
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 105
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8116cb108c38942ba2407f1d56f893
+      internalID: -124514480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratones_8
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 105
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0f4e4c8e197e04b9a4207ecbaa8c3f
+      internalID: -2031512761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ratones_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 105
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e44d79db50a7c648bfdd3f3084c5d48
+      internalID: -1405030785
       vertices: []
       indices: 
       edges: []
@@ -203,7 +304,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e6da8911725115243b6ba1534205e02a
+    spriteID: e88dfade42be5cc48a187d0f62640be2
     internalID: 0
     vertices: []
     indices: 
@@ -215,9 +316,14 @@ TextureImporter:
     nameFileIdTable:
       Ratones_0: -5149744388904727079
       Ratones_1: -3274167162619842268
-      Ratones_2: 5484801481006534047
-      Ratones_3: -5284597068077120306
-      Ratones_4: -4855444434869341007
+      Ratones_2: -1015350799
+      Ratones_3: 213192189
+      Ratones_4: 1190826923
+      Ratones_5: -1084907979
+      Ratones_6: 1667164959
+      Ratones_7: -124514480
+      Ratones_8: -2031512761
+      Ratones_9: -1405030785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,7 +12,7 @@ namespace Code
         {
             OnHealthChange?.Invoke(health);
         }
-        public void TakeDamage(int damage)
+        public void TakeDamage(int damage, Effect[] effects)
         {
             health -= damage;
             OnHealthChange?.Invoke(health);

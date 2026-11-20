@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8031270095727454048, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  m_Sprite: {fileID: 2198068573293541188, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,7 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9228a0c3bae3954f935cad5152d130f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gato
-  spriteRenderer: {fileID: 0}
+  health: 0
+  attackSpeed: 0
+  attack: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!61 &7898750176576649046
 BoxCollider2D:
   m_ObjectHideFlags: 0

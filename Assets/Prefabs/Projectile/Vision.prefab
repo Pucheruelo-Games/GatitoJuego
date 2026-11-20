@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2578394304275363255}
   - component: {fileID: 7913647177626473907}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,12 +81,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4149455633675506791, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  m_Sprite: {fileID: 1615267039, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.27, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -103,8 +103,8 @@ GameObject:
   - component: {fileID: 2121697921538561138}
   - component: {fileID: 4692912786222150708}
   - component: {fileID: 1653487694094783842}
-  m_Layer: 0
-  m_Name: Bullet
+  m_Layer: 3
+  m_Name: Vision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,12 +138,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b246ad41be194fc40ac2fea6442baa05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.BaseProjectile
-  damage: 2
-  velocity: 4
+  damage: 1
+  velocity: 6
   range: 10
+  effects:
+  - effectType: 1
+    duration: 5
+    level: 2
   rigidbody2D: {fileID: 1653487694094783842}
-  spriteRenderer: {fileID: 7913647177626473907}
-  boxCollider2D: {fileID: 4692912786222150708}
 --- !u!61 &4692912786222150708
 BoxCollider2D:
   m_ObjectHideFlags: 0
