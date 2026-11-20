@@ -16,16 +16,17 @@ MonoBehaviour:
   cost: 0
   cooldown: 3
   displayname: Bomb
+  width: 1
+  height: 1
   spell: {fileID: 3195143326174965144, guid: be5904afefd2c9845bf34529b1d0e828, type: 3}
   foregroundSprite: {fileID: 21300000, guid: 7968a3f0ee594c14a8ddb01df0bd0fe4, type: 3}
-  previewType: 1
+  previewType: 0
   previewConfig:
-    rid: 3638327304224243831
+    rid: 4738255664730341506
   references:
     version: 2
     RefIds:
-    - rid: 3638327304224243831
-      type: {class: SquarePreviewConfig, ns: Code, asm: Assembly-CSharp}
+    - rid: 4738255664730341506
+      type: {class: CirclePreviewConfig, ns: Code, asm: Assembly-CSharp}
       data:
-        width: 1
-        height: 1
+        radius: 2

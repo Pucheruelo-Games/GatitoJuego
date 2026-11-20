@@ -53,12 +53,15 @@ namespace Code
             {
                 var canvasPos = InputManager.Instance.Player.Position.ReadValue<Vector2>();
                 var worldPos = Camera.main.ScreenToWorldPoint(canvasPos) * Vector2.one;
-                _carriedCard.OnCarriedUpdate(worldPos, canvasPos, cardPreview);
                 
                 if (InputManager.Instance.Player.Click.WasReleasedThisFrame() && _carriedCard)
                 {
-                    _carriedCard.OnCardDrop(worldPos, canvasPos, cardPreview);
+                    _carriedCard.OnCarriedUpdate(worldPos, canvasPos, cardPreview, true);
                     _carriedCard = null;
+                }
+                else
+                {
+                    _carriedCard.OnCarriedUpdate(worldPos, canvasPos, cardPreview);
                 }
             }
         }

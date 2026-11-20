@@ -9,7 +9,10 @@ namespace Code
     {
         [SerializeField] private SpellBehaviour spell;
         public SpellBehaviour Spell => spell;
+        [SerializeField] private bool catPreventCast = false;
+        public bool CatPreventCast => catPreventCast;
         [SerializeField] private Sprite foregroundSprite;
+        private PreviewType _lastPreviewType;
         [SerializeField] private PreviewType previewType;
         [SerializeReference] private PreviewConfig previewConfig;
         public override void GeneratePreview(PreviewHandler handler)
@@ -19,11 +22,13 @@ namespace Code
 
         private void OnValidate()
         {
+            if (_lastPreviewType == previewType) return;
             switch (previewType)
             {
                 case PreviewType.Circle: previewConfig = new CirclePreviewConfig(); break;
                 case PreviewType.Square: previewConfig = new SquarePreviewConfig(); break;
             }
+            _lastPreviewType = previewType;
         }
     }
 
@@ -41,7 +46,7 @@ namespace Code
     [Serializable]
     public class CirclePreviewConfig : PreviewConfig
     {
-        [SerializeField] private float radius = 1f;
+        [SerializeField] private int radius = 1;
 
         public override void Generate(PreviewHandler handler, Sprite foregroundSprite)
         {
@@ -52,8 +57,8 @@ namespace Code
     [Serializable]
     public class SquarePreviewConfig : PreviewConfig
     {
-        [SerializeField] private float width = 1f;
-        [SerializeField] private float height = 1f;
+        [SerializeField] private int width = 1;
+        [SerializeField] private int height = 1;
 
         public override void Generate(PreviewHandler handler, Sprite foregroundSprite)
         {

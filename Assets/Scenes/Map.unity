@@ -212,6 +212,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1607875698}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1746698984}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 2064720165}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1369571297}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (5)
@@ -318,6 +334,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1263479577}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 2138299819}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1978581291}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (7)
@@ -384,6 +412,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1578667864}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1818186573}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1382079157}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (7)
@@ -446,6 +486,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1616746796}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 2064720165}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1419073149}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1607875698}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (4)
@@ -460,6 +516,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 43212302}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &61428536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 33875755}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &119548163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -508,6 +575,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 61428536}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1436520268}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (8)
@@ -574,6 +649,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1755113674}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1469242148}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -640,6 +723,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1746698984}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1978581291}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1319210876}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1263479577}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (7)
@@ -702,6 +801,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1592803223}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1578667864}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1637413805}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (5)
@@ -905,6 +1016,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1547537268}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1592803223}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1757562131}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (3)
@@ -919,6 +1042,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 196891854}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &196891857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 196891854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &234571857
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +1093,17 @@ Transform:
   - {fileID: 969519353}
   m_Father: {fileID: 1474289883}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &250155213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 24383433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &262872671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1007,6 +1152,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 2064720165}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1319210876}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1082934135}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1746698984}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (6)
@@ -1069,6 +1230,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1211414559}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 61428536}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1367448616}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (6)
@@ -1135,6 +1308,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1818186573}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 672352459}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -1201,6 +1382,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1637413805}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1382079157}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1578667864}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1082934135}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (6)
@@ -1263,6 +1460,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 611416970}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1563426561}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1882287064}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 2025255222}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (7)
@@ -1329,6 +1542,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1701797676}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1616746796}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 2064009610}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1983486059}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (2)
@@ -1470,6 +1699,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1369571297}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1263479577}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1746698984}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (5)
@@ -1532,6 +1773,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1447077841}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1211414559}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 250155213}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (4)
@@ -1598,6 +1851,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 196891857}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 986300134}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1138899308}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (4)
@@ -1680,7 +1945,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1755,6 +2020,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1563426561}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 526419590}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 2106859175}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -1821,6 +2098,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1419073149}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1082934135}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1637413805}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 2064720165}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (5)
@@ -1835,6 +2128,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 498074879}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &526419590 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 320460425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &529188941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 43212302}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &531257829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1883,6 +2198,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1983486059}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1607875698}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1616746796}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1945986829}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (3)
@@ -1897,6 +2228,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 531257829}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &531257832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 531257829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &550077353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,7 +2303,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2158,6 +2500,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1559563159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &611416970 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 323527361}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &621457412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,6 +2741,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1496528441}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1362499614}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1138899308}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 529188941}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (4)
@@ -2406,6 +2775,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 671769108}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &672352459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 493746659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &674773056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2454,6 +2834,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 250155213}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1367448616}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1489354999}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1211414559}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (6)
@@ -3858,6 +4254,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1732324447}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1138899308}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 196891857}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1496528441}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (3)
@@ -3876,6 +4288,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 835313166}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &856126526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 386233562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &879655005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3924,6 +4347,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1008305172}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1945986829}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1983486059}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (1)
@@ -4127,9 +4562,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1960948568}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 2106859175}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1436520268}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
-      value: Tile
+      value: Tile4/1
       objectReference: {fileID: 0}
     - target: {fileID: 8746010678102812221, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Sprite
@@ -4145,6 +4592,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 969519352}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &969519355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 969519352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &969762454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4193,6 +4651,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1945986829}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1369571297}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1607875698}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (3)
@@ -4207,6 +4677,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 969762454}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &986300134 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 174072101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1008305172 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 129282303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1026370182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4295,6 +4787,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 856126526}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 529188941}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1496528441}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 531257832}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (3)
@@ -4361,6 +4869,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1362499614}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 2025255222}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 611416970}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1489354999}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (6)
@@ -4379,6 +4903,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1082934132}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1082934135 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1082934132}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1096980157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4427,6 +4962,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1732324447}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 8436615093356668574}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1720466919}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (1)
@@ -4445,6 +4992,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1096980157}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1096980160 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1096980157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1138899305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4493,6 +5051,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1757562131}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1637413805}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1592803223}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1419073149}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (4)
@@ -4507,6 +5081,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1138899305}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1138899308 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1138899305}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1205855821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,6 +5214,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1559563159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211414559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 448507373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1228470513
 GameObject:
   m_ObjectHideFlags: 0
@@ -4737,8 +5333,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.PreviewHandler
   foreground: {fileID: 483037492}
   background: {fileID: 550077354}
-  circle: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  square: {fileID: 6833748595559723454, guid: 3feb870de5ae2874494d6a02688db197, type: 3}
+  circles:
+  - {fileID: -5383671415335508278, guid: 18329a88196a87146b7a453ed7dc0fda, type: 3}
+  - {fileID: -7698138948945539861, guid: 18329a88196a87146b7a453ed7dc0fda, type: 3}
+  - {fileID: -3516616012245760874, guid: 18329a88196a87146b7a453ed7dc0fda, type: 3}
+  - {fileID: 2190485357215893546, guid: 18329a88196a87146b7a453ed7dc0fda, type: 3}
+  - {fileID: -3911128351369292997, guid: 18329a88196a87146b7a453ed7dc0fda, type: 3}
+  - {fileID: -2434568325419030468, guid: 18329a88196a87146b7a453ed7dc0fda, type: 3}
+  square: {fileID: 21300000, guid: ef725d1a062981a4094f6925fb0e634f, type: 3}
 --- !u!1 &1239018916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4837,6 +5439,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239018916}
   m_CullTransparentMesh: 1
+--- !u!114 &1263479577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 265856073}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1304590279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4885,6 +5498,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1367448616}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1436520268}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1960948568}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 61428536}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (8)
@@ -4951,6 +5580,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1489354999}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1960948568}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 2025255222}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1367448616}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (7)
@@ -4969,6 +5614,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1319210873}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1319210876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1319210873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1362499614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 498074879}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1364055101
 GameObject:
   m_ObjectHideFlags: 0
@@ -5014,6 +5681,39 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &1367448616 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 170480306}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1369571297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 475391880}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1382079157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 346873517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1395413117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5142,6 +5842,17 @@ MonoBehaviour:
   _monedasUI: {fileID: 571743600}
   _cuentaAtrasTxt: {fileID: 182889922}
   _rondaTxt: {fileID: 687149162}
+--- !u!114 &1419073149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 671769108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1423542675
 GameObject:
   m_ObjectHideFlags: 0
@@ -5321,6 +6032,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1978581291}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 969519355}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 2138299819}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -5335,6 +6058,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1436520265}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1436520268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1436520265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1437255752
 GameObject:
   m_ObjectHideFlags: 0
@@ -5406,6 +6140,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1559563159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1447077841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 969762454}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1469057216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5454,6 +6199,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 986300134}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1882287064}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 611416970}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (6)
@@ -5520,6 +6277,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1983486059}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1701797676}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1008305172}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (1)
@@ -5538,6 +6307,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1469242145}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1469242148 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1469242145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1474289882
 GameObject:
   m_ObjectHideFlags: 0
@@ -5575,6 +6355,17 @@ Transform:
   - {fileID: 1423838968}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1489354999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 262872671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1496528438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5623,6 +6414,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 2064009610}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1419073149}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1757562131}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1616746796}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (3)
@@ -5641,6 +6448,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1496528438}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1496528441 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1496528438}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1505210718
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,6 +6696,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 8436615093356668574}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 196891857}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1732324447}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (2)
@@ -5896,6 +6726,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1547537265}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1547537268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1547537265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1559563158
 GameObject:
   m_ObjectHideFlags: 0
@@ -6007,6 +6848,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1382079157}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 672352459}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1818186573}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1671086762}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (8)
@@ -6021,6 +6878,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1563426558}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1563426561 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1563426558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1578667864 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1469057216}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1592803223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 481556000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1594218922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6069,6 +6959,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1082934135}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1671086762}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1382079157}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1319210876}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (7)
@@ -6135,6 +7041,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 531257832}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 250155213}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 529188941}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1447077841}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (4)
@@ -6153,6 +7075,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1607875695}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1607875698 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1607875695}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1616746796 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1074512738}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1637413802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6201,6 +7145,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1138899308}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 611416970}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 986300134}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1362499614}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (5)
@@ -6219,6 +7179,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1637413802}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1637413805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1637413802}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1671086759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6267,6 +7238,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 2025255222}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 2106859175}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1563426561}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1960948568}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (8)
@@ -6285,6 +7272,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1671086759}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1671086762 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1671086759}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1677603467
 GameObject:
   m_ObjectHideFlags: 0
@@ -6424,6 +7422,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 856126526}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1720466919}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1469242148}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (1)
@@ -6442,6 +7452,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1701797673}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1701797676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1701797673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1720466916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6490,6 +7511,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 2064009610}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1096980160}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1701797676}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (1)
@@ -6504,6 +7537,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1720466916}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1720466919 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1720466916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1732324444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6552,6 +7596,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1096980160}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1757562131}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1547537268}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 2064009610}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (2)
@@ -6566,6 +7626,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1732324444}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1732324447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1732324444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1746698984 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 674773056}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1755113674 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 879655005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1757562131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 835313166}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1818186570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6614,6 +7718,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1882287064}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 526419590}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1563426561}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (8)
@@ -6632,6 +7748,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1818186570}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1818186573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1818186570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
+--- !u!114 &1882287064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 43163985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1933037441
 GameObject:
   m_ObjectHideFlags: 0
@@ -6776,6 +7914,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1755113674}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1447077841}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 531257832}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (2)
@@ -6794,6 +7944,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1945986826}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1945986829 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1945986826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1960948565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6842,6 +8003,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1319210876}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 969519355}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1671086762}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1978581291}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (8)
@@ -6856,6 +8033,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1960948565}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960948568 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1960948565}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1968579757
 GameObject:
   m_ObjectHideFlags: 0
@@ -6927,6 +8115,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968579757}
   m_CullTransparentMesh: 1
+--- !u!114 &1978581291 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1304590279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &1983486056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6975,6 +8174,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1469242148}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 531257832}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 856126526}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1755113674}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (2)
@@ -6993,6 +8208,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 1983486056}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1983486059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1983486056}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &1990188883
 GameObject:
   m_ObjectHideFlags: 0
@@ -7268,6 +8494,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2025255222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 1594218922}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &2064009607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7316,6 +8553,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1720466919}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1496528441}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1732324447}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 856126526}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (2)
@@ -7334,6 +8587,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 2064009607}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2064009610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 2064009607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &2064720162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7382,6 +8646,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 529188941}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1489354999}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1362499614}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 250155213}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (5)
@@ -7400,6 +8680,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 2064720162}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2064720165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 2064720162}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &2075116055
 GameObject:
   m_ObjectHideFlags: 0
@@ -7620,9 +8911,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 1671086762}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 672352459}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 969519355}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
-      value: Tile
+      value: Tile3/1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7634,6 +8937,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 2106859172}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2106859175 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 2106859172}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1 &2135075601
 GameObject:
   m_ObjectHideFlags: 0
@@ -7665,6 +8979,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1559563159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2138299819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 119548163}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1001 &8436615093356668571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7713,6 +9038,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: down
+      value: 
+      objectReference: {fileID: 1547537268}
+    - target: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1096980160}
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile (1)
@@ -7727,6 +9060,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3969285169167854177, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
   m_PrefabInstance: {fileID: 8436615093356668571}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8436615093356668574 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5167917808921648730, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+  m_PrefabInstance: {fileID: 8436615093356668571}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bd353bb41ed364797c2d239a4bd0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tile
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

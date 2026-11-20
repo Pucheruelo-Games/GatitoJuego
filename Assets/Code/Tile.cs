@@ -6,11 +6,11 @@ namespace Code
     public class Tile : MonoBehaviour
     {
         public CatBehaviour Cat;
-        private Tile _up, _down, _right, _left;
-        public Tile Up => _up;
-        public Tile Down => _down;
-        public Tile Right => _right;
-        public Tile Left => _left;
+        [SerializeField] private Tile up, down, right, left;
+        public Tile Up => up;
+        public Tile Down => down;
+        public Tile Right => right;
+        public Tile Left => left;
         
         [ContextMenu("Set Adjacent Tiles")]   
         private void SetAdjacent()
@@ -19,7 +19,7 @@ namespace Code
             {
                 if (hit.collider.gameObject.TryGetComponent(out Tile tile) && tile != this)
                 {
-                    _up = tile;
+                    up = tile;
                     break;
                 }
             }
@@ -28,7 +28,7 @@ namespace Code
             {
                 if (hit.collider.gameObject.TryGetComponent(out Tile tile) && tile != this)
                 {
-                    _down = tile;
+                    down = tile;
                     break;
                 }
             }
@@ -37,7 +37,7 @@ namespace Code
             {
                 if (hit.collider.gameObject.TryGetComponent(out Tile tile) && tile != this)
                 {
-                    _left = tile;
+                    left = tile;
                     break;
                 }
             }
@@ -46,7 +46,7 @@ namespace Code
             {
                 if (hit.collider.gameObject.TryGetComponent(out Tile tile) && tile != this)
                 {
-                    _right = tile;
+                    right = tile;
                     break;
                 }
             }
