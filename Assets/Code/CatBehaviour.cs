@@ -6,7 +6,6 @@ using UnityEngine;
 
 namespace Code
 {
-    [RequireComponent(typeof(Attack))]
     public class CatBehaviour : MonoBehaviour, IDamageable
     {
         public AttackTag AttackTag => AttackTag.Cat;
@@ -14,7 +13,7 @@ namespace Code
         [SerializeField] private float attackSpeed;
         [SerializeField] private Attack attack;
         [SerializeField] private Animator animator;
-        private float _timer;
+        private float _cooldown;
         private Tile[] _tiles;
         private List<Effect> activeEffects = new List<Effect>();
         private float _poisonTick;
@@ -35,13 +34,19 @@ namespace Code
 
         private void FixedUpdate()
         {
-            if (attack.IsEnemyInRange())
+            if (attack)
             {
-                _timer += Time.fixedDeltaTime;
-                if (_timer >= attackSpeed)
+                if (_cooldown <= 0f)
                 {
-                    _timer -= attackSpeed;
-                    attack.Perform();
+                    if (attack.IsEnemyInRange())
+                    {
+                        _cooldown = attackSpeed;
+                        attack.Perform();
+                    }
+                }
+                else
+                {
+                    _cooldown -= Time.fixedDeltaTime;
                 }
             }
             List<Effect> newListEff = new List<Effect>(activeEffects);

@@ -15,13 +15,9 @@ namespace Code
         [SerializeField] private Image cooldownMask;
         [SerializeField] private RectTransform visualRect;
         private Card _card;
+        public Card Card => _card;
         private float _cooldown = 0f;
-        private LayerMask _tileLayerMask;
-
-        private void Awake()
-        {
-            _tileLayerMask = LayerMask.GetMask("Tile");
-        }
+        private Vector2 _visualsStartPosition;
 
         public void Init(Card card)
         {
@@ -42,18 +38,22 @@ namespace Code
             }
         }
 
-        public void OnCarriedUpdate(Vector2 worldPos, Vector2 canvasPos, PreviewHandler handler, bool drop = false)
+        public void OnSelected(RectTransform container)
+        {
+            visualRect.SetParent(container);
+            _visualsStartPosition = visualRect.position + Vector3.up * 20f;
+            visualRect.position = _visualsStartPosition;
+        }
+
+        public void OnDeselected()
+        {
+            visualRect.SetParent(transform);
+            visualRect.localPosition = Vector3.zero;
+        }
+
+        public void OnCarriedUpdate(Tile[] tiles, Vector2 canvasPos, PreviewHandler handler, bool drop = false)
         {
             bool available = _cooldown <= 0f && GameManager.Instance.Coins >= _card.Cost;
-            Tile[] tiles = null;
-            foreach (var hit in Physics2D.OverlapBoxAll(worldPos, Vector2.one * 0.1f, 0, _tileLayerMask))
-            {
-                if (!hit.TryGetComponent(out Tile tile)) continue;
-                
-                tiles = GetAreaTiles(tile);
-                
-                break;
-            }
 
             if (tiles != null && (_card is CatCard || (_card is SpellCard s && s.CatPreventCast)))
             {
@@ -70,7 +70,7 @@ namespace Code
             if (drop)
             {
                 visualRect.gameObject.SetActive(true);
-                visualRect.localPosition = Vector3.zero;
+                visualRect.position = _visualsStartPosition;
                 handler.ReleasePreview();
 
                 if (!available) return;
@@ -91,7 +91,7 @@ namespace Code
             }
             else
             {
-                visualRect.transform.position = canvasPos;
+                visualRect.position = canvasPos;
                 if (tiles == null)
                 {
                     visualRect.gameObject.SetActive(true);
@@ -106,65 +106,7 @@ namespace Code
             }
         }
 
-        private Tile[] GetAreaTiles(Tile center, int lookBack = 0)
-        {
-            if (!center) return null;
-            
-            if (_card.Width <= 1 && _card.Height <= 1)
-            {
-                return new []{center};
-            }
-
-            if (lookBack >= 16) return null;
-                    
-            var right = center;
-            var left = center;
-                    
-            var up = center;
-            var down = center;
-                    
-            List<Tile> tileList = new();
-                
-            tileList.Add(center);
-
-            for (int x = 1; x < _card.Width; x++)
-            {
-                if (x % 2 == 0)
-                {
-                    if (right.Right) right = right.Right;
-                    else return GetAreaTiles(center.Left, lookBack+1);
-                    
-                    tileList.Add(right);
-                }
-                else
-                {
-                    if (left.Left) left = left.Left;
-                    else return GetAreaTiles(center.Right, lookBack+1);
-                    
-                    tileList.Add(left);
-                }
-                        
-                for (int y = 1; y < _card.Height; y++)
-                {
-                    if (y % 2 == 0)
-                    {
-                        if (down.Down) down = down.Down;
-                        else return GetAreaTiles(center.Up, lookBack+1);
-                        
-                        tileList.Add(down);
-                    }
-                    else
-                    {
-                        if (up.Up) up = up.Up;
-                        else return GetAreaTiles(center.Down, lookBack+1);
-                        
-                        tileList.Add(up);
-                    }
-                }
-            }
-            
-            return tileList.ToArray();
-        }
+        
         
     }
 }

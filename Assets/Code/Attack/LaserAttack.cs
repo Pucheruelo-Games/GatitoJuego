@@ -45,6 +45,7 @@ namespace Code
         
         private void OnDrawGizmos()
         {
+            if (!origin) return;
             Gizmos.color = Color.red;
             Gizmos.DrawRay(origin.position, direction * projectile.Range);
         }

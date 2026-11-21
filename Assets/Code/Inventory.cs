@@ -12,11 +12,13 @@ namespace Code
         [SerializeField] private PreviewHandler cardPreview;
         [SerializeField] private InventoryCard cardPrefab;
         [SerializeField] private RectTransform cardContainer;
+        [SerializeField] private RectTransform selectedContainer;
         [SerializeField] private int cardSlots;
         [SerializeField] private Card[] startCards;
         private List<InventoryCard> _cards = new();
         private InventoryCard _selectedCard;
         private InventoryCard _carriedCard;
+        private LayerMask _tileLayerMask;
 
         public InventoryCard CarriedCard
         {
@@ -35,35 +37,134 @@ namespace Code
             if (Instance)
             {
                 Destroy(gameObject);
+                return;
             }
-            else
-            {
-                _instance = this;
-            }
+            
+            _instance = this;
+            _tileLayerMask = LayerMask.GetMask("Tile");
         }
 
         private void Update()
         {
-            if (InputManager.Instance.Player.Click.WasPressedThisFrame() && GetPointedCard(out var card))
+            if (GetPointedCard(out var card))
             {
-                _carriedCard = card;
+                if (!_carriedCard)
+                {
+                    if (_selectedCard)
+                    {
+                        _selectedCard.OnDeselected();
+                    }
+                    _selectedCard = card;
+                    _selectedCard.OnSelected(selectedContainer);
+                }
+            }
+            
+            if (InputManager.Instance.Player.Click.WasPressedThisFrame())
+            {
+                if (card)
+                {
+                    _carriedCard = card;
+                }
+                else if (_selectedCard)
+                {
+                    var canvasPos = InputManager.Instance.Player.Position.ReadValue<Vector2>();
+                    var worldPos = Camera.main.ScreenToWorldPoint(canvasPos) * Vector2.one;
+
+                    if (GetSelectedTiles(worldPos, _selectedCard.Card) != null)
+                    {
+                        _carriedCard = _selectedCard;
+                    }
+                }
             }
             
             if (_carriedCard)
             {
                 var canvasPos = InputManager.Instance.Player.Position.ReadValue<Vector2>();
                 var worldPos = Camera.main.ScreenToWorldPoint(canvasPos) * Vector2.one;
+
+                var tiles = GetSelectedTiles(worldPos, _selectedCard.Card);
                 
                 if (InputManager.Instance.Player.Click.WasReleasedThisFrame() && _carriedCard)
                 {
-                    _carriedCard.OnCarriedUpdate(worldPos, canvasPos, cardPreview, true);
+                    _carriedCard.OnCarriedUpdate(tiles, canvasPos, cardPreview, true);
                     _carriedCard = null;
                 }
                 else
                 {
-                    _carriedCard.OnCarriedUpdate(worldPos, canvasPos, cardPreview);
+                    _carriedCard.OnCarriedUpdate(tiles, canvasPos, cardPreview);
                 }
             }
+        }
+        
+        private Tile[] GetSelectedTiles(Vector2 worldPos, Card card)
+        {
+            foreach (var hit in Physics2D.OverlapBoxAll(worldPos, Vector2.one * 0.1f, 0, _tileLayerMask))
+            {
+                if (!hit.TryGetComponent(out Tile tile)) continue;
+                
+                return GetAreaTiles(tile, card);
+            }
+            return null;
+        }
+
+        private Tile[] GetAreaTiles(Tile center, Card card, int lookBack = 0)
+        {
+            if (!center) return null;
+            
+            if (card.Width <= 1 && card.Height <= 1)
+            {
+                return new []{center};
+            }
+
+            if (lookBack >= 16) return null;
+                    
+            var right = center;
+            var left = center;
+                    
+            var up = center;
+            var down = center;
+                    
+            List<Tile> tileList = new();
+                
+            tileList.Add(center);
+
+            for (int x = 1; x < card.Width; x++)
+            {
+                if (x % 2 == 0)
+                {
+                    if (right.Right) right = right.Right;
+                    else return GetAreaTiles(center.Left, card, lookBack+1);
+                    
+                    tileList.Add(right);
+                }
+                else
+                {
+                    if (left.Left) left = left.Left;
+                    else return GetAreaTiles(center.Right, card, lookBack+1);
+                    
+                    tileList.Add(left);
+                }
+                        
+                for (int y = 1; y < card.Height; y++)
+                {
+                    if (y % 2 == 0)
+                    {
+                        if (down.Down) down = down.Down;
+                        else return GetAreaTiles(center.Up, card, lookBack+1);
+                        
+                        tileList.Add(down);
+                    }
+                    else
+                    {
+                        if (up.Up) up = up.Up;
+                        else return GetAreaTiles(center.Down, card, lookBack+1);
+                        
+                        tileList.Add(up);
+                    }
+                }
+            }
+            
+            return tileList.ToArray();
         }
         
         private static bool GetPointedCard(out InventoryCard card)

@@ -576,6 +576,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 8746010678102812221, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1320,6 +1328,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 8746010678102812221, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1967,6 +1983,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 8746010678102812221, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2401,6 +2425,7 @@ MonoBehaviour:
   cardPreview: {fileID: 1228470516}
   cardPrefab: {fileID: 6830017497886656530, guid: 31f05f620adde614da3f61602bec2531, type: 3}
   cardContainer: {fileID: 1968579758}
+  selectedContainer: {fileID: 1466896494}
   cardSlots: 6
   startCards:
   - {fileID: 11400000, guid: 55e50379549f4ce4789c79450e9b9db2, type: 2}
@@ -4465,6 +4490,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 8746010678102812221, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5634,6 +5667,7 @@ RectTransform:
   - {fileID: 182889923}
   - {fileID: 687149163}
   - {fileID: 1968579758}
+  - {fileID: 1466896494}
   m_Father: {fileID: 1994446812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5854,6 +5888,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5946,6 +5988,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1559563159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1466896493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466896494}
+  m_Layer: 5
+  m_Name: SelectedCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1466896494
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466896493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1395413121}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 58}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!1001 &1469057216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8872,6 +8949,14 @@ PrefabInstance:
     - target: {fileID: 6954633155102310883, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796225565866542363, guid: 46f393f5163284f4299bd30bef5f8f44, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

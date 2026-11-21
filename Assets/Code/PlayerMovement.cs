@@ -24,32 +24,57 @@ namespace Code
         }
         private void Update()
         {
-            if (Inventory.Instance.CarriedCard) return;
+            var pos = _rigidbody2D.position;
+            
             var dir = InputManager.Instance.Player.Move.ReadValue<Vector2>().x;
-            var pos = transform.position.x;
 
-            if (pos <= maxDistanceLeft && dir < 0)
+            if (dir != 0f)
             {
-                transform.position = new Vector3(maxDistanceLeft, transform.position.y, transform.position.z);
-            }
-            else if (pos >= maxDistanceRight && dir > 0)
-            {
-                transform.position = new Vector3(maxDistanceRight, transform.position.y, transform.position.z);
+                pos.x += dir * speed * Time.deltaTime;
             }
             else
             {
-                _rigidbody2D.linearVelocityX = dir * speed;
+                if (Inventory.Instance.CarriedCard) return;
+                if (!InputManager.Instance.Player.Click.IsPressed()) return;
+                
+                var canvasPos = InputManager.Instance.Player.Position.ReadValue<Vector2>();
+                var worldPos = Camera.main.ScreenToWorldPoint(canvasPos) * Vector2.one;
+                
+                if (Mathf.Abs(worldPos.y - transform.position.y) > 1f) return;
+                
+                pos.x = worldPos.x;
             }
             
+            if (pos.x <= maxDistanceLeft)
+            {
+                _rigidbody2D.position = new Vector3(maxDistanceLeft, transform.position.y, transform.position.z);
+            }
+            else if (pos.x >= maxDistanceRight)
+            {
+                _rigidbody2D.position = new Vector3(maxDistanceRight, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                _rigidbody2D.position = new Vector3(pos.x, transform.position.y, transform.position.z);
+            }
         }
 
         private void FixedUpdate()
         {
-            _attackCooldown += Time.fixedDeltaTime;
-            if (_attackCooldown > attackSpeed && attack.IsEnemyInRange())
+            if (attack)
             {
-                attack.Perform();
-                _attackCooldown = 0f;
+                if (_attackCooldown <= 0f)
+                {
+                    if (attack.IsEnemyInRange())
+                    {
+                        _attackCooldown = attackSpeed;
+                        attack.Perform();
+                    }
+                }
+                else
+                {
+                    _attackCooldown -= Time.fixedDeltaTime;
+                }
             }
         }
     }
