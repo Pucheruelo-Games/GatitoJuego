@@ -49,14 +49,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651336c189a164418224bbb828b0d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Raton
-  health: 40
+  health: 15
   attackSpeed: 1
   moveSpeed: 1
   reward: 1
+  armor: 1
   attack: {fileID: 4331545656230452655}
   animator: {fileID: 1817989913249787967}
   rigidbody2D: {fileID: 1153347623361214546}
   difficulty: 1
+  coinsPref: {fileID: 4947939586947902568, guid: 5b71be405ff9f7945a5ccc07fb0d7de2, type: 3}
 --- !u!114 &4331545656230452655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.MeleeAttack
   <TargetTag>k__BackingField: 0
   direction: {x: 0, y: -1}
-  damage: 5
+  damage: 2
   origin: {fileID: 4322703690070839394}
   range: 0.5
   effects: []

@@ -138,9 +138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b246ad41be194fc40ac2fea6442baa05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.BaseProjectile
-  damage: 10
+  damage: 3
   velocity: 6
-  range: 10
+  range: 15
   effects:
   - effectType: 1
     duration: 5

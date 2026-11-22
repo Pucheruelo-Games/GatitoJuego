@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using static UnityEditor.PlayerSettings;
 
 namespace Code
 {
@@ -17,7 +18,8 @@ namespace Code
         private List<InventoryCard> _cards = new();
         private InventoryCard _selectedCard;
         private InventoryCard _carriedCard;
-
+        private InventoryCard _precard;
+        private Vector3 _precardpos;
         public InventoryCard CarriedCard
         {
             get => _carriedCard;
@@ -44,6 +46,26 @@ namespace Code
 
         private void Update()
         {
+            GetPointedCard(out var precard);
+
+            if (precard != _precard)
+            {
+                if (_precard != null)
+                {
+                    _precard.VisualRect.position = _precardpos;
+                }
+
+                _precard = precard;
+                if (precard != null && _precard != _carriedCard)
+                {
+                    _precardpos = _precard.VisualRect.position;
+                    var pos = _precardpos;
+                    pos.y += 15;
+
+                    _precard.VisualRect.position = pos;
+                }
+            }
+            
             if (InputManager.Instance.Player.Click.WasPressedThisFrame() && GetPointedCard(out var card))
             {
                 _carriedCard = card;

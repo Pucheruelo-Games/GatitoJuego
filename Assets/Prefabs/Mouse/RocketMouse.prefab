@@ -54,10 +54,12 @@ MonoBehaviour:
   attackSpeed: 0.1
   moveSpeed: 15
   reward: 3
+  armor: 1
   attack: {fileID: 5381383452775463275}
   animator: {fileID: 7004805430496815070}
   rigidbody2D: {fileID: 1153347623361214546}
-  difficulty: 4
+  difficulty: 6
+  coinsPref: {fileID: 4947939586947902568, guid: 5b71be405ff9f7945a5ccc07fb0d7de2, type: 3}
 --- !u!114 &5381383452775463275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,7 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.ExplosiveAttack
   <TargetTag>k__BackingField: 0
   direction: {x: 0, y: -1}
-  damage: 85
+  damage: 30
   origin: {fileID: 4322703690070839394}
   range: 0.1
   ExplosionRadius: 1

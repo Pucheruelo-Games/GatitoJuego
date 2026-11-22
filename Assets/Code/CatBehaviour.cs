@@ -1,8 +1,11 @@
 using Code;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 namespace Code
 {
@@ -14,6 +17,7 @@ namespace Code
         [SerializeField] private float attackSpeed;
         [SerializeField] private Attack attack;
         [SerializeField] private Animator animator;
+        [SerializeField] private VisualEffect[] Particles;
         private float _timer;
         private Tile[] _tiles;
         private List<Effect> activeEffects = new List<Effect>();
@@ -32,20 +36,28 @@ namespace Code
             position.y += 0.2f;
             transform.position = position;
             if (animator) animator.SetTrigger("Attack");
+            if (Particles.Length > 0)
+            {
+                Particles[0].Play();
+            }
         }
 
         private void FixedUpdate()
         {
-            if (attack.IsEnemyInRange())
+            if (attack != null)
             {
-                _timer += Time.fixedDeltaTime;
-                if (_timer >= attackSpeed)
+                if (attack.IsEnemyInRange())
                 {
-                    _timer -= attackSpeed;
-                    attack.Perform();
-                    if (animator) animator.SetTrigger("Attack");
+                    _timer += Time.fixedDeltaTime;
+                    if (_timer >= attackSpeed)
+                    {
+                        _timer -= attackSpeed;
+                        attack.Perform();
+                        if (animator) animator.SetTrigger("Attack");
+                    }
                 }
             }
+            
             List<Effect> newListEff = new List<Effect>(activeEffects);
             foreach (Effect ef in newListEff)
             {

@@ -138,9 +138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c45b334732e39f46a71b72a86335163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.LaserProjectile
-  damage: 20
+  damage: 3
   velocity: 5
-  range: 10
+  range: 15
   rigidbody2D: {fileID: 1653487694094783842}
 --- !u!61 &4692912786222150708
 BoxCollider2D:
