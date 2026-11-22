@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b60c45c8bd4b33bb5f912126ab3495, type: 3}
   m_Name: MagicCat
   m_EditorClassIdentifier: Assembly-CSharp::Code.CatCard
-  icon: {fileID: -1126876486, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  icon: {fileID: 21300000, guid: c20ed84ab084e104ea157364f110cf71, type: 3}
   cost: 15
   cooldown: 30
   displayname: MagicCat
