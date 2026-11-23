@@ -31,10 +31,6 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator CuentaAtras()
     {
         _ronda = GameManager.Instance.Round;
-        if (_ronda > 1)
-        {
-            yield return new WaitForSeconds(1f);
-        }
         CrearListaEnemigosRonda();
         while (_tiempo > 0)
         {
@@ -44,7 +40,7 @@ public class EnemySpawner : MonoBehaviour
             _tiempo--;
             
         }
-        CuentaCambio?.Invoke("YA!");
+        CuentaCambio?.Invoke("GO!");
         yield return new WaitForSeconds(1f);
         CuentaCambio?.Invoke(_tiempo.ToString());
         
@@ -71,12 +67,20 @@ public class EnemySpawner : MonoBehaviour
 
     private void EmpezarRonda()
     {
-        float intervalo = Mathf.Max(0.15f, _intervalo / _ronda);
-        int enemVar = UnityEngine.Random.Range(_enemRonda-_ronda, _enemRonda+_ronda);
-        int cantidad = enemVar * _ronda;
+        _spawneados = 0;
+        int cantidad = CalcularCantidad();
+        float duracion = Mathf.Max(0.1f, Mathf.Min(3f * _ronda+5, 60f));
+        float intervalo = duracion / cantidad;
 
         Debug.Log("Ronda: " + _ronda + "CantidadEnemigos: " + cantidad);
         StartCoroutine(SpawnearEnemigosDeRonda(cantidad,intervalo,_ronda));
+    }
+
+    private int CalcularCantidad()
+    {
+        float media = 2f * _ronda + 2f;
+        int cantidad = Mathf.RoundToInt(media * Random.Range(0.8f, 1.2f));
+        return Mathf.Max(1, cantidad);
     }
     private void CambiarRonda()
     {
@@ -84,13 +88,18 @@ public class EnemySpawner : MonoBehaviour
         TransicionTienda();
         StartCoroutine(CuentaAtras());
     }
+    private IEnumerator RondaTerminada()
+    {
+        GameManager.Instance.Coins += 10;
+        yield return new WaitForSeconds(1f);
+        CambiarRonda();
+    }
 
     public IEnumerator SpawnearEnemigosDeRonda(int cantidad, float intervalo, int ronda)
     {
         while (cantidad > 0)
         {
-            float var = Random.Range(-0.5f, 0.5f);
-            float espera = Mathf.Max(0.1f, intervalo + var);
+            float espera = Mathf.Max(0.1f, intervalo * Random.Range(0.6f, 1.4f));
             yield return new WaitForSeconds(espera);
 
             int carril = Random.Range(0, 6);
@@ -105,7 +114,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         yield return new WaitUntil(TodosMuertos);
-        CambiarRonda();
+        StartCoroutine(RondaTerminada());
     }
     private MouseBehaviour RatonesCampanaDeGauss()
     {

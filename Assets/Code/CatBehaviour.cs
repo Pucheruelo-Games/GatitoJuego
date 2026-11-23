@@ -2,10 +2,13 @@ using Code;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 namespace Code
 {
+    [RequireComponent(typeof(Attack))]
     public class CatBehaviour : MonoBehaviour, IDamageable
     {
         public AttackTag AttackTag => AttackTag.Cat;
@@ -13,6 +16,7 @@ namespace Code
         [SerializeField] private float attackSpeed;
         [SerializeField] private Attack attack;
         [SerializeField] private Animator animator;
+        [SerializeField] private VisualEffect[] Particles;
         private float _cooldown;
         private Tile[] _tiles;
         private List<Effect> activeEffects = new List<Effect>();
@@ -26,10 +30,19 @@ namespace Code
             {
                 tile.Cat = this;
                 position += tile.transform.position;
+                tile.GetComponentInChildren<SpriteRenderer>().color = Color.black;
             }
             position /= _tiles.Length;
+            Debug.DrawLine(new Vector3(position.x - .1f, position.y), new Vector3(position.x + .1f, position.y), Color.magenta, 5f);
+            Debug.DrawLine(new Vector3(position.x, position.y - .1f), new Vector3(position.x, position.y + .1f), Color.magenta, 5f);
+            print($"aaaaaaa {_tiles.Length}");
             position.y += 0.2f;
             transform.position = position;
+            if (animator) animator.SetTrigger("Attack");
+            if (Particles.Length > 0)
+            {
+                Particles[0].Play();
+            }
         }
 
         private void FixedUpdate()
@@ -42,6 +55,7 @@ namespace Code
                     {
                         _cooldown = attackSpeed;
                         attack.Perform();
+                        if (animator) animator.SetTrigger("Attack");
                     }
                 }
                 else
@@ -49,6 +63,7 @@ namespace Code
                     _cooldown -= Time.fixedDeltaTime;
                 }
             }
+            
             List<Effect> newListEff = new List<Effect>(activeEffects);
             foreach (Effect ef in newListEff)
             {
@@ -74,6 +89,7 @@ namespace Code
         {
             health -= damage;
             if (health <= 0) Die();
+            else if (animator) animator.SetTrigger("Hurt");
             if (effects == null) return;
             foreach (Effect ef in effects)
             {
@@ -108,7 +124,16 @@ namespace Code
         private void Die()
         {
             foreach (var tile in _tiles) tile.Cat = null;
-            Destroy(this.gameObject);
+            if (animator) animator.SetTrigger("Dead");
+            if (animator)
+            {
+                Destroy(GetComponent<Collider2D>());
+                Destroy(this.gameObject, 2);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,20 +14,28 @@ namespace Code
         [SerializeField] private float attackSpeed;
         [SerializeField] private float moveSpeed;
         [SerializeField] private int reward;
+        [SerializeField] private int armor;
         [SerializeField] private Attack attack;
         [SerializeField] private Animator animator;
         [SerializeField] private Rigidbody2D rigidbody2D;
         [SerializeField] private int difficulty;
+        [SerializeField] private GameObject coinsPref;
+
         private List<Effect> activeEffects = new List<Effect>();
         public int Difficulty => difficulty;
         private bool _dead;
         private float _timer;
         public Action OnDeath;
         private float _poisonTick;
+
+        private void Awake()
+        {
+            health = health * (1f + (0.035f * (GameManager.Instance.Round-1)));
+        }
         public void TakeDamage(int damage, Effect[] effects = null)
         {
             if (_dead) return;
-            health -= damage;
+            health -= damage / armor;
             if (health <= 0) Die();
             else if (animator) animator.SetTrigger("Hurt");
             if (effects == null) return;
@@ -121,6 +130,16 @@ namespace Code
             _dead = true;
             OnDeath?.Invoke();
             GameManager.Instance.Coins += reward;
+            if (coinsPref)
+            {
+                GameObject coin = Instantiate(coinsPref,transform.position, Quaternion.identity);
+                if(coin.TryGetComponent<Rigidbody2D>(out Rigidbody2D rbC))
+                {
+                    rbC.AddForceY(2.5f, ForceMode2D.Impulse);
+                }
+                coin.GetComponentInChildren<TextMeshPro>().text = "+" + reward;
+                Destroy(coin, 0.5f);
+            }
             if (animator)
             {
                 Destroy(GetComponent<Collider2D>()); 

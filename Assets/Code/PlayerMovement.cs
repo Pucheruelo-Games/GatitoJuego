@@ -14,6 +14,7 @@ namespace Code
         [SerializeField] float maxDistanceLeft = -2.75f;
         [SerializeField] float maxDistanceRight = 2.75f;
         [SerializeField] Attack attack;
+        [SerializeField] Animator animator;
         private Rigidbody2D _rigidbody2D;
         private float _attackCooldown;
 
@@ -69,6 +70,7 @@ namespace Code
                     {
                         _attackCooldown = attackSpeed;
                         attack.Perform();
+                        if (animator) animator.SetTrigger("Attack");
                     }
                 }
                 else

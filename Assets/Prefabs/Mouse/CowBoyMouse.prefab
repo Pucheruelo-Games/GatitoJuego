@@ -49,14 +49,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651336c189a164418224bbb828b0d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Raton
-  health: 6
-  attackSpeed: 3
+  health: 20
+  attackSpeed: 1
   moveSpeed: 0.8
-  reward: 4
+  reward: 3
+  armor: 1
   attack: {fileID: -3390734876699524419}
   animator: {fileID: 1817989913249787967}
   rigidbody2D: {fileID: 1153347623361214546}
-  difficulty: 3
+  difficulty: 4
+  coinsPref: {fileID: 4947939586947902568, guid: 5b71be405ff9f7945a5ccc07fb0d7de2, type: 3}
 --- !u!61 &347784072850423495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -168,6 +170,7 @@ MonoBehaviour:
   projectile: {fileID: 2121697921538561138, guid: 1ac569fd10408934aa299f9fa633a3dd, type: 3}
   direction: {x: 0, y: -1}
   origin: {fileID: 4322703690070839394}
+  Particles: []
 --- !u!1 &6812786580221443480
 GameObject:
   m_ObjectHideFlags: 0
