@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NyanCatCard
   m_EditorClassIdentifier: Assembly-CSharp::Code.CatCard
   icon: {fileID: -6104482763094284809, guid: 72171b57e5846854ba854ca910584e9c, type: 3}
-  cost: 0
+  cost: 14
   cooldown: 7
   displayname: NyanCat
   width: 1

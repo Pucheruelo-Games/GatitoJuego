@@ -37,10 +37,13 @@ namespace Code
                 if (hit.TryGetComponent(out IDamageable damageable) && damageable.AttackTag == TargetTag)
                 {
                     damageable.TakeDamage(damage);
-                    if(Particles.Length>0) Particles[0].Play();
+
                 }
             }
-            
+            if (Particles.Length > 0)
+            {
+                Particles[0].Play();
+            }
             if (this.TryGetComponent(out MouseBehaviour mouseBehaviour))
             {
                 mouseBehaviour.TakeDamage(999999);

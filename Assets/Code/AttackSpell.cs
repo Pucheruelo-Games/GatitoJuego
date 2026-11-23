@@ -22,7 +22,6 @@ namespace Code
             
             if (delay > 0)
             {
-                if (animator) animator.SetTrigger("Cast");
                 StartCoroutine(DelayedSpellCast());
             }
             else
