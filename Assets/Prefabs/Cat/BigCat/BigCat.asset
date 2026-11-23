@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: BigCat
   m_EditorClassIdentifier: Assembly-CSharp::Code.CatCard
   icon: {fileID: -1211398744, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
-  cost: 4
+  cost: 0
   cooldown: 4
   displayname: BigCat
-  width: 2
-  height: 2
+  width: 3
+  height: 3
   cat: {fileID: 8655387335933335661, guid: b2fbef8029d63834493bd4af44dce592, type: 3}
   preview: {fileID: -1211398744, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
