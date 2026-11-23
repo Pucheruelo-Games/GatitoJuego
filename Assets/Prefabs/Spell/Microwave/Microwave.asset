@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa56b20551e2436c8616c4b47e162467, type: 3}
+  m_Name: Microwave
+  m_EditorClassIdentifier: Assembly-CSharp::Code.SpellCard
+  icon: {fileID: 21300000, guid: 8d2b2bd7ce60dd7459ee0366a3b2fa00, type: 3}
+  cost: 5
+  cooldown: 20
+  displayname: Microwave
+  width: 2
+  height: 1
+  spell: {fileID: 3195143326174965144, guid: be5904afefd2c9845bf34529b1d0e828, type: 3}
+  catPreventCast: 1
+  foregroundSprite: {fileID: 21300000, guid: 3ca1400bd64c82d4fad5d0f498e02098, type: 3}
+  previewType: 0
+  previewConfig:
+    rid: 4738255664730341577
+  references:
+    version: 2
+    RefIds:
+    - rid: 4738255664730341577
+      type: {class: CirclePreviewConfig, ns: Code, asm: Assembly-CSharp}
+      data:
+        radius: 4

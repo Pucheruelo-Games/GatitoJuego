@@ -4,22 +4,22 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using static UnityEditor.PlayerSettings;
 
 namespace Code
 {
     public class Inventory : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer cardPreview;
+        [SerializeField] private PreviewHandler cardPreview;
         [SerializeField] private InventoryCard cardPrefab;
         [SerializeField] private RectTransform cardContainer;
+        [SerializeField] private RectTransform selectedContainer;
         [SerializeField] private int cardSlots;
         [SerializeField] private Card[] startCards;
         private List<InventoryCard> _cards = new();
         private InventoryCard _selectedCard;
         private InventoryCard _carriedCard;
-        private InventoryCard _precard;
-        private Vector3 _precardpos;
+        private LayerMask _tileLayerMask;
+
         public InventoryCard CarriedCard
         {
             get => _carriedCard;
@@ -37,56 +37,134 @@ namespace Code
             if (Instance)
             {
                 Destroy(gameObject);
+                return;
             }
-            else
-            {
-                _instance = this;
-            }
+            
+            _instance = this;
+            _tileLayerMask = LayerMask.GetMask("Tile");
         }
 
         private void Update()
         {
-            GetPointedCard(out var precard);
-
-            if (precard != _precard)
+            if (GetPointedCard(out var card))
             {
-                if (_precard != null)
+                if (!_carriedCard)
                 {
-                    _precard.VisualRect.position = _precardpos;
-                }
-
-                _precard = precard;
-                if (precard != null && _precard != _carriedCard)
-                {
-                    _precardpos = _precard.VisualRect.position;
-                    var pos = _precardpos;
-                    pos.y += 15;
-
-                    _precard.VisualRect.position = pos;
+                    if (_selectedCard)
+                    {
+                        _selectedCard.OnDeselected();
+                    }
+                    _selectedCard = card;
+                    _selectedCard.OnSelected(selectedContainer);
                 }
             }
             
-            if (InputManager.Instance.Player.Click.WasPressedThisFrame() && GetPointedCard(out var card))
+            if (InputManager.Instance.Player.Click.WasPressedThisFrame())
             {
-                _carriedCard = card;
+                if (card)
+                {
+                    _carriedCard = card;
+                }
+                else if (_selectedCard)
+                {
+                    var canvasPos = InputManager.Instance.Player.Position.ReadValue<Vector2>();
+                    var worldPos = Camera.main.ScreenToWorldPoint(canvasPos) * Vector2.one;
+
+                    if (GetSelectedTiles(worldPos, _selectedCard.Card) != null)
+                    {
+                        _carriedCard = _selectedCard;
+                    }
+                }
             }
             
             if (_carriedCard)
             {
-                var position = InputManager.Instance.Player.Position.ReadValue<Vector2>();
-                var worldPos = Camera.main.ScreenToWorldPoint(position) * Vector2.one;
-                _carriedCard.VisualRect.position = position;
-                _carriedCard.OnCarriedUpdate(worldPos, cardPreview);
+                var canvasPos = InputManager.Instance.Player.Position.ReadValue<Vector2>();
+                var worldPos = Camera.main.ScreenToWorldPoint(canvasPos) * Vector2.one;
+
+                var tiles = GetSelectedTiles(worldPos, _selectedCard.Card);
                 
                 if (InputManager.Instance.Player.Click.WasReleasedThisFrame() && _carriedCard)
                 {
-                    _carriedCard.OnCardDrop(worldPos);
-                    cardPreview.gameObject.SetActive(false);
-                    _carriedCard.VisualRect.gameObject.SetActive(true);
-                    _carriedCard.VisualRect.localPosition = Vector3.zero;
+                    _carriedCard.OnCarriedUpdate(tiles, canvasPos, cardPreview, true);
                     _carriedCard = null;
                 }
+                else
+                {
+                    _carriedCard.OnCarriedUpdate(tiles, canvasPos, cardPreview);
+                }
             }
+        }
+        
+        private Tile[] GetSelectedTiles(Vector2 worldPos, Card card)
+        {
+            foreach (var hit in Physics2D.OverlapBoxAll(worldPos, Vector2.one * 0.1f, 0, _tileLayerMask))
+            {
+                if (!hit.TryGetComponent(out Tile tile)) continue;
+                
+                return GetAreaTiles(tile, card);
+            }
+            return null;
+        }
+
+        private Tile[] GetAreaTiles(Tile center, Card card, int lookBack = 0)
+        {
+            if (!center) return null;
+            
+            if (card.Width <= 1 && card.Height <= 1)
+            {
+                return new []{center};
+            }
+
+            if (lookBack >= 16) return null;
+                    
+            var right = center;
+            var left = center;
+                    
+            var up = center;
+            var down = center;
+                    
+            List<Tile> tileList = new();
+                
+            tileList.Add(center);
+
+            for (int x = 1; x < card.Width; x++)
+            {
+                if (x % 2 == 0)
+                {
+                    if (right.Right) right = right.Right;
+                    else return GetAreaTiles(center.Left, card, lookBack+1);
+                    
+                    tileList.Add(right);
+                }
+                else
+                {
+                    if (left.Left) left = left.Left;
+                    else return GetAreaTiles(center.Right, card, lookBack+1);
+                    
+                    tileList.Add(left);
+                }
+                        
+                for (int y = 1; y < card.Height; y++)
+                {
+                    if (y % 2 == 0)
+                    {
+                        if (down.Down) down = down.Down;
+                        else return GetAreaTiles(center.Up, card, lookBack+1);
+                        
+                        tileList.Add(down);
+                    }
+                    else
+                    {
+                        if (up.Up) up = up.Up;
+                        else return GetAreaTiles(center.Down, card, lookBack+1);
+                        
+                        tileList.Add(up);
+                    }
+                }
+            }
+            
+            return tileList.ToArray();
         }
         
         private static bool GetPointedCard(out InventoryCard card)

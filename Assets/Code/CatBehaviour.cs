@@ -1,7 +1,6 @@
 using Code;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,7 +17,7 @@ namespace Code
         [SerializeField] private Attack attack;
         [SerializeField] private Animator animator;
         [SerializeField] private VisualEffect[] Particles;
-        private float _timer;
+        private float _cooldown;
         private Tile[] _tiles;
         private List<Effect> activeEffects = new List<Effect>();
         private float _poisonTick;
@@ -44,17 +43,20 @@ namespace Code
 
         private void FixedUpdate()
         {
-            if (attack != null)
+            if (attack)
             {
-                if (attack.IsEnemyInRange())
+                if (_cooldown <= 0f)
                 {
-                    _timer += Time.fixedDeltaTime;
-                    if (_timer >= attackSpeed)
+                    if (attack.IsEnemyInRange())
                     {
-                        _timer -= attackSpeed;
+                        _cooldown = attackSpeed;
                         attack.Perform();
                         if (animator) animator.SetTrigger("Attack");
                     }
+                }
+                else
+                {
+                    _cooldown -= Time.fixedDeltaTime;
                 }
             }
             

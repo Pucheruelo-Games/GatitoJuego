@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,9 +12,12 @@ namespace Code
         [SerializeField] private Image iconImage;
         [SerializeField] private TMP_Text nameText;
         [SerializeField] private TMP_Text costText;
-        [field:SerializeField] public RectTransform VisualRect { get; private set; }
+        [SerializeField] private Image cooldownMask;
+        [SerializeField] private RectTransform visualRect;
         private Card _card;
+        public Card Card => _card;
         private float _cooldown = 0f;
+        private Vector2 _visualsStartPosition;
 
         public void Init(Card card)
         {
@@ -19,58 +25,88 @@ namespace Code
             iconImage.sprite = card.Icon;
             nameText.text = card.DisplayName;
             costText.text = card.Cost.ToString();
+            cooldownMask.fillAmount = Mathf.Clamp01(_cooldown / _card.Cooldown);
         }
 
-        public void OnCarriedUpdate(Vector2 position, SpriteRenderer preview)
+        private void Update()
         {
-            foreach (var hit in Physics2D.OverlapBoxAll(position,Vector2.one*0.1f,0))
+            if (_cooldown > 0f)
             {
-                if (hit.TryGetComponent(out Tile tile))
-                {
-                    preview.gameObject.SetActive(true);
-                    VisualRect.gameObject.SetActive(false);
-                    preview.transform.position = tile.transform.position + Vector3.up * 0.2f;
-                    if (_card is CatCard catCard)
-                    {
-                        preview.sprite = catCard.Preview;
-
-                        var newColor = new Color();
-                        
-                        if (tile.Cat || GameManager.Instance.Coins < catCard.Cost) newColor = Color.red;
-                        else newColor = Color.white;
-
-                        newColor.a = 0.5f;
-                        
-                        preview.color = newColor;
-                    }
-
-                    if (tile.Cat == null) ;
-
-                    return;
-                }
+                _cooldown -= Time.deltaTime;
+                cooldownMask.fillAmount = Mathf.Clamp01(_cooldown / _card.Cooldown);
+                if (_cooldown <= 0f) _cooldown = 0f;
             }
-            preview.gameObject.SetActive(false);
-            VisualRect.gameObject.SetActive(true);
         }
 
-        public void OnCardDrop(Vector2 position)
+        public void OnSelected(RectTransform container)
         {
-            foreach (var hit in Physics2D.OverlapBoxAll(position,Vector2.one*0.1f,0))
+            visualRect.SetParent(container);
+            _visualsStartPosition = visualRect.position + Vector3.up * 20f;
+            visualRect.position = _visualsStartPosition;
+        }
+
+        public void OnDeselected()
+        {
+            visualRect.SetParent(transform);
+            visualRect.localPosition = Vector3.zero;
+        }
+
+        public void OnCarriedUpdate(Tile[] tiles, Vector2 canvasPos, PreviewHandler handler, bool drop = false)
+        {
+            bool available = _cooldown <= 0f && GameManager.Instance.Coins >= _card.Cost;
+
+            if (tiles != null && (_card is CatCard || (_card is SpellCard s && s.CatPreventCast)))
             {
-                if (hit.TryGetComponent(out Tile tile))
+                foreach (var t in tiles)
                 {
-                    
-                    if (GameManager.Instance.Coins < _card.Cost) return;
-                    
-                    if (_card is CatCard catCard)
+                    if (t.Cat)
                     {
-                        if (tile.Cat) return;
-                        var cat = Instantiate(catCard.Cat);
-                        cat.Init(tile);
-                        GameManager.Instance.Coins -= catCard.Cost;
+                        available = false;
+                        break;
                     }
                 }
             }
+
+            if (drop)
+            {
+                visualRect.gameObject.SetActive(true);
+                visualRect.position = _visualsStartPosition;
+                handler.ReleasePreview();
+
+                if (!available) return;
+                if (tiles == null) return;
+                    
+                if (_card is CatCard catCard)
+                {
+                    var cat = Instantiate(catCard.Cat);
+                    cat.Init(tiles);
+                }
+                else if (_card is SpellCard spellCard)
+                {
+                    var spell = Instantiate(spellCard.Spell);
+                    spell.Cast(tiles);
+                }
+                GameManager.Instance.Coins -= _card.Cost;
+                _cooldown = _card.Cooldown;
+            }
+            else
+            {
+                visualRect.position = canvasPos;
+                if (tiles == null)
+                {
+                    visualRect.gameObject.SetActive(true);
+                    handler.ReleasePreview();
+                }
+                else
+                {
+                    visualRect.gameObject.SetActive(false);
+                    handler.Init(available, tiles);
+                    _card.GeneratePreview(handler);
+                }
+            }
         }
+
+        
+        
     }
 }
