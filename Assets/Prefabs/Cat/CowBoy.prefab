@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5982143360511176368}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.335, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1126876486, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  m_Sprite: {fileID: 8012055214899776398, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -186,10 +186,10 @@ GameObject:
   - component: {fileID: 874792310514442902}
   - component: {fileID: 8655387335933335661}
   - component: {fileID: 7898750176576649046}
+  - component: {fileID: 2645387813991624404}
   - component: {fileID: -6952334376709490956}
-  - component: {fileID: 2872615775175554363}
   m_Layer: 8
-  m_Name: MagicCat
+  m_Name: CowBoy
   m_TagString: Gato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,9 +225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9228a0c3bae3954f935cad5152d130f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gato
-  health: 40
-  attackSpeed: 1.5
-  attack: {fileID: 2872615775175554363}
+  health: 30
+  attackSpeed: 4
+  attack: {fileID: 2645387813991624404}
   animator: {fileID: -6952334376709490956}
   Particles:
   - {fileID: 6236570963329905151}
@@ -277,6 +277,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2645387813991624404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6547297762886524317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe41a242d6e4d4f999230035818beca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Code.ShootAttack
+  <TargetTag>k__BackingField: 1
+  projectile: {fileID: 2121697921538561138, guid: 2dbf12b6f7d013b4887ff5843152122a, type: 3}
+  direction: {x: 0, y: 1}
+  origin: {fileID: 874792310514442902}
+  Particles: []
 --- !u!95 &-6952334376709490956
 Animator:
   serializedVersion: 7
@@ -299,26 +316,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2872615775175554363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6547297762886524317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d83a78c0b5df5da47a6254496734a528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomAttack
-  <TargetTag>k__BackingField: 1
-  projectiles:
-  - {fileID: 3783132196845721684, guid: d4eee92c529d478409c4cff4c36f3b99, type: 3}
-  - {fileID: 3783132196845721684, guid: 2727039933bdb034e9e56588e9e049a5, type: 3}
-  - {fileID: 3783132196845721684, guid: 23d05af58a243ba458abfa2816113316, type: 3}
-  direction: {x: 0, y: 1}
-  origin: {fileID: 874792310514442902}
-  Particles: []
 --- !u!1 &8405911938608746286
 GameObject:
   m_ObjectHideFlags: 0

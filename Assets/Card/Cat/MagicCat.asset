@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: c20ed84ab084e104ea157364f110cf71, type: 3}
   cost: 15
   cooldown: 30
-  displayname: MagicCat
+  displayname: HonouredCat
   width: 1
   height: 1
   cat: {fileID: 8655387335933335661, guid: a2814dbb4580a244c9111477a8ece7cb, type: 3}

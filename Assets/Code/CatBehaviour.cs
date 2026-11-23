@@ -32,6 +32,7 @@ namespace Code
                 position += tile.transform.position;
             }
             position /= _tiles.Length;
+            position += (Vector3.up * 0.2f);
             transform.position = position;
             if (animator) animator.SetTrigger("Attack");
             if (Particles.Length > 0)

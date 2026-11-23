@@ -18,6 +18,7 @@ namespace Code
                 position += tile.transform.position;
             }
             position /= tiles.Length;
+            position += (Vector3.up * 0.2f);
             transform.position = position;
             
             if (delay > 0)

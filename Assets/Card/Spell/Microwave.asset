@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Microwave
   m_EditorClassIdentifier: Assembly-CSharp::Code.SpellCard
   icon: {fileID: 21300000, guid: 8d2b2bd7ce60dd7459ee0366a3b2fa00, type: 3}
-  cost: 0
-  cooldown: 20
+  cost: 12
+  cooldown: 15
   displayname: Microwave
   width: 2
   height: 1

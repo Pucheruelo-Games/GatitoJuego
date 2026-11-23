@@ -27,9 +27,18 @@ namespace Code
             _available = available;
         }
 
+        private Vector2 GetSpriteOffset(Sprite sprite)
+        {
+            Vector2 center = sprite.rect.size / 2f;
+            Vector2 offset = (sprite.pivot - center) / sprite.pixelsPerUnit;
+            return offset + (Vector2.up * 0.2f);
+        }
+
         public void GenerateCatPreview(CatCard cat)
         {
             transform.position = _center;
+
+            foreground.transform.localPosition = GetSpriteOffset(cat.Preview);
 
             var newColor = new Color();
             
@@ -48,6 +57,8 @@ namespace Code
         public void GenerateCirclePreview(Sprite fgSprite, int radius)
         {
             transform.position = _center;
+            
+            foreground.transform.localPosition = GetSpriteOffset(fgSprite);
 
             foreground.color = new Color(1f, 1f, 1f, 0.5f);
             background.color = areaPreviewColor;
@@ -62,6 +73,8 @@ namespace Code
         public void GenerateSquarePreview(Sprite fgSprite, int width, int height)
         {
             transform.position = _center;
+            
+            foreground.transform.localPosition = GetSpriteOffset(fgSprite);
 
             foreground.color = new Color(1f, 1f, 1f, 0.5f);
             background.color = areaPreviewColor;
@@ -84,6 +97,9 @@ namespace Code
 
             foreground.transform.localScale = Vector3.one;
             background.transform.localScale = Vector3.one;
+            
+            foreground.transform.localPosition = Vector3.zero;
+            background.transform.localPosition = Vector3.zero;
             
             _generated = false;
         }

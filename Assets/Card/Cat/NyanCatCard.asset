@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65b60c45c8bd4b33bb5f912126ab3495, type: 3}
-  m_Name: BigCat
+  m_Name: NyanCatCard
   m_EditorClassIdentifier: Assembly-CSharp::Code.CatCard
-  icon: {fileID: -1211398744, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
-  cost: 0
-  cooldown: 4
-  displayname: BigCat
-  width: 2
-  height: 2
-  cat: {fileID: 8655387335933335661, guid: b2fbef8029d63834493bd4af44dce592, type: 3}
-  preview: {fileID: -1211398744, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
+  icon: {fileID: -6104482763094284809, guid: 72171b57e5846854ba854ca910584e9c, type: 3}
+  cost: 6
+  cooldown: 7
+  displayname: NyanCat
+  width: 1
+  height: 1
+  cat: {fileID: 8655387335933335661, guid: a04b67b2bb3a3ad47b523135944f69c5, type: 3}
+  preview: {fileID: 1897224193, guid: c65abda17dcabe24bb11dc4c3e08727e, type: 3}
