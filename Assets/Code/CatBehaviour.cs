@@ -30,13 +30,8 @@ namespace Code
             {
                 tile.Cat = this;
                 position += tile.transform.position;
-                tile.GetComponentInChildren<SpriteRenderer>().color = Color.black;
             }
             position /= _tiles.Length;
-            Debug.DrawLine(new Vector3(position.x - .1f, position.y), new Vector3(position.x + .1f, position.y), Color.magenta, 5f);
-            Debug.DrawLine(new Vector3(position.x, position.y - .1f), new Vector3(position.x, position.y + .1f), Color.magenta, 5f);
-            print($"aaaaaaa {_tiles.Length}");
-            position.y += 0.2f;
             transform.position = position;
             if (animator) animator.SetTrigger("Attack");
             if (Particles.Length > 0)

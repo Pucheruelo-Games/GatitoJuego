@@ -108,63 +108,78 @@ namespace Code
         }
 
 
-        private Tile[] GetAreaTiles(Tile center, Card card, int lookBack = 0)
+        private Tile[] GetAreaTiles(Tile center, Card card)
         {
             if (!center) return null;
-            
-            if (card.Width <= 1 && card.Height <= 1)
-            {
-                return new []{center};
-            }
 
-            if (lookBack >= 16) return null;
-                    
-            var right = center;
-            var left = center;
-                    
-            var up = center;
-            var down = center;
-                    
+            if (card.Width <= 1 && card.Height <= 1) return new Tile[] { center };
+
             List<Tile> tileList = new();
-                
-            tileList.Add(center);
-
-            for (int x = 1; x < card.Width; x++)
-            {
-                if (x % 2 == 0)
-                {
-                    if (right.Right) right = right.Right;
-                    else return GetAreaTiles(center.Left, card, lookBack+1);
-                    
-                    tileList.Add(right);
-                }
-                else
-                {
-                    if (left.Left) left = left.Left;
-                    else return GetAreaTiles(center.Right, card, lookBack+1);
-                    
-                    tileList.Add(left);
-                }
-                        
-                for (int y = 1; y < card.Height; y++)
-                {
-                    if (y % 2 == 0)
-                    {
-                        if (down.Down) down = down.Down;
-                        else return GetAreaTiles(center.Up, card, lookBack+1);
-                        
-                        tileList.Add(down);
-                    }
-                    else
-                    {
-                        if (up.Up) up = up.Up;
-                        else return GetAreaTiles(center.Down, card, lookBack+1);
-                        
-                        tileList.Add(up);
-                    }
-                }
-            }
             
+            int rightCount = 0;
+            int leftCount = 0;
+            int upCount = 0;
+            int downCount = 0;
+
+            Tile left = center;
+            Tile up = center;
+            Tile down = center;
+            Tile right = center;
+
+            int leftOffset = Mathf.CeilToInt((card.Width-1f)/2f);
+            int rightOffset = Mathf.FloorToInt((card.Width - 1f) / 2f);
+            int upOffset = Mathf.CeilToInt((card.Height-1f)/2f);
+            int downOffset = Mathf.FloorToInt((card.Width-1f)/2f);
+            
+            // LEFT
+            for (int i = 0; i < leftOffset; i++)
+            {
+                left = left.Left;
+                if (!left) leftCount++;
+            }
+            for (int i = 0; i < leftCount; i++) center = center.Right;
+            
+            // RIGHT
+            for (int i = 0; i < rightOffset; i++)
+            {
+                right = right.Right;
+                if (!right) rightCount++;
+            }
+            for (int i = 0; i < rightCount; i++) center = center.Left;
+            
+            // UP
+            for (int i = 0; i < upOffset; i++)
+            {
+                up = up.Up;
+                if (!up) upCount++;
+            }
+            for (int i = 0; i < upCount; i++) center = center.Down;
+            
+            // DOWN
+            for (int i = 0; i < downOffset; i++)
+            {
+                down = down.Down;
+                if (!down) downCount++;
+            }
+            for (int i = 0; i < downCount; i++) center = center.Up;
+            
+            for (int i = 0; i < leftOffset; i++) center = center.Left;
+            for (int i = 0; i < upOffset; i++) center = center.Up;
+
+
+            for (int x = 0; x < card.Width; x++)
+            {
+                Tile current = center;
+                
+                for (int y = 0; y < card.Height; y++)
+                {
+                    tileList.Add(current);
+                    current = current.Down;
+                }
+
+                center = center.Right;
+            }
+
             return tileList.ToArray();
         }
         

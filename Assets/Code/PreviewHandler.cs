@@ -29,7 +29,7 @@ namespace Code
 
         public void GenerateCatPreview(CatCard cat)
         {
-            transform.position = _center + Vector2.up * 0.2f;
+            transform.position = _center;
 
             var newColor = new Color();
             
