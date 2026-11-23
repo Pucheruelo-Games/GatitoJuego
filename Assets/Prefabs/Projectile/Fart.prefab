@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.BaseProjectile
   damage: 2
   velocity: 3
-  range: 15
+  range: 10
   effects:
   - effectType: 0
     duration: 0

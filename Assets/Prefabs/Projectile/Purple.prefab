@@ -332,5 +332,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.LaserProjectile
   damage: 15
   velocity: 6
-  range: 15
+  range: 10
   rigidbody2D: {fileID: 1653487694094783842}

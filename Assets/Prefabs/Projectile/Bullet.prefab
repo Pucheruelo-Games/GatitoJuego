@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.BaseProjectile
   damage: 15
   velocity: 6
-  range: 15
+  range: 10
   effects: []
   rigidbody2D: {fileID: 1653487694094783842}
 --- !u!61 &4692912786222150708
