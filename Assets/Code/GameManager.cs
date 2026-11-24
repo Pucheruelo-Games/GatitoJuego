@@ -17,12 +17,6 @@ public class GameManager : MonoBehaviour
         OnRoundChange.Invoke();
     }
     
-    private void Awake()
-    {
-        if (Instance) Destroy(gameObject);
-        else _instance = this;
-    }
-
     private int _coins;
 
     public int Coins
@@ -34,7 +28,19 @@ public class GameManager : MonoBehaviour
             OnCoinsChange.Invoke(_coins);
         }
     }
+    
+    private void Awake()
+    {
+        if (Instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+        _instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+   
     public event Action<int> OnCoinsChange = delegate { };
     public event Action OnRoundChange = delegate { };
-
 }

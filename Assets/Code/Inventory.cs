@@ -205,7 +205,20 @@ namespace Code
 
         private void Start()
         {
-            foreach (var card in startCards) AddCard(card);
+            GameData.instance.Load();
+            print(GameData.instance.HasData);
+            if (GameData.instance.HasData)
+            {
+                foreach (var card in GameData.instance.Inventory) AddCard(card);
+            }
+            else
+            {
+                foreach (var card in startCards) AddCard(card);
+                GameData.instance.Inventory = startCards;
+                GameData.instance.Health = GameManager.Instance.Health;
+            }
+            
+            GameData.instance.Save();
         }
 
         public bool AddCard(Card card)
