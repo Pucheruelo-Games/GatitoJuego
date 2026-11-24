@@ -3,6 +3,7 @@ using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Code
 {
@@ -14,6 +15,8 @@ namespace Code
         [SerializeField] TextMeshProUGUI _monedasUI;
         [SerializeField] GameObject _cuentaAtrasTxt;
         [SerializeField] GameObject _rondaTxt;
+        [SerializeField] Image _barraRonda;
+        private float _totalEnemigos;
         
         private void Start()
         {
@@ -21,6 +24,8 @@ namespace Code
             GameManager.Instance.OnCoinsChange += ActualizarMonedas;
             GameManager.Instance.OnRoundChange += ActualizarRonda;
             _roundManager.CuentaCambio += CuentaAtras;
+            _roundManager.RatonMuerto += ActualizarBarraEnemigos;
+            _roundManager.TotalRatones += ObtenerEnemigosRonda;
         }
         private void OnDisable()
         {
@@ -28,7 +33,8 @@ namespace Code
             GameManager.Instance.OnCoinsChange -= ActualizarMonedas;
             GameManager.Instance.OnRoundChange -= ActualizarRonda;
             _roundManager.CuentaCambio -= CuentaAtras;
-
+            _roundManager.RatonMuerto -= ActualizarBarraEnemigos;
+            _roundManager.TotalRatones -= ObtenerEnemigosRonda;
         }
         private void CuentaAtras(String num)
         {
@@ -58,6 +64,16 @@ namespace Code
         private void ActualizarVida(int vida)
         {
             _vidaUI.text = vida.ToString();
+        }
+        private void ActualizarBarraEnemigos(int enemigos)
+        {
+            Debug.Log("DIVISION: "+enemigos/_totalEnemigos+" ENEMIGOS: "+enemigos+" TOTAL: "+_totalEnemigos);
+            _barraRonda.fillAmount = enemigos/_totalEnemigos;
+        }
+        private void ObtenerEnemigosRonda(int enemigos)
+        {
+            _totalEnemigos = enemigos;
+            _barraRonda.fillAmount = 1;
         }
 
         private void Perder()

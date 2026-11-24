@@ -12,10 +12,14 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] MouseBehaviour[] prefabs;
     [SerializeField] GameObject[] _spawners;
     private int _spawneados;
+    private int _totalspawneados;
     [SerializeField] float _intervalo = 4;
     [SerializeField] int _tiempoPausa;
     private int _ronda;
     public Action<string> CuentaCambio;
+    public Action<int> TotalRatones;
+
+    public Action<int> RatonMuerto;
     int _enemRonda = 6;
     private int _tiempo;
     private System.Collections.Generic.List<MouseBehaviour> _ratonesSpawneables = new System.Collections.Generic.List<MouseBehaviour>();
@@ -97,6 +101,8 @@ public class EnemySpawner : MonoBehaviour
 
     public IEnumerator SpawnearEnemigosDeRonda(int cantidad, float intervalo, int ronda)
     {
+        _spawneados = cantidad;
+        TotalRatones?.Invoke(_spawneados);
         while (cantidad > 0)
         {
             float espera = Mathf.Max(0.1f, intervalo * Random.Range(0.6f, 1.4f));
@@ -107,7 +113,7 @@ public class EnemySpawner : MonoBehaviour
             
             MouseBehaviour r= (Instantiate(RatonesCampanaDeGauss(), spawner, Quaternion.identity));
             
-            _spawneados++;
+            
             r.OnDeath += OnMouseDeath;
             Debug.Log("Ha spawneado una rata");
             cantidad--;
@@ -135,5 +141,6 @@ public class EnemySpawner : MonoBehaviour
     private void OnMouseDeath()
     {
         _spawneados--;
+        RatonMuerto?.Invoke(_spawneados);
     }
 }
