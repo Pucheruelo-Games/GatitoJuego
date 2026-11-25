@@ -9,7 +9,6 @@ namespace Code
 {
     public class UIManager : MonoBehaviour
     {
-        [SerializeField] Table _mesa;
         [SerializeField] EnemySpawner _roundManager;
         [SerializeField] TextMeshProUGUI _vidaUI;
         [SerializeField] TextMeshProUGUI _monedasUI;
@@ -20,16 +19,19 @@ namespace Code
         
         private void Start()
         {
-            _mesa.OnHealthChange += ActualizarVida;
+            GameManager.Instance.OnHealthChange += ActualizarVida;
             GameManager.Instance.OnCoinsChange += ActualizarMonedas;
             GameManager.Instance.OnRoundChange += ActualizarRonda;
             _roundManager.CuentaCambio += CuentaAtras;
             _roundManager.RatonMuerto += ActualizarBarraEnemigos;
             _roundManager.TotalRatones += ObtenerEnemigosRonda;
+            ActualizarVida(GameManager.Instance.Health);
+            ActualizarMonedas(GameManager.Instance.Coins);
+            ActualizarRonda(GameManager.Instance.Round);
         }
         private void OnDisable()
         {
-            _mesa.OnHealthChange -= ActualizarVida;
+            GameManager.Instance.OnHealthChange -= ActualizarVida;
             GameManager.Instance.OnCoinsChange -= ActualizarMonedas;
             GameManager.Instance.OnRoundChange -= ActualizarRonda;
             _roundManager.CuentaCambio -= CuentaAtras;
@@ -52,9 +54,9 @@ namespace Code
             }
         
         }
-        private void ActualizarRonda()
+        private void ActualizarRonda(int round)
         {
-            _rondaTxt.GetComponent<TextMeshProUGUI>().text = GameManager.Instance.Round.ToString();
+            _rondaTxt.GetComponent<TextMeshProUGUI>().text = round+"";
         }
         private void ActualizarMonedas(int monedas)
         {

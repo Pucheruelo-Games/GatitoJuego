@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05612da904645a5b487796aa67aba4a, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: Assembly-CSharp::Code.GameData
-  cards:
+  cardDictionary:
     Entries:
     - ID: 0
       Card: {fileID: 11400000, guid: e98c2b6933ed46a42b928f0ee39e9464, type: 2}

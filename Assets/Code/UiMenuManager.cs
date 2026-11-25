@@ -2,7 +2,7 @@ using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UiMenuManager : MonoBehaviour
+public class UIMenuManager : MonoBehaviour
 {
     public void StartNewGame()
     {
@@ -10,7 +10,8 @@ public class UiMenuManager : MonoBehaviour
     }
     public void LoadGame()
     {
-        //hola
+        GameManager.Instance.LoadGame();
+        SceneManager.LoadScene("Map");
     }
     public void ExitGame()
     {

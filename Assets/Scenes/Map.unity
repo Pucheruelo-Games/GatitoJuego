@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _health: 10
+  cardSlots: 0
+  _coins: 0
 --- !u!1001 &24383433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2880,13 +2882,7 @@ MonoBehaviour:
   cardPrefab: {fileID: 6830017497886656530, guid: 31f05f620adde614da3f61602bec2531, type: 3}
   cardContainer: {fileID: 1968579758}
   selectedContainer: {fileID: 627170213}
-  cardSlots: 5
-  startCards:
-  - {fileID: 11400000, guid: 0f1477231cd5e134e9573972e517e4e9, type: 2}
-  - {fileID: 11400000, guid: 1103d6cacf44cc74489ca01a62f89032, type: 2}
-  - {fileID: 11400000, guid: e98c2b6933ed46a42b928f0ee39e9464, type: 2}
-  - {fileID: 11400000, guid: 230218d32585e6e4aa6d8d63a203abd7, type: 2}
-  - {fileID: 11400000, guid: 937d2c8611b41c947925268101e7e3fb, type: 2}
+  startCards: []
 --- !u!4 &644300617
 Transform:
   m_ObjectHideFlags: 0
@@ -6671,7 +6667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc2661226bf91b468c95001ea1edf8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.UIManager
-  _mesa: {fileID: 2003549599}
   _roundManager: {fileID: 1559563160}
   _vidaUI: {fileID: 925457367}
   _monedasUI: {fileID: 571743600}
@@ -10568,7 +10563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6629257ac63ea46a5d1d86e4ccfe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mesa
-  health: 100
 --- !u!50 &2003549600
 Rigidbody2D:
   serializedVersion: 5

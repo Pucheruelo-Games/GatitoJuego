@@ -8,17 +8,28 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance => _instance;
 
-    private int _round = 0;
+    private int _round = 1;
     public int Round => _round;
     [SerializeField] private int _health = 10;
-    public int Health { get => _health; set { _health = value; }}
+    [SerializeField] private int cardSlots;
+
+    public int Health
+    {
+        get => _health;
+        set
+        {
+            _health = value;
+            OnHealthChange.Invoke(_health);
+        }
+    }
     public void NextRound()
     {
         _round++;
-        OnRoundChange.Invoke();
+        OnRoundChange.Invoke(Round);
+        SaveGame();
     }
     
-    private int _coins;
+    [SerializeField] private int _coins;
 
     public int Coins
     {
@@ -29,12 +40,14 @@ public class GameManager : MonoBehaviour
             OnCoinsChange.Invoke(_coins);
         }
     }
+
     private Card[] _inventory;
     public Card[] Inventory => _inventory;
     
     private const string _saveFile = "game.json";
 
     private SaveData? _saveData = null;
+    public bool HasSavedGame => _saveData != null;
     
     private void Awake()
     {
@@ -43,15 +56,18 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
+
+        _inventory = new Card[cardSlots];
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
+        LoadGameFile();
     }
    
     public event Action<int> OnCoinsChange = delegate { };
-    public event Action OnRoundChange = delegate { };
+    public event Action<int> OnRoundChange = delegate { };
+    public event Action<int> OnHealthChange = delegate {};
     
-    public void Save()
+    public void SaveGame()
     {
         string filepath = GetFilePath();
 
@@ -70,17 +86,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Load()
+    public bool LoadGameFile()
     {
         string filepath = GetFilePath();
         try
         {
             _saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(filepath));
+            return true;
         }
         catch
         {
             Debug.Log("No game saved yet");
+            return false;
         }
+    }
+
+    public bool LoadGame()
+    {
+        if (_saveData == null) return false;
+        SaveData data = (SaveData)_saveData;
+        _health = data.Health;
+        _coins = data.Coins;
+        _round = data.Round;
+        _inventory = CardDataBase.instance.GetCards(data.CardIds);
+        return true;
     }
     
     public struct SaveData

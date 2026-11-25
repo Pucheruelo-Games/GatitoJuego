@@ -29,7 +29,6 @@ public class EnemySpawner : MonoBehaviour
     }
     private void Start()
     {
-        GameManager.Instance.NextRound();
         StartCoroutine(CuentaAtras());
     }
     private IEnumerator CuentaAtras()

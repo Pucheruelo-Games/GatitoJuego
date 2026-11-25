@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,7 +14,7 @@ namespace Code
         [SerializeField] private InventoryCard cardPrefab;
         [SerializeField] private RectTransform cardContainer;
         [SerializeField] private RectTransform selectedContainer;
-        [SerializeField] private int cardSlots;
+        
         [SerializeField] private Card[] startCards;
         private List<InventoryCard> _cards = new();
         private InventoryCard _selectedCard;
@@ -205,25 +206,27 @@ namespace Code
 
         private void Start()
         {
-            CardDataBase.instance.Load();
-            print(CardDataBase.instance.HasData);
-            if (CardDataBase.instance.HasData)
+            if (GameManager.Instance.Inventory[0])
             {
-                foreach (var card in CardDataBase.instance.Inventory) AddCard(card);
+                foreach (var card in GameManager.Instance.Inventory) AddCard(card);
             }
             else
             {
-                foreach (var card in startCards) AddCard(card);
-                CardDataBase.instance.Inventory = startCards;
-                CardDataBase.instance.Health = GameManager.Instance.Health;
+                for (int i = 0; i < GameManager.Instance.Inventory.Length; i++)
+                {
+                    if (i >= startCards.Length || !startCards[i]) 
+                        break;
+                    
+                    AddCard(startCards[i]);
+                    GameManager.Instance.Inventory[i] = startCards[i];
+                }
             }
             
-            CardDataBase.instance.Save();
+            GameManager.Instance.SaveGame();
         }
 
         public bool AddCard(Card card)
         {
-            if (_cards.Count >= cardSlots) return false;
             var newCard = Instantiate(cardPrefab, cardContainer);
             newCard.Init(card);
             _cards.Add(newCard);

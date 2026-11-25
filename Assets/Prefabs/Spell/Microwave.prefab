@@ -298,7 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.ExplosiveAttack
   <TargetTag>k__BackingField: 1
   direction: {x: 0, y: 0}
-  damage: 80
+  damage: 953494
   origin: {fileID: 3844687826637745156}
   range: 2
   ExplosionRadius: 2
