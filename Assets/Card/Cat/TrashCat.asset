@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.CatCard
   icon: {fileID: 21300000, guid: 707bde0ff5c438b438e088f692a234bc, type: 3}
   cost: 5
-  cooldown: 6
+  cooldown: 10
   displayname: TrashCat
   width: 1
   height: 1

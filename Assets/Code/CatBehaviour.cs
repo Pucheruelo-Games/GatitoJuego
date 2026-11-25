@@ -12,7 +12,7 @@ namespace Code
     public class CatBehaviour : MonoBehaviour, IDamageable
     {
         public AttackTag AttackTag => AttackTag.Cat;
-        [SerializeField] private float health;
+        [SerializeField] private int health;
         [SerializeField] private float attackSpeed;
         [SerializeField] private Attack attack;
         [SerializeField] private Animator animator;

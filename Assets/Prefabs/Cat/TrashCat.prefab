@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9228a0c3bae3954f935cad5152d130f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gato
-  health: 600
+  health: 150
   attackSpeed: -1
   attack: {fileID: 0}
   animator: {fileID: 8133760999288585330}

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651336c189a164418224bbb828b0d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Raton
-  health: 45
+  health: 35
   attackSpeed: 0.5
   moveSpeed: 1
   reward: 8
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.MeleeAttack
   <TargetTag>k__BackingField: 0
   direction: {x: 0, y: -1}
-  damage: 13
+  damage: 18
   origin: {fileID: 4322703690070839394}
   range: 0.5
   effects: []

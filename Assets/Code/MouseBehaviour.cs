@@ -30,7 +30,8 @@ namespace Code
 
         private void Awake()
         {
-            health = health * (1f + (0.035f * (GameManager.Instance.Round-1)));
+            health *= (1f + (0.035f * (GameManager.Instance.Round-1)));
+            attack.AtkMulti *= (1f + (0.035f * (GameManager.Instance.Round - 1)));
         }
         public void TakeDamage(int damage, Effect[] effects = null)
         {
