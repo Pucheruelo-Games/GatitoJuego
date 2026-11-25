@@ -205,20 +205,20 @@ namespace Code
 
         private void Start()
         {
-            GameData.instance.Load();
-            print(GameData.instance.HasData);
-            if (GameData.instance.HasData)
+            CardDataBase.instance.Load();
+            print(CardDataBase.instance.HasData);
+            if (CardDataBase.instance.HasData)
             {
-                foreach (var card in GameData.instance.Inventory) AddCard(card);
+                foreach (var card in CardDataBase.instance.Inventory) AddCard(card);
             }
             else
             {
                 foreach (var card in startCards) AddCard(card);
-                GameData.instance.Inventory = startCards;
-                GameData.instance.Health = GameManager.Instance.Health;
+                CardDataBase.instance.Inventory = startCards;
+                CardDataBase.instance.Health = GameManager.Instance.Health;
             }
             
-            GameData.instance.Save();
+            CardDataBase.instance.Save();
         }
 
         public bool AddCard(Card card)

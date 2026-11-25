@@ -12,4 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05612da904645a5b487796aa67aba4a, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: Assembly-CSharp::Code.GameData
-  cards: []
+  cards:
+    Entries:
+    - ID: 0
+      Card: {fileID: 11400000, guid: e98c2b6933ed46a42b928f0ee39e9464, type: 2}
+    - ID: 1
+      Card: {fileID: 11400000, guid: f0b1dbfed3e110e45a7e14d9643b8bcd, type: 2}
+    - ID: 2
+      Card: {fileID: 11400000, guid: 1103d6cacf44cc74489ca01a62f89032, type: 2}
+    - ID: 3
+      Card: {fileID: 11400000, guid: acc6d446e194c2f4d98be35593838d61, type: 2}
+    - ID: 4
+      Card: {fileID: 11400000, guid: 55e50379549f4ce4789c79450e9b9db2, type: 2}
+    - ID: 5
+      Card: {fileID: 11400000, guid: e832b9291d1101c4a90d31e45d0460d0, type: 2}
+    - ID: 6
+      Card: {fileID: 11400000, guid: 937d2c8611b41c947925268101e7e3fb, type: 2}
+    - ID: 7
+      Card: {fileID: 11400000, guid: 0f1477231cd5e134e9573972e517e4e9, type: 2}
+    - ID: 8
+      Card: {fileID: 11400000, guid: 12be596081a39844ba1725c3ecf0fba0, type: 2}
+    - ID: 9
+      Card: {fileID: 11400000, guid: 15d1c56d04a7036498146b8ac2a1891f, type: 2}
+    - ID: 10
+      Card: {fileID: 11400000, guid: 230218d32585e6e4aa6d8d63a203abd7, type: 2}
