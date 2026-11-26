@@ -26,9 +26,6 @@ namespace Code
 
         public Card GetCard(int i)
         {
-            if (!Entries.ToList().Exists(c => c.ID == i))
-                return null;
-
             return Entries.ToList().First(c => c.ID == i).Card;
         }
     }

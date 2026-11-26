@@ -8,13 +8,15 @@ namespace Code
     {
         [SerializeField] private Sprite icon;
         public Sprite Icon => icon;
+        [SerializeField, Range(0f,100f)] private float chance;
+        [SerializeField] private int minRound;
         [SerializeField] private CardPoolEntry[] cardPool;
         
         [Serializable]
         public struct CardPoolEntry
         {
-            [SerializeField] public Card Card;
-            [SerializeField] public float Chance;
+            [SerializeField] public Card card;
+            [SerializeField, Range(0f,100f)] public float chance;
         } 
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d05612da904645a5b487796aa67aba4a, type: 3}
-  m_Name: GameData
+  m_Name: CardDataBase
   m_EditorClassIdentifier: Assembly-CSharp::Code.GameData
   cardDictionary:
     Entries:

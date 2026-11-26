@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: CardPack1
   m_EditorClassIdentifier: Assembly-CSharp::Code.CardPack
   icon: {fileID: 0}
+  chance: 0
+  minRound: 0
   cardPool:
-  - Card: {fileID: 11400000, guid: 55e50379549f4ce4789c79450e9b9db2, type: 2}
-    Chance: 50
-  - Card: {fileID: 11400000, guid: e98c2b6933ed46a42b928f0ee39e9464, type: 2}
-    Chance: 10
-  - Card: {fileID: 11400000, guid: 55e50379549f4ce4789c79450e9b9db2, type: 2}
-    Chance: 20
+  - card: {fileID: 11400000, guid: 55e50379549f4ce4789c79450e9b9db2, type: 2}
+    chance: 0
+  - card: {fileID: 0}
+    chance: 0
+  - card: {fileID: 0}
+    chance: 0

@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -12,8 +13,7 @@ namespace Code
         [SerializeField] private bool catPreventCast = false;
         public bool CatPreventCast => catPreventCast;
         [SerializeField] private Sprite foregroundSprite;
-        private PreviewType _lastPreviewType;
-        [SerializeField] private PreviewType previewType;
+        private PreviewType _currentPreviewType;
         [SerializeReference] private PreviewConfig previewConfig;
         public override void GeneratePreview(PreviewHandler handler)
         {
@@ -22,13 +22,27 @@ namespace Code
 
         private void OnValidate()
         {
-            if (_lastPreviewType == previewType) return;
-            switch (previewType)
+            if (_currentPreviewType == previewConfig.previewType) return;
+            _currentPreviewType = previewConfig.previewType;
+            switch (_currentPreviewType)
             {
                 case PreviewType.Circle: previewConfig = new CirclePreviewConfig(); break;
                 case PreviewType.Square: previewConfig = new SquarePreviewConfig(); break;
             }
-            _lastPreviewType = previewType;
+            previewConfig.previewType = _currentPreviewType;
+        }
+        
+        [ContextMenu("Look For Behaviour")]
+        private void LookForBehaviour()
+        {
+            foreach (string guid in AssetDatabase.FindAssets("t:prefab "+name))
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guid);
+                if (AssetDatabase.LoadAssetAtPath<GameObject>(path).TryGetComponent(out SpellBehaviour catPrefab))
+                {
+                    spell = catPrefab;
+                }
+            }
         }
     }
 
@@ -40,6 +54,7 @@ namespace Code
     [Serializable]
     public abstract class PreviewConfig
     {
+        [SerializeField] public PreviewType previewType;
         public abstract void Generate(PreviewHandler handler, Sprite foregroundSprite);
     }
     

@@ -21,13 +21,13 @@ MonoBehaviour:
   spell: {fileID: 3195143326174965144, guid: be5904afefd2c9845bf34529b1d0e828, type: 3}
   catPreventCast: 1
   foregroundSprite: {fileID: 21300000, guid: 3ca1400bd64c82d4fad5d0f498e02098, type: 3}
-  previewType: 0
   previewConfig:
-    rid: 4738255664730341577
+    rid: 3638327462882967632
   references:
     version: 2
     RefIds:
-    - rid: 4738255664730341577
+    - rid: 3638327462882967632
       type: {class: CirclePreviewConfig, ns: Code, asm: Assembly-CSharp}
       data:
+        previewType: 0
         radius: 4

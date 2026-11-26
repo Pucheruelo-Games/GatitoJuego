@@ -16,7 +16,6 @@ namespace Code
         [SerializeField] private RectTransform selectedContainer;
         
         [SerializeField] private Card[] startCards;
-        private List<InventoryCard> _cards = new();
         private InventoryCard _selectedCard;
         private InventoryCard _carriedCard;
         private LayerMask _tileLayerMask;
@@ -227,9 +226,8 @@ namespace Code
 
         public bool AddCard(Card card)
         {
-            var newCard = Instantiate(cardPrefab, cardContainer);
+            InventoryCard newCard = Instantiate(cardPrefab, cardContainer);
             newCard.Init(card);
-            _cards.Add(newCard);
             return true;
         }
     }
