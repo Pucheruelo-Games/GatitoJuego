@@ -51,6 +51,11 @@ namespace Code
             visualRect.localPosition = Vector3.zero;
         }
 
+        public void OnCarriedUpdate(Vector2 canvasPos)
+        {
+            visualRect.position = canvasPos;
+        }
+
         public void OnCarriedUpdate(Tile[] tiles, Vector2 canvasPos, PreviewHandler handler, bool drop = false)
         {
             bool available = _cooldown <= 0f && GameManager.Instance.Coins >= _card.Cost;

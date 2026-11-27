@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e108031145459d9d27908f830f86f3, type: 3}
   m_Name: CardPack1
   m_EditorClassIdentifier: Assembly-CSharp::Code.CardPack
-  icon: {fileID: 0}
-  chance: 0
+  icon: {fileID: -308584930, guid: 8de56da12028fb548a466af38d3ce9df, type: 3}
+  chance: 65
   minRound: 0
+  cost: 8
   cardPool:
   - card: {fileID: 11400000, guid: 55e50379549f4ce4789c79450e9b9db2, type: 2}
-    chance: 0
-  - card: {fileID: 0}
-    chance: 0
-  - card: {fileID: 0}
-    chance: 0
+    chance: 60
+  - card: {fileID: 11400000, guid: e98c2b6933ed46a42b928f0ee39e9464, type: 2}
+    chance: 20
+  - card: {fileID: 11400000, guid: 1103d6cacf44cc74489ca01a62f89032, type: 2}
+    chance: 20

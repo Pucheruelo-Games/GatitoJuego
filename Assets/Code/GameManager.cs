@@ -1,5 +1,6 @@
 using Code;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int Round => _round;
     [SerializeField] private int _health = 10;
     [SerializeField] private int cardSlots;
+    public int CardSlots => cardSlots;
 
     public int Health
     {
@@ -42,7 +44,20 @@ public class GameManager : MonoBehaviour
     }
 
     private Card[] _inventory;
-    public Card[] Inventory => _inventory;
+
+    public Card[] Inventory
+    {
+        get => _inventory;
+        set
+        {
+            if (value.Length > cardSlots) return;
+
+            _inventory = value;
+        }
+    } 
+        
+    
+    
     
     private const string _saveFile = "game.json";
 

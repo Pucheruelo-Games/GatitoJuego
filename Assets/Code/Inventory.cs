@@ -205,20 +205,18 @@ namespace Code
 
         private void Start()
         {
-            if (GameManager.Instance.Inventory[0])
+            if (GameManager.Instance.Inventory.Length > 0)
             {
                 foreach (var card in GameManager.Instance.Inventory) AddCard(card);
             }
             else
             {
-                for (int i = 0; i < GameManager.Instance.Inventory.Length; i++)
+                foreach (Card c in startCards)
                 {
-                    if (i >= startCards.Length || !startCards[i]) 
-                        break;
-                    
-                    AddCard(startCards[i]);
-                    GameManager.Instance.Inventory[i] = startCards[i];
+                    AddCard(c);
                 }
+                
+                GameManager.Instance.Inventory = startCards;
             }
             
             GameManager.Instance.SaveGame();
